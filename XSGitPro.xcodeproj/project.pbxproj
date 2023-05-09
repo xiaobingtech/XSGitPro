@@ -1,0 +1,1304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE256CA92A0393A7006CF9A5 /* libgit2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB258912A0390EB0008720F /* libgit2.a */; };
+		AE256CAA2A0393C1006CF9A5 /* libgit2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB258902A0390D00008720F /* libgit2.a */; };
+		AE256D972A039A67006CF9A5 /* XS_Git2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE256D962A039A67006CF9A5 /* XS_Git2.swift */; };
+		AE256D982A039A67006CF9A5 /* XS_Git2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE256D962A039A67006CF9A5 /* XS_Git2.swift */; };
+		AE25EE1129FA078100D8FA5B /* XSGitProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE25EE1029FA078100D8FA5B /* XSGitProApp.swift */; };
+		AE25EE1529FA078300D8FA5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE25EE1429FA078300D8FA5B /* Assets.xcassets */; };
+		AE25EE1829FA078300D8FA5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE25EE1729FA078300D8FA5B /* Preview Assets.xcassets */; };
+		AE25EE2529FA07BB00D8FA5B /* GitSimulatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE25EE2429FA07BB00D8FA5B /* GitSimulatorApp.swift */; };
+		AE25EE2929FA07BC00D8FA5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE25EE2829FA07BC00D8FA5B /* Assets.xcassets */; };
+		AE25EE2C29FA07BC00D8FA5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE25EE2B29FA07BC00D8FA5B /* Preview Assets.xcassets */; };
+		AE25EF2B29FA09FA00D8FA5B /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE25EF2A29FA09FA00D8FA5B /* libiconv.2.4.0.tbd */; };
+		AE25EF2F29FA0B5C00D8FA5B /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE25EF2E29FA0B5C00D8FA5B /* libz.1.1.3.tbd */; };
+		AE25EF3329FA13FE00D8FA5B /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE25EF2E29FA0B5C00D8FA5B /* libz.1.1.3.tbd */; };
+		AE25EF3429FA140700D8FA5B /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE25EF2A29FA09FA00D8FA5B /* libiconv.2.4.0.tbd */; };
+		AE3695E12A04D00900C3CB2A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AE3695E02A04D00900C3CB2A /* ComposableArchitecture */; };
+		AE3695E32A04D01900C3CB2A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AE3695E22A04D01900C3CB2A /* ComposableArchitecture */; };
+		AE3695E92A04D11200C3CB2A /* XS_Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695E82A04D11200C3CB2A /* XS_Mask.swift */; };
+		AE3695EB2A04D12F00C3CB2A /* XS_MaskModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695EA2A04D12F00C3CB2A /* XS_MaskModifier.swift */; };
+		AE3695ED2A04D19D00C3CB2A /* XS_Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695EC2A04D19D00C3CB2A /* XS_Activity.swift */; };
+		AE3695EF2A04D1A500C3CB2A /* XS_ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695EE2A04D1A500C3CB2A /* XS_ActivityView.swift */; };
+		AE3695F02A04D55700C3CB2A /* XS_Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695EC2A04D19D00C3CB2A /* XS_Activity.swift */; };
+		AE3695F12A04D55A00C3CB2A /* XS_ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695EE2A04D1A500C3CB2A /* XS_ActivityView.swift */; };
+		AE3695F22A04D55C00C3CB2A /* XS_Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695E82A04D11200C3CB2A /* XS_Mask.swift */; };
+		AE3695F32A04D55F00C3CB2A /* XS_MaskModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695EA2A04D12F00C3CB2A /* XS_MaskModifier.swift */; };
+		AE3695F52A04D5DD00C3CB2A /* XS_Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695F42A04D5DD00C3CB2A /* XS_Toast.swift */; };
+		AE3695F82A04D6A200C3CB2A /* XS_Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695F72A04D6A200C3CB2A /* XS_Task.swift */; };
+		AE3695FA2A04D75000C3CB2A /* XS_ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695F92A04D75000C3CB2A /* XS_ToastView.swift */; };
+		AE3695FB2A04D75000C3CB2A /* XS_ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695F92A04D75000C3CB2A /* XS_ToastView.swift */; };
+		AE3695FC2A04D75600C3CB2A /* XS_Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695F42A04D5DD00C3CB2A /* XS_Toast.swift */; };
+		AE3695FD2A04D83D00C3CB2A /* XS_Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695F72A04D6A200C3CB2A /* XS_Task.swift */; };
+		AE3696002A04EDD900C3CB2A /* XS_Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695FF2A04EDD900C3CB2A /* XS_Root.swift */; };
+		AE3696012A04EDD900C3CB2A /* XS_Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3695FF2A04EDD900C3CB2A /* XS_Root.swift */; };
+		AE3696032A04EDE800C3CB2A /* XS_RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3696022A04EDE800C3CB2A /* XS_RootView.swift */; };
+		AE3696042A04EDE800C3CB2A /* XS_RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3696022A04EDE800C3CB2A /* XS_RootView.swift */; };
+		AE3696072A04EEBD00C3CB2A /* XS_Git.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3696062A04EEBD00C3CB2A /* XS_Git.swift */; };
+		AE3696082A04EEBD00C3CB2A /* XS_Git.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3696062A04EEBD00C3CB2A /* XS_Git.swift */; };
+		AE36960A2A04EFB900C3CB2A /* XS_GitDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3696092A04EFB900C3CB2A /* XS_GitDirectory.swift */; };
+		AE36960B2A04EFB900C3CB2A /* XS_GitDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3696092A04EFB900C3CB2A /* XS_GitDirectory.swift */; };
+		AE3990EF2A05F73C00198AAA /* XS_Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990EE2A05F73C00198AAA /* XS_Directory.swift */; };
+		AE3990F12A05F74B00198AAA /* XS_DirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990F02A05F74B00198AAA /* XS_DirectoryView.swift */; };
+		AE3990F22A05F91F00198AAA /* XS_Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990EE2A05F73C00198AAA /* XS_Directory.swift */; };
+		AE3990F32A05F92200198AAA /* XS_DirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990F02A05F74B00198AAA /* XS_DirectoryView.swift */; };
+		AE3990F62A05FD9400198AAA /* XS_Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990F52A05FD9400198AAA /* XS_Nav.swift */; };
+		AE3990F82A05FDA300198AAA /* XS_NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990F72A05FDA300198AAA /* XS_NavView.swift */; };
+		AE3990F92A05FDC800198AAA /* XS_NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990F72A05FDA300198AAA /* XS_NavView.swift */; };
+		AE3990FA2A05FDCB00198AAA /* XS_Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990F52A05FD9400198AAA /* XS_Nav.swift */; };
+		AE3990FD2A06367300198AAA /* XS_Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990FC2A06367300198AAA /* XS_Repository.swift */; };
+		AE3990FF2A0636AE00198AAA /* XS_RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990FE2A0636AE00198AAA /* XS_RepositoryView.swift */; };
+		AE3991002A0636AE00198AAA /* XS_RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990FE2A0636AE00198AAA /* XS_RepositoryView.swift */; };
+		AE3991012A0636B500198AAA /* XS_Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990FC2A06367300198AAA /* XS_Repository.swift */; };
+		AE3991032A06453900198AAA /* XS_GitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3991022A06453900198AAA /* XS_GitFile.swift */; };
+		AE3991042A06453900198AAA /* XS_GitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3991022A06453900198AAA /* XS_GitFile.swift */; };
+		AE74E68E2A02407A007EB388 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AE74E68C2A02407A007EB388 /* EXTScope.m */; };
+		AE74E68F2A02407A007EB388 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AE74E68C2A02407A007EB388 /* EXTScope.m */; };
+		AEB2555F2A0380C60008720F /* GTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254EC2A0380C60008720F /* GTConfiguration.m */; };
+		AEB255602A0380C60008720F /* GTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254EC2A0380C60008720F /* GTConfiguration.m */; };
+		AEB255612A0380C60008720F /* GTRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F02A0380C60008720F /* GTRemote.m */; };
+		AEB255622A0380C60008720F /* GTRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F02A0380C60008720F /* GTRemote.m */; };
+		AEB255632A0380C60008720F /* GTIndexEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F12A0380C60008720F /* GTIndexEntry.m */; };
+		AEB255642A0380C60008720F /* GTIndexEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F12A0380C60008720F /* GTIndexEntry.m */; };
+		AEB255652A0380C60008720F /* GTDiffHunk.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F32A0380C60008720F /* GTDiffHunk.m */; };
+		AEB255662A0380C60008720F /* GTDiffHunk.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F32A0380C60008720F /* GTDiffHunk.m */; };
+		AEB255672A0380C70008720F /* GTReflog.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F42A0380C60008720F /* GTReflog.m */; };
+		AEB255682A0380C70008720F /* GTReflog.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F42A0380C60008720F /* GTReflog.m */; };
+		AEB255692A0380C70008720F /* GTBlob.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F62A0380C60008720F /* GTBlob.m */; };
+		AEB2556A2A0380C70008720F /* GTBlob.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F62A0380C60008720F /* GTBlob.m */; };
+		AEB2556B2A0380C70008720F /* ObjectiveGit.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F72A0380C60008720F /* ObjectiveGit.m */; };
+		AEB2556C2A0380C70008720F /* ObjectiveGit.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F72A0380C60008720F /* ObjectiveGit.m */; };
+		AEB2556D2A0380C70008720F /* GTRepository+Blame.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F82A0380C60008720F /* GTRepository+Blame.m */; };
+		AEB2556E2A0380C70008720F /* GTRepository+Blame.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F82A0380C60008720F /* GTRepository+Blame.m */; };
+		AEB2556F2A0380C70008720F /* GTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254FA2A0380C60008720F /* GTObject.m */; };
+		AEB255702A0380C70008720F /* GTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254FA2A0380C60008720F /* GTObject.m */; };
+		AEB255712A0380C70008720F /* GTDiffDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254FC2A0380C60008720F /* GTDiffDelta.m */; };
+		AEB255722A0380C70008720F /* GTDiffDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254FC2A0380C60008720F /* GTDiffDelta.m */; };
+		AEB255732A0380C70008720F /* GTTree.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254FE2A0380C60008720F /* GTTree.m */; };
+		AEB255742A0380C70008720F /* GTTree.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254FE2A0380C60008720F /* GTTree.m */; };
+		AEB255752A0380C70008720F /* GTSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255012A0380C60008720F /* GTSignature.m */; };
+		AEB255762A0380C70008720F /* GTSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255012A0380C60008720F /* GTSignature.m */; };
+		AEB255772A0380C70008720F /* GTFilterList.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255022A0380C60008720F /* GTFilterList.m */; };
+		AEB255782A0380C70008720F /* GTFilterList.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255022A0380C60008720F /* GTFilterList.m */; };
+		AEB255792A0380C70008720F /* GTDiffLine.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255062A0380C60008720F /* GTDiffLine.m */; };
+		AEB2557A2A0380C70008720F /* GTDiffLine.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255062A0380C60008720F /* GTDiffLine.m */; };
+		AEB2557B2A0380C70008720F /* GTOdbObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255072A0380C60008720F /* GTOdbObject.m */; };
+		AEB2557C2A0380C70008720F /* GTOdbObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255072A0380C60008720F /* GTOdbObject.m */; };
+		AEB2557D2A0380C70008720F /* GTRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255092A0380C60008720F /* GTRepository.m */; };
+		AEB2557E2A0380C70008720F /* GTRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255092A0380C60008720F /* GTRepository.m */; };
+		AEB2557F2A0380C70008720F /* GTTreeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2550E2A0380C60008720F /* GTTreeBuilder.m */; };
+		AEB255802A0380C70008720F /* GTTreeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2550E2A0380C60008720F /* GTTreeBuilder.m */; };
+		AEB255812A0380C70008720F /* GTRepository+RemoteOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255102A0380C60008720F /* GTRepository+RemoteOperations.m */; };
+		AEB255822A0380C70008720F /* GTRepository+RemoteOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255102A0380C60008720F /* GTRepository+RemoteOperations.m */; };
+		AEB255832A0380C70008720F /* GTRepository+References.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255122A0380C60008720F /* GTRepository+References.m */; };
+		AEB255842A0380C70008720F /* GTRepository+References.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255122A0380C60008720F /* GTRepository+References.m */; };
+		AEB255852A0380C70008720F /* GTCommit.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255152A0380C60008720F /* GTCommit.m */; };
+		AEB255862A0380C70008720F /* GTCommit.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255152A0380C60008720F /* GTCommit.m */; };
+		AEB255872A0380C70008720F /* GTRepository+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255162A0380C60008720F /* GTRepository+Status.m */; };
+		AEB255882A0380C70008720F /* GTRepository+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255162A0380C60008720F /* GTRepository+Status.m */; };
+		AEB255892A0380C70008720F /* GTSubmodule.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255172A0380C60008720F /* GTSubmodule.m */; };
+		AEB2558A2A0380C70008720F /* GTSubmodule.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255172A0380C60008720F /* GTSubmodule.m */; };
+		AEB2558B2A0380C70008720F /* GTRepository+Pull.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2551B2A0380C60008720F /* GTRepository+Pull.m */; };
+		AEB2558C2A0380C70008720F /* GTRepository+Pull.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2551B2A0380C60008720F /* GTRepository+Pull.m */; };
+		AEB2558D2A0380C70008720F /* GTFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2551C2A0380C60008720F /* GTFilter.m */; };
+		AEB2558E2A0380C70008720F /* GTFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2551C2A0380C60008720F /* GTFilter.m */; };
+		AEB2558F2A0380C70008720F /* GTEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2551D2A0380C60008720F /* GTEnumerator.m */; };
+		AEB255902A0380C70008720F /* GTEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2551D2A0380C60008720F /* GTEnumerator.m */; };
+		AEB255912A0380C70008720F /* GTRepository+Stashing.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2551E2A0380C60008720F /* GTRepository+Stashing.m */; };
+		AEB255922A0380C70008720F /* GTRepository+Stashing.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2551E2A0380C60008720F /* GTRepository+Stashing.m */; };
+		AEB255932A0380C70008720F /* GTFilterSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2551F2A0380C60008720F /* GTFilterSource.m */; };
+		AEB255942A0380C70008720F /* GTFilterSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2551F2A0380C60008720F /* GTFilterSource.m */; };
+		AEB255952A0380C70008720F /* GTIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255212A0380C60008720F /* GTIndex.m */; };
+		AEB255962A0380C70008720F /* GTIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255212A0380C60008720F /* GTIndex.m */; };
+		AEB255972A0380C70008720F /* GTStatusDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255252A0380C60008720F /* GTStatusDelta.m */; };
+		AEB255982A0380C70008720F /* GTStatusDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255252A0380C60008720F /* GTStatusDelta.m */; };
+		AEB255992A0380C70008720F /* GTBlame.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255282A0380C60008720F /* GTBlame.m */; };
+		AEB2559A2A0380C70008720F /* GTBlame.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255282A0380C60008720F /* GTBlame.m */; };
+		AEB2559B2A0380C70008720F /* GTObjectDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255292A0380C60008720F /* GTObjectDatabase.m */; };
+		AEB2559C2A0380C70008720F /* GTObjectDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255292A0380C60008720F /* GTObjectDatabase.m */; };
+		AEB2559D2A0380C70008720F /* GTNote.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2552D2A0380C60008720F /* GTNote.m */; };
+		AEB2559E2A0380C70008720F /* GTNote.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2552D2A0380C60008720F /* GTNote.m */; };
+		AEB2559F2A0380C70008720F /* GTBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2552F2A0380C60008720F /* GTBranch.m */; };
+		AEB255A02A0380C70008720F /* GTBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2552F2A0380C60008720F /* GTBranch.m */; };
+		AEB255A12A0380C70008720F /* GTRepository+Merging.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255322A0380C60008720F /* GTRepository+Merging.m */; };
+		AEB255A22A0380C70008720F /* GTRepository+Merging.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255322A0380C60008720F /* GTRepository+Merging.m */; };
+		AEB255A32A0380C70008720F /* GTCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255342A0380C60008720F /* GTCredential.m */; };
+		AEB255A42A0380C70008720F /* GTCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255342A0380C60008720F /* GTCredential.m */; };
+		AEB255A52A0380C70008720F /* GTBlameHunk.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255382A0380C60008720F /* GTBlameHunk.m */; };
+		AEB255A62A0380C70008720F /* GTBlameHunk.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255382A0380C60008720F /* GTBlameHunk.m */; };
+		AEB255A72A0380C70008720F /* GTDiffPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255392A0380C60008720F /* GTDiffPatch.m */; };
+		AEB255A82A0380C70008720F /* GTDiffPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255392A0380C60008720F /* GTDiffPatch.m */; };
+		AEB255A92A0380C70008720F /* GTRepository+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2553C2A0380C60008720F /* GTRepository+Attributes.m */; };
+		AEB255AA2A0380C70008720F /* GTRepository+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2553C2A0380C60008720F /* GTRepository+Attributes.m */; };
+		AEB255AB2A0380C70008720F /* GTDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2553E2A0380C60008720F /* GTDiff.m */; };
+		AEB255AC2A0380C70008720F /* GTDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2553E2A0380C60008720F /* GTDiff.m */; };
+		AEB255AD2A0380C70008720F /* GTReflogEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2553F2A0380C60008720F /* GTReflogEntry.m */; };
+		AEB255AE2A0380C70008720F /* GTReflogEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2553F2A0380C60008720F /* GTReflogEntry.m */; };
+		AEB255AF2A0380C70008720F /* GTFetchHeadEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255402A0380C60008720F /* GTFetchHeadEntry.m */; };
+		AEB255B02A0380C70008720F /* GTFetchHeadEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255402A0380C60008720F /* GTFetchHeadEntry.m */; };
+		AEB255B12A0380C70008720F /* GTRepository+Committing.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255412A0380C60008720F /* GTRepository+Committing.m */; };
+		AEB255B22A0380C70008720F /* GTRepository+Committing.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255412A0380C60008720F /* GTRepository+Committing.m */; };
+		AEB255B32A0380C70008720F /* GTDiffFile.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255432A0380C60008720F /* GTDiffFile.m */; };
+		AEB255B42A0380C70008720F /* GTDiffFile.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255432A0380C60008720F /* GTDiffFile.m */; };
+		AEB255B52A0380C70008720F /* GTTag.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255462A0380C60008720F /* GTTag.m */; };
+		AEB255B62A0380C70008720F /* GTTag.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255462A0380C60008720F /* GTTag.m */; };
+		AEB255B72A0380C70008720F /* GTCheckoutOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255472A0380C60008720F /* GTCheckoutOptions.m */; };
+		AEB255B82A0380C70008720F /* GTCheckoutOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255472A0380C60008720F /* GTCheckoutOptions.m */; };
+		AEB255B92A0380C70008720F /* GTRepository+Reset.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255482A0380C60008720F /* GTRepository+Reset.m */; };
+		AEB255BA2A0380C70008720F /* GTRepository+Reset.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255482A0380C60008720F /* GTRepository+Reset.m */; };
+		AEB255BB2A0380C70008720F /* NSError+Git.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2554B2A0380C60008720F /* NSError+Git.m */; };
+		AEB255BC2A0380C70008720F /* NSError+Git.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2554B2A0380C60008720F /* NSError+Git.m */; };
+		AEB255BD2A0380C70008720F /* NSArray+StringArray.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2554C2A0380C60008720F /* NSArray+StringArray.m */; };
+		AEB255BE2A0380C70008720F /* NSArray+StringArray.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2554C2A0380C60008720F /* NSArray+StringArray.m */; };
+		AEB255BF2A0380C70008720F /* NSData+Git.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2554E2A0380C60008720F /* NSData+Git.m */; };
+		AEB255C02A0380C70008720F /* NSData+Git.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2554E2A0380C60008720F /* NSData+Git.m */; };
+		AEB255C12A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255522A0380C60008720F /* NSDate+GTTimeAdditions.m */; };
+		AEB255C22A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255522A0380C60008720F /* NSDate+GTTimeAdditions.m */; };
+		AEB255C32A0380C70008720F /* NSString+Git.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255542A0380C60008720F /* NSString+Git.m */; };
+		AEB255C42A0380C70008720F /* NSString+Git.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255542A0380C60008720F /* NSString+Git.m */; };
+		AEB255C52A0380C70008720F /* GTOID.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255592A0380C60008720F /* GTOID.m */; };
+		AEB255C62A0380C70008720F /* GTOID.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB255592A0380C60008720F /* GTOID.m */; };
+		AEB255C72A0380C70008720F /* GTReference.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2555A2A0380C60008720F /* GTReference.m */; };
+		AEB255C82A0380C70008720F /* GTReference.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2555A2A0380C60008720F /* GTReference.m */; };
+		AEB255C92A0380C70008720F /* GTTreeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2555B2A0380C60008720F /* GTTreeEntry.m */; };
+		AEB255CA2A0380C70008720F /* GTTreeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2555B2A0380C60008720F /* GTTreeEntry.m */; };
+		AEE39E932A089C9100F6D0B6 /* XS_GitClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */; };
+		AEE39E942A089C9100F6D0B6 /* XS_GitClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE256D962A039A67006CF9A5 /* XS_Git2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XS_Git2.swift; sourceTree = "<group>"; };
+		AE25EE0D29FA078100D8FA5B /* XSGitPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XSGitPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE25EE1029FA078100D8FA5B /* XSGitProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSGitProApp.swift; sourceTree = "<group>"; };
+		AE25EE1429FA078300D8FA5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE25EE1729FA078300D8FA5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AE25EE2229FA07BB00D8FA5B /* GitSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE25EE2429FA07BB00D8FA5B /* GitSimulatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSimulatorApp.swift; sourceTree = "<group>"; };
+		AE25EE2829FA07BC00D8FA5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE25EE2B29FA07BC00D8FA5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AE25EF2A29FA09FA00D8FA5B /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		AE25EF2E29FA0B5C00D8FA5B /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		AE2B08222A00B5FE004B9F24 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		AE3695E82A04D11200C3CB2A /* XS_Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Mask.swift; sourceTree = "<group>"; };
+		AE3695EA2A04D12F00C3CB2A /* XS_MaskModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_MaskModifier.swift; sourceTree = "<group>"; };
+		AE3695EC2A04D19D00C3CB2A /* XS_Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Activity.swift; sourceTree = "<group>"; };
+		AE3695EE2A04D1A500C3CB2A /* XS_ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_ActivityView.swift; sourceTree = "<group>"; };
+		AE3695F42A04D5DD00C3CB2A /* XS_Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Toast.swift; sourceTree = "<group>"; };
+		AE3695F72A04D6A200C3CB2A /* XS_Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Task.swift; sourceTree = "<group>"; };
+		AE3695F92A04D75000C3CB2A /* XS_ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_ToastView.swift; sourceTree = "<group>"; };
+		AE3695FF2A04EDD900C3CB2A /* XS_Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Root.swift; sourceTree = "<group>"; };
+		AE3696022A04EDE800C3CB2A /* XS_RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_RootView.swift; sourceTree = "<group>"; };
+		AE3696062A04EEBD00C3CB2A /* XS_Git.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Git.swift; sourceTree = "<group>"; };
+		AE3696092A04EFB900C3CB2A /* XS_GitDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitDirectory.swift; sourceTree = "<group>"; };
+		AE3990EE2A05F73C00198AAA /* XS_Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Directory.swift; sourceTree = "<group>"; };
+		AE3990F02A05F74B00198AAA /* XS_DirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_DirectoryView.swift; sourceTree = "<group>"; };
+		AE3990F52A05FD9400198AAA /* XS_Nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Nav.swift; sourceTree = "<group>"; };
+		AE3990F72A05FDA300198AAA /* XS_NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_NavView.swift; sourceTree = "<group>"; };
+		AE3990FC2A06367300198AAA /* XS_Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Repository.swift; sourceTree = "<group>"; };
+		AE3990FE2A0636AE00198AAA /* XS_RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_RepositoryView.swift; sourceTree = "<group>"; };
+		AE3991022A06453900198AAA /* XS_GitFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitFile.swift; sourceTree = "<group>"; };
+		AE74E68B2A02407A007EB388 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		AE74E68C2A02407A007EB388 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		AE74E68D2A02407A007EB388 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		AEB254EC2A0380C60008720F /* GTConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTConfiguration.m; sourceTree = "<group>"; };
+		AEB254ED2A0380C60008720F /* GTCredential+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTCredential+Private.h"; sourceTree = "<group>"; };
+		AEB254EE2A0380C60008720F /* GTObjectDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTObjectDatabase.h; sourceTree = "<group>"; };
+		AEB254EF2A0380C60008720F /* GTBlame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBlame.h; sourceTree = "<group>"; };
+		AEB254F02A0380C60008720F /* GTRemote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRemote.m; sourceTree = "<group>"; };
+		AEB254F12A0380C60008720F /* GTIndexEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTIndexEntry.m; sourceTree = "<group>"; };
+		AEB254F22A0380C60008720F /* GTStatusDelta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStatusDelta.h; sourceTree = "<group>"; };
+		AEB254F32A0380C60008720F /* GTDiffHunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDiffHunk.m; sourceTree = "<group>"; };
+		AEB254F42A0380C60008720F /* GTReflog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTReflog.m; sourceTree = "<group>"; };
+		AEB254F52A0380C60008720F /* GTIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTIndex.h; sourceTree = "<group>"; };
+		AEB254F62A0380C60008720F /* GTBlob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBlob.m; sourceTree = "<group>"; };
+		AEB254F72A0380C60008720F /* ObjectiveGit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveGit.m; sourceTree = "<group>"; };
+		AEB254F82A0380C60008720F /* GTRepository+Blame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+Blame.m"; sourceTree = "<group>"; };
+		AEB254F92A0380C60008720F /* GTCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCredential.h; sourceTree = "<group>"; };
+		AEB254FA2A0380C60008720F /* GTObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTObject.m; sourceTree = "<group>"; };
+		AEB254FB2A0380C60008720F /* GTRepository+Merging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+Merging.h"; sourceTree = "<group>"; };
+		AEB254FC2A0380C60008720F /* GTDiffDelta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDiffDelta.m; sourceTree = "<group>"; };
+		AEB254FD2A0380C60008720F /* GTReflogEntry+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTReflogEntry+Private.h"; sourceTree = "<group>"; };
+		AEB254FE2A0380C60008720F /* GTTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTree.m; sourceTree = "<group>"; };
+		AEB254FF2A0380C60008720F /* GTBranch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBranch.h; sourceTree = "<group>"; };
+		AEB255002A0380C60008720F /* GTNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNote.h; sourceTree = "<group>"; };
+		AEB255012A0380C60008720F /* GTSignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSignature.m; sourceTree = "<group>"; };
+		AEB255022A0380C60008720F /* GTFilterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFilterList.m; sourceTree = "<group>"; };
+		AEB255032A0380C60008720F /* GTTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTag.h; sourceTree = "<group>"; };
+		AEB255042A0380C60008720F /* GTCheckoutOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCheckoutOptions.h; sourceTree = "<group>"; };
+		AEB255052A0380C60008720F /* GTRepository+Reset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+Reset.h"; sourceTree = "<group>"; };
+		AEB255062A0380C60008720F /* GTDiffLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDiffLine.m; sourceTree = "<group>"; };
+		AEB255072A0380C60008720F /* GTOdbObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTOdbObject.m; sourceTree = "<group>"; };
+		AEB255082A0380C60008720F /* GTDiffFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDiffFile.h; sourceTree = "<group>"; };
+		AEB255092A0380C60008720F /* GTRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRepository.m; sourceTree = "<group>"; };
+		AEB2550A2A0380C60008720F /* GTRepository+Committing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+Committing.h"; sourceTree = "<group>"; };
+		AEB2550B2A0380C60008720F /* GTFetchHeadEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFetchHeadEntry.h; sourceTree = "<group>"; };
+		AEB2550C2A0380C60008720F /* GTReflog+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTReflog+Private.h"; sourceTree = "<group>"; };
+		AEB2550D2A0380C60008720F /* GTReflogEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTReflogEntry.h; sourceTree = "<group>"; };
+		AEB2550E2A0380C60008720F /* GTTreeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTreeBuilder.m; sourceTree = "<group>"; };
+		AEB2550F2A0380C60008720F /* GTRepository+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+Attributes.h"; sourceTree = "<group>"; };
+		AEB255102A0380C60008720F /* GTRepository+RemoteOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+RemoteOperations.m"; sourceTree = "<group>"; };
+		AEB255112A0380C60008720F /* GTDiff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDiff.h; sourceTree = "<group>"; };
+		AEB255122A0380C60008720F /* GTRepository+References.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+References.m"; sourceTree = "<group>"; };
+		AEB255132A0380C60008720F /* GTDiffPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDiffPatch.h; sourceTree = "<group>"; };
+		AEB255142A0380C60008720F /* GTBlameHunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBlameHunk.h; sourceTree = "<group>"; };
+		AEB255152A0380C60008720F /* GTCommit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCommit.m; sourceTree = "<group>"; };
+		AEB255162A0380C60008720F /* GTRepository+Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+Status.m"; sourceTree = "<group>"; };
+		AEB255172A0380C60008720F /* GTSubmodule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSubmodule.m; sourceTree = "<group>"; };
+		AEB255182A0380C60008720F /* GTTreeEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTreeEntry.h; sourceTree = "<group>"; };
+		AEB255192A0380C60008720F /* GTOID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTOID.h; sourceTree = "<group>"; };
+		AEB2551A2A0380C60008720F /* GTReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTReference.h; sourceTree = "<group>"; };
+		AEB2551B2A0380C60008720F /* GTRepository+Pull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+Pull.m"; sourceTree = "<group>"; };
+		AEB2551C2A0380C60008720F /* GTFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFilter.m; sourceTree = "<group>"; };
+		AEB2551D2A0380C60008720F /* GTEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEnumerator.m; sourceTree = "<group>"; };
+		AEB2551E2A0380C60008720F /* GTRepository+Stashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+Stashing.m"; sourceTree = "<group>"; };
+		AEB2551F2A0380C60008720F /* GTFilterSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFilterSource.m; sourceTree = "<group>"; };
+		AEB255202A0380C60008720F /* GTBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBlob.h; sourceTree = "<group>"; };
+		AEB255212A0380C60008720F /* GTIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTIndex.m; sourceTree = "<group>"; };
+		AEB255222A0380C60008720F /* GTReflog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTReflog.h; sourceTree = "<group>"; };
+		AEB255232A0380C60008720F /* GTDiffHunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDiffHunk.h; sourceTree = "<group>"; };
+		AEB255242A0380C60008720F /* GTIndexEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTIndexEntry.h; sourceTree = "<group>"; };
+		AEB255252A0380C60008720F /* GTStatusDelta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTStatusDelta.m; sourceTree = "<group>"; };
+		AEB255262A0380C60008720F /* GTRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRemote.h; sourceTree = "<group>"; };
+		AEB255272A0380C60008720F /* GTDiff+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTDiff+Private.h"; sourceTree = "<group>"; };
+		AEB255282A0380C60008720F /* GTBlame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBlame.m; sourceTree = "<group>"; };
+		AEB255292A0380C60008720F /* GTObjectDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTObjectDatabase.m; sourceTree = "<group>"; };
+		AEB2552A2A0380C60008720F /* GTConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTConfiguration.h; sourceTree = "<group>"; };
+		AEB2552B2A0380C60008720F /* GTFilterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFilterList.h; sourceTree = "<group>"; };
+		AEB2552C2A0380C60008720F /* GTRepository+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+Private.h"; sourceTree = "<group>"; };
+		AEB2552D2A0380C60008720F /* GTNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNote.m; sourceTree = "<group>"; };
+		AEB2552E2A0380C60008720F /* GTSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSignature.h; sourceTree = "<group>"; };
+		AEB2552F2A0380C60008720F /* GTBranch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBranch.m; sourceTree = "<group>"; };
+		AEB255302A0380C60008720F /* GTTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTree.h; sourceTree = "<group>"; };
+		AEB255312A0380C60008720F /* GTDiffDelta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDiffDelta.h; sourceTree = "<group>"; };
+		AEB255322A0380C60008720F /* GTRepository+Merging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+Merging.m"; sourceTree = "<group>"; };
+		AEB255332A0380C60008720F /* GTConfiguration+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTConfiguration+Private.h"; sourceTree = "<group>"; };
+		AEB255342A0380C60008720F /* GTCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCredential.m; sourceTree = "<group>"; };
+		AEB255352A0380C60008720F /* GTObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTObject.h; sourceTree = "<group>"; };
+		AEB255362A0380C60008720F /* GTRepository+Blame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+Blame.h"; sourceTree = "<group>"; };
+		AEB255372A0380C60008720F /* ObjectiveGit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveGit.h; sourceTree = "<group>"; };
+		AEB255382A0380C60008720F /* GTBlameHunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBlameHunk.m; sourceTree = "<group>"; };
+		AEB255392A0380C60008720F /* GTDiffPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDiffPatch.m; sourceTree = "<group>"; };
+		AEB2553A2A0380C60008720F /* GTRepository+References.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+References.h"; sourceTree = "<group>"; };
+		AEB2553B2A0380C60008720F /* GTTreeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTreeBuilder.h; sourceTree = "<group>"; };
+		AEB2553C2A0380C60008720F /* GTRepository+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+Attributes.m"; sourceTree = "<group>"; };
+		AEB2553D2A0380C60008720F /* GTRepository+RemoteOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+RemoteOperations.h"; sourceTree = "<group>"; };
+		AEB2553E2A0380C60008720F /* GTDiff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDiff.m; sourceTree = "<group>"; };
+		AEB2553F2A0380C60008720F /* GTReflogEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTReflogEntry.m; sourceTree = "<group>"; };
+		AEB255402A0380C60008720F /* GTFetchHeadEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFetchHeadEntry.m; sourceTree = "<group>"; };
+		AEB255412A0380C60008720F /* GTRepository+Committing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+Committing.m"; sourceTree = "<group>"; };
+		AEB255422A0380C60008720F /* GTRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRepository.h; sourceTree = "<group>"; };
+		AEB255432A0380C60008720F /* GTDiffFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDiffFile.m; sourceTree = "<group>"; };
+		AEB255442A0380C60008720F /* GTOdbObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTOdbObject.h; sourceTree = "<group>"; };
+		AEB255452A0380C60008720F /* GTDiffLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDiffLine.h; sourceTree = "<group>"; };
+		AEB255462A0380C60008720F /* GTTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTag.m; sourceTree = "<group>"; };
+		AEB255472A0380C60008720F /* GTCheckoutOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCheckoutOptions.m; sourceTree = "<group>"; };
+		AEB255482A0380C60008720F /* GTRepository+Reset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+Reset.m"; sourceTree = "<group>"; };
+		AEB255492A0380C60008720F /* GTFilterSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFilterSource.h; sourceTree = "<group>"; };
+		AEB2554B2A0380C60008720F /* NSError+Git.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Git.m"; sourceTree = "<group>"; };
+		AEB2554C2A0380C60008720F /* NSArray+StringArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+StringArray.m"; sourceTree = "<group>"; };
+		AEB2554D2A0380C60008720F /* NSDate+GTTimeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GTTimeAdditions.h"; sourceTree = "<group>"; };
+		AEB2554E2A0380C60008720F /* NSData+Git.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Git.m"; sourceTree = "<group>"; };
+		AEB2554F2A0380C60008720F /* NSString+Git.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Git.h"; sourceTree = "<group>"; };
+		AEB255502A0380C60008720F /* NSArray+StringArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+StringArray.h"; sourceTree = "<group>"; };
+		AEB255512A0380C60008720F /* NSError+Git.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Git.h"; sourceTree = "<group>"; };
+		AEB255522A0380C60008720F /* NSDate+GTTimeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GTTimeAdditions.m"; sourceTree = "<group>"; };
+		AEB255532A0380C60008720F /* NSData+Git.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Git.h"; sourceTree = "<group>"; };
+		AEB255542A0380C60008720F /* NSString+Git.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Git.m"; sourceTree = "<group>"; };
+		AEB255552A0380C60008720F /* GTEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEnumerator.h; sourceTree = "<group>"; };
+		AEB255562A0380C60008720F /* GTRepository+Stashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+Stashing.h"; sourceTree = "<group>"; };
+		AEB255572A0380C60008720F /* GTFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFilter.h; sourceTree = "<group>"; };
+		AEB255582A0380C60008720F /* GTRepository+Pull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+Pull.h"; sourceTree = "<group>"; };
+		AEB255592A0380C60008720F /* GTOID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTOID.m; sourceTree = "<group>"; };
+		AEB2555A2A0380C60008720F /* GTReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTReference.m; sourceTree = "<group>"; };
+		AEB2555B2A0380C60008720F /* GTTreeEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTreeEntry.m; sourceTree = "<group>"; };
+		AEB2555C2A0380C60008720F /* GTRepository+Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTRepository+Status.h"; sourceTree = "<group>"; };
+		AEB2555D2A0380C60008720F /* GTSubmodule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSubmodule.h; sourceTree = "<group>"; };
+		AEB2555E2A0380C60008720F /* GTCommit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCommit.h; sourceTree = "<group>"; };
+		AEB258902A0390D00008720F /* libgit2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgit2.a; path = XSGitPro/Libgit2/libgit2.a; sourceTree = "<group>"; };
+		AEB258912A0390EB0008720F /* libgit2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgit2.a; path = GitSimulator/Libgit2/libgit2.a; sourceTree = "<group>"; };
+		AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitClone.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE25EE0A29FA078100D8FA5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE256CAA2A0393C1006CF9A5 /* libgit2.a in Frameworks */,
+				AE25EF3429FA140700D8FA5B /* libiconv.2.4.0.tbd in Frameworks */,
+				AE3695E12A04D00900C3CB2A /* ComposableArchitecture in Frameworks */,
+				AE25EF3329FA13FE00D8FA5B /* libz.1.1.3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE25EE1F29FA07BB00D8FA5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE256CA92A0393A7006CF9A5 /* libgit2.a in Frameworks */,
+				AE25EF2F29FA0B5C00D8FA5B /* libz.1.1.3.tbd in Frameworks */,
+				AE3695E32A04D01900C3CB2A /* ComposableArchitecture in Frameworks */,
+				AE25EF2B29FA09FA00D8FA5B /* libiconv.2.4.0.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE25EE0429FA078100D8FA5B = {
+			isa = PBXGroup;
+			children = (
+				AE25EE3029FA07C300D8FA5B /* Public */,
+				AE25EE0F29FA078100D8FA5B /* XSGitPro */,
+				AE25EE2329FA07BB00D8FA5B /* GitSimulator */,
+				AE25EE0E29FA078100D8FA5B /* Products */,
+				AE25EF2929FA09F900D8FA5B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE25EE0E29FA078100D8FA5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE25EE0D29FA078100D8FA5B /* XSGitPro.app */,
+				AE25EE2229FA07BB00D8FA5B /* GitSimulator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE25EE0F29FA078100D8FA5B /* XSGitPro */ = {
+			isa = PBXGroup;
+			children = (
+				AE25EE1029FA078100D8FA5B /* XSGitProApp.swift */,
+				AE25EE1429FA078300D8FA5B /* Assets.xcassets */,
+				AE25EE1629FA078300D8FA5B /* Preview Content */,
+			);
+			path = XSGitPro;
+			sourceTree = "<group>";
+		};
+		AE25EE1629FA078300D8FA5B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AE25EE1729FA078300D8FA5B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AE25EE2329FA07BB00D8FA5B /* GitSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				AE25EE2429FA07BB00D8FA5B /* GitSimulatorApp.swift */,
+				AE25EE2829FA07BC00D8FA5B /* Assets.xcassets */,
+				AE25EE2A29FA07BC00D8FA5B /* Preview Content */,
+			);
+			path = GitSimulator;
+			sourceTree = "<group>";
+		};
+		AE25EE2A29FA07BC00D8FA5B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AE25EE2B29FA07BC00D8FA5B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AE25EE3029FA07C300D8FA5B /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				AE25EE3629FA085C00D8FA5B /* Resources */,
+				AE25EE3529FA085900D8FA5B /* SourceCode */,
+				AE25EE3429FA085600D8FA5B /* Lib */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		AE25EE3429FA085600D8FA5B /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				AEB254EB2A0380C60008720F /* ObjectiveGit */,
+				AE74E68A2A02407A007EB388 /* extobjc */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		AE25EE3529FA085900D8FA5B /* SourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				AE25EF2429FA08CE00D8FA5B /* Views */,
+				AE25EF2329FA08CA00D8FA5B /* Tools */,
+			);
+			path = SourceCode;
+			sourceTree = "<group>";
+		};
+		AE25EE3629FA085C00D8FA5B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE2B08222A00B5FE004B9F24 /* Header.h */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AE25EF2329FA08CA00D8FA5B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				AE3696052A04EEAB00C3CB2A /* Git */,
+				AE3695F62A04D66300C3CB2A /* Task */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		AE25EF2429FA08CE00D8FA5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE3990FB2A06322600198AAA /* Repository */,
+				AE3990ED2A05F72700198AAA /* Directory */,
+				AE3990F42A05FD7300198AAA /* Navigation */,
+				AE3695FE2A04EDC600C3CB2A /* Root */,
+				AE3695E42A04D0B900C3CB2A /* Mask */,
+				AE256D962A039A67006CF9A5 /* XS_Git2.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE25EF2929FA09F900D8FA5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEB258902A0390D00008720F /* libgit2.a */,
+				AEB258912A0390EB0008720F /* libgit2.a */,
+				AE25EF2E29FA0B5C00D8FA5B /* libz.1.1.3.tbd */,
+				AE25EF2A29FA09FA00D8FA5B /* libiconv.2.4.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE3695E42A04D0B900C3CB2A /* Mask */ = {
+			isa = PBXGroup;
+			children = (
+				AE3695E72A04D0F500C3CB2A /* Toast */,
+				AE3695E62A04D0F000C3CB2A /* Activity */,
+				AE3695E52A04D0ED00C3CB2A /* Mask */,
+			);
+			path = Mask;
+			sourceTree = "<group>";
+		};
+		AE3695E52A04D0ED00C3CB2A /* Mask */ = {
+			isa = PBXGroup;
+			children = (
+				AE3695E82A04D11200C3CB2A /* XS_Mask.swift */,
+				AE3695EA2A04D12F00C3CB2A /* XS_MaskModifier.swift */,
+			);
+			path = Mask;
+			sourceTree = "<group>";
+		};
+		AE3695E62A04D0F000C3CB2A /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				AE3695EC2A04D19D00C3CB2A /* XS_Activity.swift */,
+				AE3695EE2A04D1A500C3CB2A /* XS_ActivityView.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		AE3695E72A04D0F500C3CB2A /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				AE3695F42A04D5DD00C3CB2A /* XS_Toast.swift */,
+				AE3695F92A04D75000C3CB2A /* XS_ToastView.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		AE3695F62A04D66300C3CB2A /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				AE3695F72A04D6A200C3CB2A /* XS_Task.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		AE3695FE2A04EDC600C3CB2A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				AE3695FF2A04EDD900C3CB2A /* XS_Root.swift */,
+				AE3696022A04EDE800C3CB2A /* XS_RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		AE3696052A04EEAB00C3CB2A /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				AE3696062A04EEBD00C3CB2A /* XS_Git.swift */,
+				AE3696092A04EFB900C3CB2A /* XS_GitDirectory.swift */,
+				AE3991022A06453900198AAA /* XS_GitFile.swift */,
+				AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */,
+			);
+			path = Git;
+			sourceTree = "<group>";
+		};
+		AE3990ED2A05F72700198AAA /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				AE3990EE2A05F73C00198AAA /* XS_Directory.swift */,
+				AE3990F02A05F74B00198AAA /* XS_DirectoryView.swift */,
+			);
+			path = Directory;
+			sourceTree = "<group>";
+		};
+		AE3990F42A05FD7300198AAA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AE3990F52A05FD9400198AAA /* XS_Nav.swift */,
+				AE3990F72A05FDA300198AAA /* XS_NavView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		AE3990FB2A06322600198AAA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AE3990FC2A06367300198AAA /* XS_Repository.swift */,
+				AE3990FE2A0636AE00198AAA /* XS_RepositoryView.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		AE74E68A2A02407A007EB388 /* extobjc */ = {
+			isa = PBXGroup;
+			children = (
+				AE74E68B2A02407A007EB388 /* metamacros.h */,
+				AE74E68C2A02407A007EB388 /* EXTScope.m */,
+				AE74E68D2A02407A007EB388 /* EXTScope.h */,
+			);
+			path = extobjc;
+			sourceTree = "<group>";
+		};
+		AEB254EB2A0380C60008720F /* ObjectiveGit */ = {
+			isa = PBXGroup;
+			children = (
+				AEB255372A0380C60008720F /* ObjectiveGit.h */,
+				AEB254F72A0380C60008720F /* ObjectiveGit.m */,
+				AEB2554A2A0380C60008720F /* Categories */,
+				AEB255422A0380C60008720F /* GTRepository.h */,
+				AEB2552C2A0380C60008720F /* GTRepository+Private.h */,
+				AEB255092A0380C60008720F /* GTRepository.m */,
+				AEB2555C2A0380C60008720F /* GTRepository+Status.h */,
+				AEB255162A0380C60008720F /* GTRepository+Status.m */,
+				AEB255052A0380C60008720F /* GTRepository+Reset.h */,
+				AEB255482A0380C60008720F /* GTRepository+Reset.m */,
+				AEB254F22A0380C60008720F /* GTStatusDelta.h */,
+				AEB255252A0380C60008720F /* GTStatusDelta.m */,
+				AEB255562A0380C60008720F /* GTRepository+Stashing.h */,
+				AEB2551E2A0380C60008720F /* GTRepository+Stashing.m */,
+				AEB2550A2A0380C60008720F /* GTRepository+Committing.h */,
+				AEB255412A0380C60008720F /* GTRepository+Committing.m */,
+				AEB255582A0380C60008720F /* GTRepository+Pull.h */,
+				AEB2551B2A0380C60008720F /* GTRepository+Pull.m */,
+				AEB2553D2A0380C60008720F /* GTRepository+RemoteOperations.h */,
+				AEB255102A0380C60008720F /* GTRepository+RemoteOperations.m */,
+				AEB2553A2A0380C60008720F /* GTRepository+References.h */,
+				AEB255122A0380C60008720F /* GTRepository+References.m */,
+				AEB254FB2A0380C60008720F /* GTRepository+Merging.h */,
+				AEB255322A0380C60008720F /* GTRepository+Merging.m */,
+				AEB255552A0380C60008720F /* GTEnumerator.h */,
+				AEB2551D2A0380C60008720F /* GTEnumerator.m */,
+				AEB255352A0380C60008720F /* GTObject.h */,
+				AEB254FA2A0380C60008720F /* GTObject.m */,
+				AEB2555E2A0380C60008720F /* GTCommit.h */,
+				AEB255152A0380C60008720F /* GTCommit.m */,
+				AEB2552E2A0380C60008720F /* GTSignature.h */,
+				AEB255012A0380C60008720F /* GTSignature.m */,
+				AEB255202A0380C60008720F /* GTBlob.h */,
+				AEB254F62A0380C60008720F /* GTBlob.m */,
+				AEB255302A0380C60008720F /* GTTree.h */,
+				AEB254FE2A0380C60008720F /* GTTree.m */,
+				AEB255182A0380C60008720F /* GTTreeEntry.h */,
+				AEB2555B2A0380C60008720F /* GTTreeEntry.m */,
+				AEB2553B2A0380C60008720F /* GTTreeBuilder.h */,
+				AEB2550E2A0380C60008720F /* GTTreeBuilder.m */,
+				AEB255002A0380C60008720F /* GTNote.h */,
+				AEB2552D2A0380C60008720F /* GTNote.m */,
+				AEB255032A0380C60008720F /* GTTag.h */,
+				AEB255462A0380C60008720F /* GTTag.m */,
+				AEB254F52A0380C60008720F /* GTIndex.h */,
+				AEB255212A0380C60008720F /* GTIndex.m */,
+				AEB255242A0380C60008720F /* GTIndexEntry.h */,
+				AEB254F12A0380C60008720F /* GTIndexEntry.m */,
+				AEB2551A2A0380C60008720F /* GTReference.h */,
+				AEB2555A2A0380C60008720F /* GTReference.m */,
+				AEB254FF2A0380C60008720F /* GTBranch.h */,
+				AEB2552F2A0380C60008720F /* GTBranch.m */,
+				AEB254EE2A0380C60008720F /* GTObjectDatabase.h */,
+				AEB255292A0380C60008720F /* GTObjectDatabase.m */,
+				AEB255442A0380C60008720F /* GTOdbObject.h */,
+				AEB255072A0380C60008720F /* GTOdbObject.m */,
+				AEB2552A2A0380C60008720F /* GTConfiguration.h */,
+				AEB255332A0380C60008720F /* GTConfiguration+Private.h */,
+				AEB254EC2A0380C60008720F /* GTConfiguration.m */,
+				AEB255262A0380C60008720F /* GTRemote.h */,
+				AEB254F02A0380C60008720F /* GTRemote.m */,
+				AEB255CB2A0387EB0008720F /* Diff */,
+				AEB255362A0380C60008720F /* GTRepository+Blame.h */,
+				AEB254F82A0380C60008720F /* GTRepository+Blame.m */,
+				AEB254EF2A0380C60008720F /* GTBlame.h */,
+				AEB255282A0380C60008720F /* GTBlame.m */,
+				AEB255142A0380C60008720F /* GTBlameHunk.h */,
+				AEB255382A0380C60008720F /* GTBlameHunk.m */,
+				AEB255222A0380C60008720F /* GTReflog.h */,
+				AEB2550C2A0380C60008720F /* GTReflog+Private.h */,
+				AEB254F42A0380C60008720F /* GTReflog.m */,
+				AEB2550D2A0380C60008720F /* GTReflogEntry.h */,
+				AEB254FD2A0380C60008720F /* GTReflogEntry+Private.h */,
+				AEB2553F2A0380C60008720F /* GTReflogEntry.m */,
+				AEB255192A0380C60008720F /* GTOID.h */,
+				AEB255592A0380C60008720F /* GTOID.m */,
+				AEB2555D2A0380C60008720F /* GTSubmodule.h */,
+				AEB255172A0380C60008720F /* GTSubmodule.m */,
+				AEB254F92A0380C60008720F /* GTCredential.h */,
+				AEB254ED2A0380C60008720F /* GTCredential+Private.h */,
+				AEB255342A0380C60008720F /* GTCredential.m */,
+				AEB255572A0380C60008720F /* GTFilter.h */,
+				AEB2551C2A0380C60008720F /* GTFilter.m */,
+				AEB255492A0380C60008720F /* GTFilterSource.h */,
+				AEB2551F2A0380C60008720F /* GTFilterSource.m */,
+				AEB2552B2A0380C60008720F /* GTFilterList.h */,
+				AEB255022A0380C60008720F /* GTFilterList.m */,
+				AEB2550F2A0380C60008720F /* GTRepository+Attributes.h */,
+				AEB2553C2A0380C60008720F /* GTRepository+Attributes.m */,
+				AEB2550B2A0380C60008720F /* GTFetchHeadEntry.h */,
+				AEB255402A0380C60008720F /* GTFetchHeadEntry.m */,
+				AEB255042A0380C60008720F /* GTCheckoutOptions.h */,
+				AEB255472A0380C60008720F /* GTCheckoutOptions.m */,
+			);
+			path = ObjectiveGit;
+			sourceTree = "<group>";
+		};
+		AEB2554A2A0380C60008720F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AEB255532A0380C60008720F /* NSData+Git.h */,
+				AEB2554E2A0380C60008720F /* NSData+Git.m */,
+				AEB255512A0380C60008720F /* NSError+Git.h */,
+				AEB2554B2A0380C60008720F /* NSError+Git.m */,
+				AEB2554F2A0380C60008720F /* NSString+Git.h */,
+				AEB255542A0380C60008720F /* NSString+Git.m */,
+				AEB2554D2A0380C60008720F /* NSDate+GTTimeAdditions.h */,
+				AEB255522A0380C60008720F /* NSDate+GTTimeAdditions.m */,
+				AEB255502A0380C60008720F /* NSArray+StringArray.h */,
+				AEB2554C2A0380C60008720F /* NSArray+StringArray.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		AEB255CB2A0387EB0008720F /* Diff */ = {
+			isa = PBXGroup;
+			children = (
+				AEB255112A0380C60008720F /* GTDiff.h */,
+				AEB255272A0380C60008720F /* GTDiff+Private.h */,
+				AEB2553E2A0380C60008720F /* GTDiff.m */,
+				AEB255082A0380C60008720F /* GTDiffFile.h */,
+				AEB255432A0380C60008720F /* GTDiffFile.m */,
+				AEB255232A0380C60008720F /* GTDiffHunk.h */,
+				AEB254F32A0380C60008720F /* GTDiffHunk.m */,
+				AEB255312A0380C60008720F /* GTDiffDelta.h */,
+				AEB254FC2A0380C60008720F /* GTDiffDelta.m */,
+				AEB255452A0380C60008720F /* GTDiffLine.h */,
+				AEB255062A0380C60008720F /* GTDiffLine.m */,
+				AEB255132A0380C60008720F /* GTDiffPatch.h */,
+				AEB255392A0380C60008720F /* GTDiffPatch.m */,
+			);
+			name = Diff;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE25EE0C29FA078100D8FA5B /* XSGitPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE25EE1B29FA078300D8FA5B /* Build configuration list for PBXNativeTarget "XSGitPro" */;
+			buildPhases = (
+				AE25EE0929FA078100D8FA5B /* Sources */,
+				AE25EE0A29FA078100D8FA5B /* Frameworks */,
+				AE25EE0B29FA078100D8FA5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XSGitPro;
+			packageProductDependencies = (
+				AE3695E02A04D00900C3CB2A /* ComposableArchitecture */,
+			);
+			productName = XSGitPro;
+			productReference = AE25EE0D29FA078100D8FA5B /* XSGitPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE25EE2129FA07BB00D8FA5B /* GitSimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE25EE2D29FA07BC00D8FA5B /* Build configuration list for PBXNativeTarget "GitSimulator" */;
+			buildPhases = (
+				AE25EE1E29FA07BB00D8FA5B /* Sources */,
+				AE25EE1F29FA07BB00D8FA5B /* Frameworks */,
+				AE25EE2029FA07BB00D8FA5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitSimulator;
+			packageProductDependencies = (
+				AE3695E22A04D01900C3CB2A /* ComposableArchitecture */,
+			);
+			productName = GitSimulator;
+			productReference = AE25EE2229FA07BB00D8FA5B /* GitSimulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE25EE0529FA078100D8FA5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					AE25EE0C29FA078100D8FA5B = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					AE25EE2129FA07BB00D8FA5B = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = AE25EE0829FA078100D8FA5B /* Build configuration list for PBXProject "XSGitPro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE25EE0429FA078100D8FA5B;
+			packageReferences = (
+				AE3695DF2A04D00900C3CB2A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = AE25EE0E29FA078100D8FA5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE25EE0C29FA078100D8FA5B /* XSGitPro */,
+				AE25EE2129FA07BB00D8FA5B /* GitSimulator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE25EE0B29FA078100D8FA5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE25EE1829FA078300D8FA5B /* Preview Assets.xcassets in Resources */,
+				AE25EE1529FA078300D8FA5B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE25EE2029FA07BB00D8FA5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE25EE2C29FA07BC00D8FA5B /* Preview Assets.xcassets in Resources */,
+				AE25EE2929FA07BC00D8FA5B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE25EE0929FA078100D8FA5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3991032A06453900198AAA /* XS_GitFile.swift in Sources */,
+				AEB255A52A0380C70008720F /* GTBlameHunk.m in Sources */,
+				AEB2557F2A0380C70008720F /* GTTreeBuilder.m in Sources */,
+				AEB255692A0380C70008720F /* GTBlob.m in Sources */,
+				AEB255872A0380C70008720F /* GTRepository+Status.m in Sources */,
+				AEB255BD2A0380C70008720F /* NSArray+StringArray.m in Sources */,
+				AE3696072A04EEBD00C3CB2A /* XS_Git.swift in Sources */,
+				AEE39E932A089C9100F6D0B6 /* XS_GitClone.swift in Sources */,
+				AE3695F82A04D6A200C3CB2A /* XS_Task.swift in Sources */,
+				AEB255A92A0380C70008720F /* GTRepository+Attributes.m in Sources */,
+				AEB255B52A0380C70008720F /* GTTag.m in Sources */,
+				AE3695FA2A04D75000C3CB2A /* XS_ToastView.swift in Sources */,
+				AEB255BB2A0380C70008720F /* NSError+Git.m in Sources */,
+				AEB255A12A0380C70008720F /* GTRepository+Merging.m in Sources */,
+				AEB255932A0380C70008720F /* GTFilterSource.m in Sources */,
+				AEB255C72A0380C70008720F /* GTReference.m in Sources */,
+				AE3990F12A05F74B00198AAA /* XS_DirectoryView.swift in Sources */,
+				AEB2557D2A0380C70008720F /* GTRepository.m in Sources */,
+				AEB255612A0380C60008720F /* GTRemote.m in Sources */,
+				AE3990F82A05FDA300198AAA /* XS_NavView.swift in Sources */,
+				AEB2559F2A0380C70008720F /* GTBranch.m in Sources */,
+				AEB255B72A0380C70008720F /* GTCheckoutOptions.m in Sources */,
+				AE74E68E2A02407A007EB388 /* EXTScope.m in Sources */,
+				AEB255B32A0380C70008720F /* GTDiffFile.m in Sources */,
+				AEB2556F2A0380C70008720F /* GTObject.m in Sources */,
+				AEB255892A0380C70008720F /* GTSubmodule.m in Sources */,
+				AEB255632A0380C60008720F /* GTIndexEntry.m in Sources */,
+				AE3695EF2A04D1A500C3CB2A /* XS_ActivityView.swift in Sources */,
+				AE3695E92A04D11200C3CB2A /* XS_Mask.swift in Sources */,
+				AEB255AF2A0380C70008720F /* GTFetchHeadEntry.m in Sources */,
+				AEB2556B2A0380C70008720F /* ObjectiveGit.m in Sources */,
+				AEB255992A0380C70008720F /* GTBlame.m in Sources */,
+				AE3990FD2A06367300198AAA /* XS_Repository.swift in Sources */,
+				AEB255C32A0380C70008720F /* NSString+Git.m in Sources */,
+				AEB2559B2A0380C70008720F /* GTObjectDatabase.m in Sources */,
+				AEB255772A0380C70008720F /* GTFilterList.m in Sources */,
+				AEB2556D2A0380C70008720F /* GTRepository+Blame.m in Sources */,
+				AEB2559D2A0380C70008720F /* GTNote.m in Sources */,
+				AE256D972A039A67006CF9A5 /* XS_Git2.swift in Sources */,
+				AEB255A72A0380C70008720F /* GTDiffPatch.m in Sources */,
+				AEB255A32A0380C70008720F /* GTCredential.m in Sources */,
+				AEB2558B2A0380C70008720F /* GTRepository+Pull.m in Sources */,
+				AEB255B12A0380C70008720F /* GTRepository+Committing.m in Sources */,
+				AEB255912A0380C70008720F /* GTRepository+Stashing.m in Sources */,
+				AEB255752A0380C70008720F /* GTSignature.m in Sources */,
+				AE3695F52A04D5DD00C3CB2A /* XS_Toast.swift in Sources */,
+				AE3696032A04EDE800C3CB2A /* XS_RootView.swift in Sources */,
+				AE3990FF2A0636AE00198AAA /* XS_RepositoryView.swift in Sources */,
+				AE25EE1129FA078100D8FA5B /* XSGitProApp.swift in Sources */,
+				AE3990EF2A05F73C00198AAA /* XS_Directory.swift in Sources */,
+				AEB2555F2A0380C60008720F /* GTConfiguration.m in Sources */,
+				AEB255972A0380C70008720F /* GTStatusDelta.m in Sources */,
+				AEB255C52A0380C70008720F /* GTOID.m in Sources */,
+				AE3695EB2A04D12F00C3CB2A /* XS_MaskModifier.swift in Sources */,
+				AEB255652A0380C60008720F /* GTDiffHunk.m in Sources */,
+				AEB2558D2A0380C70008720F /* GTFilter.m in Sources */,
+				AEB255712A0380C70008720F /* GTDiffDelta.m in Sources */,
+				AEB255C92A0380C70008720F /* GTTreeEntry.m in Sources */,
+				AE3990F62A05FD9400198AAA /* XS_Nav.swift in Sources */,
+				AEB255792A0380C70008720F /* GTDiffLine.m in Sources */,
+				AEB255732A0380C70008720F /* GTTree.m in Sources */,
+				AEB255832A0380C70008720F /* GTRepository+References.m in Sources */,
+				AEB255AB2A0380C70008720F /* GTDiff.m in Sources */,
+				AE3696002A04EDD900C3CB2A /* XS_Root.swift in Sources */,
+				AEB255C12A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */,
+				AEB255672A0380C70008720F /* GTReflog.m in Sources */,
+				AEB255B92A0380C70008720F /* GTRepository+Reset.m in Sources */,
+				AEB255BF2A0380C70008720F /* NSData+Git.m in Sources */,
+				AEB255852A0380C70008720F /* GTCommit.m in Sources */,
+				AEB2557B2A0380C70008720F /* GTOdbObject.m in Sources */,
+				AEB255AD2A0380C70008720F /* GTReflogEntry.m in Sources */,
+				AE36960A2A04EFB900C3CB2A /* XS_GitDirectory.swift in Sources */,
+				AE3695ED2A04D19D00C3CB2A /* XS_Activity.swift in Sources */,
+				AEB2558F2A0380C70008720F /* GTEnumerator.m in Sources */,
+				AEB255952A0380C70008720F /* GTIndex.m in Sources */,
+				AEB255812A0380C70008720F /* GTRepository+RemoteOperations.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE25EE1E29FA07BB00D8FA5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3991042A06453900198AAA /* XS_GitFile.swift in Sources */,
+				AEB255A62A0380C70008720F /* GTBlameHunk.m in Sources */,
+				AEB255802A0380C70008720F /* GTTreeBuilder.m in Sources */,
+				AEB2556A2A0380C70008720F /* GTBlob.m in Sources */,
+				AE3695F32A04D55F00C3CB2A /* XS_MaskModifier.swift in Sources */,
+				AE3991002A0636AE00198AAA /* XS_RepositoryView.swift in Sources */,
+				AEB255882A0380C70008720F /* GTRepository+Status.m in Sources */,
+				AEE39E942A089C9100F6D0B6 /* XS_GitClone.swift in Sources */,
+				AE3696082A04EEBD00C3CB2A /* XS_Git.swift in Sources */,
+				AEB255BE2A0380C70008720F /* NSArray+StringArray.m in Sources */,
+				AEB255AA2A0380C70008720F /* GTRepository+Attributes.m in Sources */,
+				AEB255B62A0380C70008720F /* GTTag.m in Sources */,
+				AEB255BC2A0380C70008720F /* NSError+Git.m in Sources */,
+				AEB255A22A0380C70008720F /* GTRepository+Merging.m in Sources */,
+				AE3695FD2A04D83D00C3CB2A /* XS_Task.swift in Sources */,
+				AEB255942A0380C70008720F /* GTFilterSource.m in Sources */,
+				AEB255C82A0380C70008720F /* GTReference.m in Sources */,
+				AE3990F32A05F92200198AAA /* XS_DirectoryView.swift in Sources */,
+				AEB2557E2A0380C70008720F /* GTRepository.m in Sources */,
+				AE3695F02A04D55700C3CB2A /* XS_Activity.swift in Sources */,
+				AEB255622A0380C60008720F /* GTRemote.m in Sources */,
+				AE3695F12A04D55A00C3CB2A /* XS_ActivityView.swift in Sources */,
+				AEB255A02A0380C70008720F /* GTBranch.m in Sources */,
+				AEB255B82A0380C70008720F /* GTCheckoutOptions.m in Sources */,
+				AE74E68F2A02407A007EB388 /* EXTScope.m in Sources */,
+				AEB255B42A0380C70008720F /* GTDiffFile.m in Sources */,
+				AEB255702A0380C70008720F /* GTObject.m in Sources */,
+				AEB2558A2A0380C70008720F /* GTSubmodule.m in Sources */,
+				AEB255642A0380C60008720F /* GTIndexEntry.m in Sources */,
+				AEB255B02A0380C70008720F /* GTFetchHeadEntry.m in Sources */,
+				AEB2556C2A0380C70008720F /* ObjectiveGit.m in Sources */,
+				AEB2559A2A0380C70008720F /* GTBlame.m in Sources */,
+				AE3990F92A05FDC800198AAA /* XS_NavView.swift in Sources */,
+				AEB255C42A0380C70008720F /* NSString+Git.m in Sources */,
+				AE3695FB2A04D75000C3CB2A /* XS_ToastView.swift in Sources */,
+				AEB2559C2A0380C70008720F /* GTObjectDatabase.m in Sources */,
+				AEB255782A0380C70008720F /* GTFilterList.m in Sources */,
+				AEB2556E2A0380C70008720F /* GTRepository+Blame.m in Sources */,
+				AEB2559E2A0380C70008720F /* GTNote.m in Sources */,
+				AE256D982A039A67006CF9A5 /* XS_Git2.swift in Sources */,
+				AEB255A82A0380C70008720F /* GTDiffPatch.m in Sources */,
+				AEB255A42A0380C70008720F /* GTCredential.m in Sources */,
+				AE3991012A0636B500198AAA /* XS_Repository.swift in Sources */,
+				AEB2558C2A0380C70008720F /* GTRepository+Pull.m in Sources */,
+				AEB255B22A0380C70008720F /* GTRepository+Committing.m in Sources */,
+				AEB255922A0380C70008720F /* GTRepository+Stashing.m in Sources */,
+				AEB255762A0380C70008720F /* GTSignature.m in Sources */,
+				AE3696042A04EDE800C3CB2A /* XS_RootView.swift in Sources */,
+				AE25EE2529FA07BB00D8FA5B /* GitSimulatorApp.swift in Sources */,
+				AE3990F22A05F91F00198AAA /* XS_Directory.swift in Sources */,
+				AEB255602A0380C60008720F /* GTConfiguration.m in Sources */,
+				AEB255982A0380C70008720F /* GTStatusDelta.m in Sources */,
+				AEB255C62A0380C70008720F /* GTOID.m in Sources */,
+				AEB255662A0380C60008720F /* GTDiffHunk.m in Sources */,
+				AEB2558E2A0380C70008720F /* GTFilter.m in Sources */,
+				AEB255722A0380C70008720F /* GTDiffDelta.m in Sources */,
+				AEB255CA2A0380C70008720F /* GTTreeEntry.m in Sources */,
+				AEB2557A2A0380C70008720F /* GTDiffLine.m in Sources */,
+				AEB255742A0380C70008720F /* GTTree.m in Sources */,
+				AE3990FA2A05FDCB00198AAA /* XS_Nav.swift in Sources */,
+				AEB255842A0380C70008720F /* GTRepository+References.m in Sources */,
+				AEB255AC2A0380C70008720F /* GTDiff.m in Sources */,
+				AEB255C22A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */,
+				AE3696012A04EDD900C3CB2A /* XS_Root.swift in Sources */,
+				AEB255682A0380C70008720F /* GTReflog.m in Sources */,
+				AEB255BA2A0380C70008720F /* GTRepository+Reset.m in Sources */,
+				AE3695F22A04D55C00C3CB2A /* XS_Mask.swift in Sources */,
+				AEB255C02A0380C70008720F /* NSData+Git.m in Sources */,
+				AEB255862A0380C70008720F /* GTCommit.m in Sources */,
+				AEB2557C2A0380C70008720F /* GTOdbObject.m in Sources */,
+				AEB255AE2A0380C70008720F /* GTReflogEntry.m in Sources */,
+				AE36960B2A04EFB900C3CB2A /* XS_GitDirectory.swift in Sources */,
+				AEB255902A0380C70008720F /* GTEnumerator.m in Sources */,
+				AEB255962A0380C70008720F /* GTIndex.m in Sources */,
+				AE3695FC2A04D75600C3CB2A /* XS_Toast.swift in Sources */,
+				AEB255822A0380C70008720F /* GTRepository+RemoteOperations.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AE25EE1929FA078300D8FA5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE25EE1A29FA078300D8FA5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE25EE1C29FA078300D8FA5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"XSGitPro/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/XSGitPro/Libgit2/Headers\"";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XSGitPro/Libgit2",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = xsf.hyz.XSGitPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Public/Resources/Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE25EE1D29FA078300D8FA5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"XSGitPro/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/XSGitPro/Libgit2/Headers\"";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XSGitPro/Libgit2",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = xsf.hyz.XSGitPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Public/Resources/Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE25EE2E29FA07BC00D8FA5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GitSimulator/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/GitSimulator/Libgit2/Headers\"";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GitSimulator/Libgit2",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = xsf.hyz.GitSimulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Public/Resources/Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE25EE2F29FA07BC00D8FA5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GitSimulator/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/GitSimulator/Libgit2/Headers\"";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GitSimulator/Libgit2",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = xsf.hyz.GitSimulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Public/Resources/Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE25EE0829FA078100D8FA5B /* Build configuration list for PBXProject "XSGitPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE25EE1929FA078300D8FA5B /* Debug */,
+				AE25EE1A29FA078300D8FA5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE25EE1B29FA078300D8FA5B /* Build configuration list for PBXNativeTarget "XSGitPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE25EE1C29FA078300D8FA5B /* Debug */,
+				AE25EE1D29FA078300D8FA5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE25EE2D29FA07BC00D8FA5B /* Build configuration list for PBXNativeTarget "GitSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE25EE2E29FA07BC00D8FA5B /* Debug */,
+				AE25EE2F29FA07BC00D8FA5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE3695DF2A04D00900C3CB2A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE3695E02A04D00900C3CB2A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE3695DF2A04D00900C3CB2A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		AE3695E22A04D01900C3CB2A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE3695DF2A04D00900C3CB2A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AE25EE0529FA078100D8FA5B /* Project object */;
+}
