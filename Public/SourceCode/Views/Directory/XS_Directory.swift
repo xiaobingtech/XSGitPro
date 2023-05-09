@@ -91,8 +91,10 @@ struct XS_Directory: ReducerProtocol {
                     }
                     if repo != nil {
                         await send(.update)
-                    } else {
-                        vs.send(.hide)
+                    } else if vs.isShow {
+                        DispatchQueue.main.async {
+                            vs.send(.hide)
+                        }
                     }
                     await send(.clear)
                 }
