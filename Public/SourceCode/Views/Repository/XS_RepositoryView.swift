@@ -45,12 +45,15 @@ struct XS_RepositoryView: View {
 #if DEBUG
 struct XS_RepositoryView_Previews: PreviewProvider {
     static var previews: some View {
-        XS_RepositoryView(
+        let folderURL = URL(fileURLWithPath: "/Users/hanyz/Desktop/GitDemo/GitClones/Files")
+        let repo = try! GTRepository(url: folderURL)
+        return XS_RepositoryView(
             store: .init(
                 initialState: .init(
                     directory: XS_GitDirectory(
                         fileName: "Files",
-                        localURL: URL(fileURLWithPath: "/Users/hanyz/Desktop/GitDemo/GitClones/Files")
+                        localURL: folderURL,
+                        repo: repo
                     ),
                     array: []
                 ),

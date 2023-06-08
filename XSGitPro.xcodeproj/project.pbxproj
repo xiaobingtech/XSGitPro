@@ -61,6 +61,8 @@
 		AE3991042A06453900198AAA /* XS_GitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3991022A06453900198AAA /* XS_GitFile.swift */; };
 		AE74E68E2A02407A007EB388 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AE74E68C2A02407A007EB388 /* EXTScope.m */; };
 		AE74E68F2A02407A007EB388 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AE74E68C2A02407A007EB388 /* EXTScope.m */; };
+		AEB0BE252A31A4B700BA6AAF /* XS_DeleteModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */; };
+		AEB0BE262A31A4F200BA6AAF /* XS_DeleteModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */; };
 		AEB2555F2A0380C60008720F /* GTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254EC2A0380C60008720F /* GTConfiguration.m */; };
 		AEB255602A0380C60008720F /* GTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254EC2A0380C60008720F /* GTConfiguration.m */; };
 		AEB255612A0380C60008720F /* GTRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F02A0380C60008720F /* GTRemote.m */; };
@@ -207,6 +209,7 @@
 		AE74E68B2A02407A007EB388 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		AE74E68C2A02407A007EB388 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
 		AE74E68D2A02407A007EB388 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_DeleteModifier.swift; sourceTree = "<group>"; };
 		AEB254EC2A0380C60008720F /* GTConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTConfiguration.m; sourceTree = "<group>"; };
 		AEB254ED2A0380C60008720F /* GTCredential+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTCredential+Private.h"; sourceTree = "<group>"; };
 		AEB254EE2A0380C60008720F /* GTObjectDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTObjectDatabase.h; sourceTree = "<group>"; };
@@ -430,6 +433,7 @@
 		AE25EE3529FA085900D8FA5B /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				AEB0BE222A31A3E400BA6AAF /* Shared */,
 				AE25EF2429FA08CE00D8FA5B /* Views */,
 				AE25EF2329FA08CA00D8FA5B /* Tools */,
 			);
@@ -460,7 +464,6 @@
 				AE3990ED2A05F72700198AAA /* Directory */,
 				AE3990F42A05FD7300198AAA /* Navigation */,
 				AE3695FE2A04EDC600C3CB2A /* Root */,
-				AE3695E42A04D0B900C3CB2A /* Mask */,
 				AE256D962A039A67006CF9A5 /* XS_Git2.swift */,
 			);
 			path = Views;
@@ -577,6 +580,23 @@
 				AE74E68D2A02407A007EB388 /* EXTScope.h */,
 			);
 			path = extobjc;
+			sourceTree = "<group>";
+		};
+		AEB0BE222A31A3E400BA6AAF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AEB0BE232A31A43800BA6AAF /* Delete */,
+				AE3695E42A04D0B900C3CB2A /* Mask */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AEB0BE232A31A43800BA6AAF /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */,
+			);
+			path = Delete;
 			sourceTree = "<group>";
 		};
 		AEB254EB2A0380C60008720F /* ObjectiveGit */ = {
@@ -883,6 +903,7 @@
 				AEB2558D2A0380C70008720F /* GTFilter.m in Sources */,
 				AEB255712A0380C70008720F /* GTDiffDelta.m in Sources */,
 				AEB255C92A0380C70008720F /* GTTreeEntry.m in Sources */,
+				AEB0BE252A31A4B700BA6AAF /* XS_DeleteModifier.swift in Sources */,
 				AE3990F62A05FD9400198AAA /* XS_Nav.swift in Sources */,
 				AEB255792A0380C70008720F /* GTDiffLine.m in Sources */,
 				AEB255732A0380C70008720F /* GTTree.m in Sources */,
@@ -966,6 +987,7 @@
 				AEB255722A0380C70008720F /* GTDiffDelta.m in Sources */,
 				AEB255CA2A0380C70008720F /* GTTreeEntry.m in Sources */,
 				AEB2557A2A0380C70008720F /* GTDiffLine.m in Sources */,
+				AEB0BE262A31A4F200BA6AAF /* XS_DeleteModifier.swift in Sources */,
 				AEB255742A0380C70008720F /* GTTree.m in Sources */,
 				AE3990FA2A05FDCB00198AAA /* XS_Nav.swift in Sources */,
 				AEB255842A0380C70008720F /* GTRepository+References.m in Sources */,
@@ -1282,7 +1304,7 @@
 			repositoryURL = "git@github.com:pointfreeco/swift-composable-architecture.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.53.2;
+				minimumVersion = 0.54.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

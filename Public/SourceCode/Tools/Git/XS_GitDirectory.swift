@@ -18,13 +18,19 @@ extension URL {
     }
     static var clonesDir: URL? {
         #if DEBUG
-        URL(fileURLWithPath: "/Users/hanyz/Desktop/GitDemo")
-            .appendingPathComponent("GitClones", conformingTo: .directory)
+        let fm = FileManager.default
+        let url = URL(fileURLWithPath: "/Users/hanyz/Desktop/GitDemo/GitClones/")
+        if fm.fileExists(atPath: url.relativePath) {
+            return url
+        } else {
+            return fm
+                .urls(for: .documentDirectory, in: .userDomainMask)
+                .last
+        }
         #else
         FileManager.default
             .urls(for: .documentDirectory, in: .userDomainMask)
-            .last?
-            .appending(component: "GitClones", directoryHint: .isDirectory)
+            .last
         #endif
     }
     static func localURL(_ name: String) -> URL? {
@@ -52,10 +58,7 @@ extension XS_Git {
                         )
                     } catch {
                         debugPrint(error)
-                        return XS_GitDirectory(
-                            fileName: fileName,
-                            localURL: folderURL
-                        )
+                        return nil
                     }
                 } else {
                     return nil
@@ -72,5 +75,14 @@ struct XS_GitDirectory: Equatable, Identifiable, Hashable {
     var id: String { fileName }
     let fileName: String
     let localURL: URL
-    var repo: GTRepository?
+    let repo: GTRepository
+    var branchName: String? {
+        do {
+            let branch = try repo.currentBranch()
+            return branch.name
+        } catch {
+            debugPrint(error)
+            return nil
+        }
+    }
 }
