@@ -9,33 +9,21 @@ import Foundation
 import ComposableArchitecture
 
 extension XS_Git {
-    func clone(_ urlPath: String, progress: @escaping (git_transfer_progress) -> Void) -> GTRepository? {
+    @discardableResult
+    func clone(_ urlPath: String, provider: GTCredentialProvider? = nil, progress: @escaping (git_transfer_progress) -> Void) throws -> GTRepository {
         guard let url = URL(string: urlPath), let localURL = URL.localURL(url.fileName) else {
-            DispatchQueue.main.async {
-                ViewStore(maskStore.scopeToast)
-                    .send(.showToast(msg: "链接错误!"))
-            }
-            return nil
+            throw NSError(domain: "链接错误!", code: -1001)
         }
         if FileManager.default.fileExists(atPath: localURL.relativePath) {
-            DispatchQueue.main.async {
-                ViewStore(maskStore.scopeToast)
-                    .send(.showToast(msg: "文件目录重名!"))
-            }
-            return nil
+            throw NSError(domain: "文件目录重名!", code: -1001)
         }
-        do {
-            _repo = try GTRepository.clone(from: url, toWorkingDirectory: localURL) { pro, stop in
-                progress(pro.pointee)
-            }
-            return _repo
-        } catch {
-            debugPrint(error)
-            DispatchQueue.main.async {
-                ViewStore(maskStore.scopeToast)
-                    .send(.showToast(msg: "克隆失败!"))
-            }
-            return nil
+        var options: [AnyHashable : Any]?
+        if let provider = provider {
+            options = [GTRepositoryCloneOptionsCredentialProvider:provider]
+        }
+        return try GTRepository.clone(from: url, toWorkingDirectory: localURL, options: options) { pro, stop in
+            progress(pro.pointee)
         }
     }
+    
 }

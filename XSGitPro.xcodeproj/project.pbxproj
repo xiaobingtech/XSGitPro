@@ -63,6 +63,10 @@
 		AE74E68F2A02407A007EB388 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AE74E68C2A02407A007EB388 /* EXTScope.m */; };
 		AEB0BE252A31A4B700BA6AAF /* XS_DeleteModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */; };
 		AEB0BE262A31A4F200BA6AAF /* XS_DeleteModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */; };
+		AEB0BE292A31C35600BA6AAF /* XS_Clone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE282A31C35600BA6AAF /* XS_Clone.swift */; };
+		AEB0BE2A2A31C35600BA6AAF /* XS_Clone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE282A31C35600BA6AAF /* XS_Clone.swift */; };
+		AEB0BE2C2A31C36C00BA6AAF /* XS_CloneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE2B2A31C36C00BA6AAF /* XS_CloneView.swift */; };
+		AEB0BE2D2A31C36C00BA6AAF /* XS_CloneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE2B2A31C36C00BA6AAF /* XS_CloneView.swift */; };
 		AEB2555F2A0380C60008720F /* GTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254EC2A0380C60008720F /* GTConfiguration.m */; };
 		AEB255602A0380C60008720F /* GTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254EC2A0380C60008720F /* GTConfiguration.m */; };
 		AEB255612A0380C60008720F /* GTRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB254F02A0380C60008720F /* GTRemote.m */; };
@@ -210,6 +214,8 @@
 		AE74E68C2A02407A007EB388 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
 		AE74E68D2A02407A007EB388 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
 		AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_DeleteModifier.swift; sourceTree = "<group>"; };
+		AEB0BE282A31C35600BA6AAF /* XS_Clone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Clone.swift; sourceTree = "<group>"; };
+		AEB0BE2B2A31C36C00BA6AAF /* XS_CloneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_CloneView.swift; sourceTree = "<group>"; };
 		AEB254EC2A0380C60008720F /* GTConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTConfiguration.m; sourceTree = "<group>"; };
 		AEB254ED2A0380C60008720F /* GTCredential+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTCredential+Private.h"; sourceTree = "<group>"; };
 		AEB254EE2A0380C60008720F /* GTObjectDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTObjectDatabase.h; sourceTree = "<group>"; };
@@ -460,6 +466,7 @@
 		AE25EF2429FA08CE00D8FA5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AEB0BE272A31C2CF00BA6AAF /* Clone */,
 				AE3990FB2A06322600198AAA /* Repository */,
 				AE3990ED2A05F72700198AAA /* Directory */,
 				AE3990F42A05FD7300198AAA /* Navigation */,
@@ -597,6 +604,15 @@
 				AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */,
 			);
 			path = Delete;
+			sourceTree = "<group>";
+		};
+		AEB0BE272A31C2CF00BA6AAF /* Clone */ = {
+			isa = PBXGroup;
+			children = (
+				AEB0BE282A31C35600BA6AAF /* XS_Clone.swift */,
+				AEB0BE2B2A31C36C00BA6AAF /* XS_CloneView.swift */,
+			);
+			path = Clone;
 			sourceTree = "<group>";
 		};
 		AEB254EB2A0380C60008720F /* ObjectiveGit */ = {
@@ -895,6 +911,7 @@
 				AE3990FF2A0636AE00198AAA /* XS_RepositoryView.swift in Sources */,
 				AE25EE1129FA078100D8FA5B /* XSGitProApp.swift in Sources */,
 				AE3990EF2A05F73C00198AAA /* XS_Directory.swift in Sources */,
+				AEB0BE2C2A31C36C00BA6AAF /* XS_CloneView.swift in Sources */,
 				AEB2555F2A0380C60008720F /* GTConfiguration.m in Sources */,
 				AEB255972A0380C70008720F /* GTStatusDelta.m in Sources */,
 				AEB255C52A0380C70008720F /* GTOID.m in Sources */,
@@ -909,6 +926,7 @@
 				AEB255732A0380C70008720F /* GTTree.m in Sources */,
 				AEB255832A0380C70008720F /* GTRepository+References.m in Sources */,
 				AEB255AB2A0380C70008720F /* GTDiff.m in Sources */,
+				AEB0BE292A31C35600BA6AAF /* XS_Clone.swift in Sources */,
 				AE3696002A04EDD900C3CB2A /* XS_Root.swift in Sources */,
 				AEB255C12A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */,
 				AEB255672A0380C70008720F /* GTReflog.m in Sources */,
@@ -979,6 +997,7 @@
 				AE3696042A04EDE800C3CB2A /* XS_RootView.swift in Sources */,
 				AE25EE2529FA07BB00D8FA5B /* GitSimulatorApp.swift in Sources */,
 				AE3990F22A05F91F00198AAA /* XS_Directory.swift in Sources */,
+				AEB0BE2D2A31C36C00BA6AAF /* XS_CloneView.swift in Sources */,
 				AEB255602A0380C60008720F /* GTConfiguration.m in Sources */,
 				AEB255982A0380C70008720F /* GTStatusDelta.m in Sources */,
 				AEB255C62A0380C70008720F /* GTOID.m in Sources */,
@@ -993,6 +1012,7 @@
 				AEB255842A0380C70008720F /* GTRepository+References.m in Sources */,
 				AEB255AC2A0380C70008720F /* GTDiff.m in Sources */,
 				AEB255C22A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */,
+				AEB0BE2A2A31C35600BA6AAF /* XS_Clone.swift in Sources */,
 				AE3696012A04EDD900C3CB2A /* XS_Root.swift in Sources */,
 				AEB255682A0380C70008720F /* GTReflog.m in Sources */,
 				AEB255BA2A0380C70008720F /* GTRepository+Reset.m in Sources */,

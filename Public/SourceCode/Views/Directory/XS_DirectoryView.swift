@@ -13,11 +13,23 @@ struct XS_DirectoryView: View {
     var body: some View {
         _list
             .navigationTitle("所有仓库")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        ViewStore(store).send(.onAdd)
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(store: store.scopeClone) { store in
+                XS_CloneView(store: store)
+            }
     }
     private var _list: some View {
         WithViewStore(store, observe: \.list) { vs in
             ScrollView {
-                VStack(spacing: 0) {
+                VStackLayout(spacing: 0) {
                     ForEach(vs.state) { item in
                         VStack(alignment: .leading) {
                             Text(item.fileName)
@@ -28,12 +40,12 @@ struct XS_DirectoryView: View {
                             Divider()
                         }
                         .padding(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
                         .xsDelete {
                             vs.send(.delete(item), animation: .default)
                         }
                     }
                 }
+                .frame(maxWidth: .infinity)
                 .padding(.vertical, 15)
             }
         }
