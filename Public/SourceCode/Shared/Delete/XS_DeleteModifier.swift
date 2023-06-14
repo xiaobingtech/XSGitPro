@@ -27,24 +27,24 @@ struct XS_DeleteModifier: ViewModifier {
     private let buttonWidth: CGFloat = 60
     
     func body(content: Content) -> some View {
-        ZStack {
-            Color.red
-                .onTapGesture {
-                    currentOffset = -screenWidth
-                    isPresented = true
-                }
-            HStack(spacing: 0) {
-                content
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.white)
+        HStack(spacing: 0) {
+            content
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            ZStack(alignment: .leading) {
+                Color.red
+                    .frame(width: screenWidth)
                 Image(systemName: "trash.fill")
                     .foregroundColor(.white)
                     .frame(width: buttonWidth)
-                    .frame(width: 0, alignment: .leading)
             }
-            .offset(x: offset)
-            .animation(.spring(response: 1, dampingFraction: 1), value: offset)
+            .frame(width: 0, alignment: .leading)
+            .onTapGesture {
+                currentOffset = -screenWidth
+                isPresented = true
+            }
         }
+        .offset(x: offset)
+        .animation(.spring(response: 1, dampingFraction: 1), value: offset)
         .clipped()
         .gesture(dragGesture)
         .confirmationDialog("是否删除?", isPresented: $isPresented) {

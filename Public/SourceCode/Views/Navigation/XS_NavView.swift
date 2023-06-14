@@ -23,18 +23,13 @@ private struct _NavDestination: ViewModifier {
     func body(content: Content) -> some View {
         content.navigationDestination(for: XS_NavPathItem.self) { item in
             switch item {
-            case let .repository(directory, array, title, index):
-                XS_RepositoryView(
-                    store: .init(
-                        initialState: .init(
-                            directory: directory,
-                            array: XS_Git.shared.files(array, title: title, index: index)
-                        ),
-                        reducer: XS_Repository()
-                    ),
-                    index: index
+            case let .files(files, key, title):
+                XS_FilesView(
+                    store: .init(initialState: .init(files: files, key: key)) {
+                        XS_Files()
+                    }
                 )
-                .navigationTitle(title.isEmpty ? directory.fileName : title)
+                .navigationTitle(title)
             default: EmptyView()
             }
         }

@@ -31,17 +31,22 @@ struct XS_DirectoryView: View {
             ScrollView {
                 VStackLayout(spacing: 0) {
                     ForEach(vs.state) { item in
-                        VStack(alignment: .leading) {
-                            Text(item.fileName)
-                            if let name = item.branchName {
-                                Text(name)
-                                    .font(.footnote)
+                        NavigationLink(value: XS_NavPathItem.files(XS_Git.shared.files(item.repo), "", item.fileName)) {
+                            VStack(spacing: 0) {
+                                VStack(alignment: .leading) {
+                                    Text(item.fileName)
+                                    if let name = item.branchName {
+                                        Text(name)
+                                            .font(.footnote)
+                                    }
+                                }
+                                .frame(maxWidth: .infinity, minHeight: 50, alignment: .leading)
+                                Divider()
                             }
-                            Divider()
-                        }
-                        .padding(.leading)
-                        .xsDelete {
-                            vs.send(.delete(item), animation: .default)
+                            .padding(.leading)
+                            .xsDelete {
+                                vs.send(.delete(item), animation: .default)
+                            }
                         }
                     }
                 }

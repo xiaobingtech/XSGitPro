@@ -53,14 +53,14 @@
 		AE3990F82A05FDA300198AAA /* XS_NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990F72A05FDA300198AAA /* XS_NavView.swift */; };
 		AE3990F92A05FDC800198AAA /* XS_NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990F72A05FDA300198AAA /* XS_NavView.swift */; };
 		AE3990FA2A05FDCB00198AAA /* XS_Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990F52A05FD9400198AAA /* XS_Nav.swift */; };
-		AE3990FD2A06367300198AAA /* XS_Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990FC2A06367300198AAA /* XS_Repository.swift */; };
-		AE3990FF2A0636AE00198AAA /* XS_RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990FE2A0636AE00198AAA /* XS_RepositoryView.swift */; };
-		AE3991002A0636AE00198AAA /* XS_RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990FE2A0636AE00198AAA /* XS_RepositoryView.swift */; };
-		AE3991012A0636B500198AAA /* XS_Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990FC2A06367300198AAA /* XS_Repository.swift */; };
 		AE3991032A06453900198AAA /* XS_GitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3991022A06453900198AAA /* XS_GitFile.swift */; };
 		AE3991042A06453900198AAA /* XS_GitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3991022A06453900198AAA /* XS_GitFile.swift */; };
 		AE74E68E2A02407A007EB388 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AE74E68C2A02407A007EB388 /* EXTScope.m */; };
 		AE74E68F2A02407A007EB388 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AE74E68C2A02407A007EB388 /* EXTScope.m */; };
+		AEAE712C2A39961C0089E96D /* XS_Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE712B2A39961C0089E96D /* XS_Files.swift */; };
+		AEAE712D2A3996270089E96D /* XS_Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE712B2A39961C0089E96D /* XS_Files.swift */; };
+		AEAE712F2A39963B0089E96D /* XS_FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE712E2A39963B0089E96D /* XS_FilesView.swift */; };
+		AEAE71302A39963B0089E96D /* XS_FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE712E2A39963B0089E96D /* XS_FilesView.swift */; };
 		AEB0BE252A31A4B700BA6AAF /* XS_DeleteModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */; };
 		AEB0BE262A31A4F200BA6AAF /* XS_DeleteModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */; };
 		AEB0BE292A31C35600BA6AAF /* XS_Clone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0BE282A31C35600BA6AAF /* XS_Clone.swift */; };
@@ -207,12 +207,12 @@
 		AE3990F02A05F74B00198AAA /* XS_DirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_DirectoryView.swift; sourceTree = "<group>"; };
 		AE3990F52A05FD9400198AAA /* XS_Nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Nav.swift; sourceTree = "<group>"; };
 		AE3990F72A05FDA300198AAA /* XS_NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_NavView.swift; sourceTree = "<group>"; };
-		AE3990FC2A06367300198AAA /* XS_Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Repository.swift; sourceTree = "<group>"; };
-		AE3990FE2A0636AE00198AAA /* XS_RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_RepositoryView.swift; sourceTree = "<group>"; };
 		AE3991022A06453900198AAA /* XS_GitFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitFile.swift; sourceTree = "<group>"; };
 		AE74E68B2A02407A007EB388 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		AE74E68C2A02407A007EB388 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
 		AE74E68D2A02407A007EB388 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		AEAE712B2A39961C0089E96D /* XS_Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Files.swift; sourceTree = "<group>"; };
+		AEAE712E2A39963B0089E96D /* XS_FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_FilesView.swift; sourceTree = "<group>"; };
 		AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_DeleteModifier.swift; sourceTree = "<group>"; };
 		AEB0BE282A31C35600BA6AAF /* XS_Clone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Clone.swift; sourceTree = "<group>"; };
 		AEB0BE2B2A31C36C00BA6AAF /* XS_CloneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_CloneView.swift; sourceTree = "<group>"; };
@@ -466,8 +466,8 @@
 		AE25EF2429FA08CE00D8FA5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AEAE712A2A3995FC0089E96D /* Files */,
 				AEB0BE272A31C2CF00BA6AAF /* Clone */,
-				AE3990FB2A06322600198AAA /* Repository */,
 				AE3990ED2A05F72700198AAA /* Directory */,
 				AE3990F42A05FD7300198AAA /* Navigation */,
 				AE3695FE2A04EDC600C3CB2A /* Root */,
@@ -570,15 +570,6 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		AE3990FB2A06322600198AAA /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				AE3990FC2A06367300198AAA /* XS_Repository.swift */,
-				AE3990FE2A0636AE00198AAA /* XS_RepositoryView.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
 		AE74E68A2A02407A007EB388 /* extobjc */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +578,15 @@
 				AE74E68D2A02407A007EB388 /* EXTScope.h */,
 			);
 			path = extobjc;
+			sourceTree = "<group>";
+		};
+		AEAE712A2A3995FC0089E96D /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEAE712B2A39961C0089E96D /* XS_Files.swift */,
+				AEAE712E2A39963B0089E96D /* XS_FilesView.swift */,
+			);
+			path = Files;
 			sourceTree = "<group>";
 		};
 		AEB0BE222A31A3E400BA6AAF /* Shared */ = {
@@ -893,10 +893,10 @@
 				AEB255AF2A0380C70008720F /* GTFetchHeadEntry.m in Sources */,
 				AEB2556B2A0380C70008720F /* ObjectiveGit.m in Sources */,
 				AEB255992A0380C70008720F /* GTBlame.m in Sources */,
-				AE3990FD2A06367300198AAA /* XS_Repository.swift in Sources */,
 				AEB255C32A0380C70008720F /* NSString+Git.m in Sources */,
 				AEB2559B2A0380C70008720F /* GTObjectDatabase.m in Sources */,
 				AEB255772A0380C70008720F /* GTFilterList.m in Sources */,
+				AEAE712F2A39963B0089E96D /* XS_FilesView.swift in Sources */,
 				AEB2556D2A0380C70008720F /* GTRepository+Blame.m in Sources */,
 				AEB2559D2A0380C70008720F /* GTNote.m in Sources */,
 				AE256D972A039A67006CF9A5 /* XS_Git2.swift in Sources */,
@@ -908,7 +908,6 @@
 				AEB255752A0380C70008720F /* GTSignature.m in Sources */,
 				AE3695F52A04D5DD00C3CB2A /* XS_Toast.swift in Sources */,
 				AE3696032A04EDE800C3CB2A /* XS_RootView.swift in Sources */,
-				AE3990FF2A0636AE00198AAA /* XS_RepositoryView.swift in Sources */,
 				AE25EE1129FA078100D8FA5B /* XSGitProApp.swift in Sources */,
 				AE3990EF2A05F73C00198AAA /* XS_Directory.swift in Sources */,
 				AEB0BE2C2A31C36C00BA6AAF /* XS_CloneView.swift in Sources */,
@@ -929,6 +928,7 @@
 				AEB0BE292A31C35600BA6AAF /* XS_Clone.swift in Sources */,
 				AE3696002A04EDD900C3CB2A /* XS_Root.swift in Sources */,
 				AEB255C12A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */,
+				AEAE712C2A39961C0089E96D /* XS_Files.swift in Sources */,
 				AEB255672A0380C70008720F /* GTReflog.m in Sources */,
 				AEB255B92A0380C70008720F /* GTRepository+Reset.m in Sources */,
 				AEB255BF2A0380C70008720F /* NSData+Git.m in Sources */,
@@ -952,7 +952,6 @@
 				AEB255802A0380C70008720F /* GTTreeBuilder.m in Sources */,
 				AEB2556A2A0380C70008720F /* GTBlob.m in Sources */,
 				AE3695F32A04D55F00C3CB2A /* XS_MaskModifier.swift in Sources */,
-				AE3991002A0636AE00198AAA /* XS_RepositoryView.swift in Sources */,
 				AEB255882A0380C70008720F /* GTRepository+Status.m in Sources */,
 				AEE39E942A089C9100F6D0B6 /* XS_GitClone.swift in Sources */,
 				AE3696082A04EEBD00C3CB2A /* XS_Git.swift in Sources */,
@@ -983,13 +982,13 @@
 				AEB255C42A0380C70008720F /* NSString+Git.m in Sources */,
 				AE3695FB2A04D75000C3CB2A /* XS_ToastView.swift in Sources */,
 				AEB2559C2A0380C70008720F /* GTObjectDatabase.m in Sources */,
+				AEAE71302A39963B0089E96D /* XS_FilesView.swift in Sources */,
 				AEB255782A0380C70008720F /* GTFilterList.m in Sources */,
 				AEB2556E2A0380C70008720F /* GTRepository+Blame.m in Sources */,
 				AEB2559E2A0380C70008720F /* GTNote.m in Sources */,
 				AE256D982A039A67006CF9A5 /* XS_Git2.swift in Sources */,
 				AEB255A82A0380C70008720F /* GTDiffPatch.m in Sources */,
 				AEB255A42A0380C70008720F /* GTCredential.m in Sources */,
-				AE3991012A0636B500198AAA /* XS_Repository.swift in Sources */,
 				AEB2558C2A0380C70008720F /* GTRepository+Pull.m in Sources */,
 				AEB255B22A0380C70008720F /* GTRepository+Committing.m in Sources */,
 				AEB255922A0380C70008720F /* GTRepository+Stashing.m in Sources */,
@@ -1015,6 +1014,7 @@
 				AEB0BE2A2A31C35600BA6AAF /* XS_Clone.swift in Sources */,
 				AE3696012A04EDD900C3CB2A /* XS_Root.swift in Sources */,
 				AEB255682A0380C70008720F /* GTReflog.m in Sources */,
+				AEAE712D2A3996270089E96D /* XS_Files.swift in Sources */,
 				AEB255BA2A0380C70008720F /* GTRepository+Reset.m in Sources */,
 				AE3695F22A04D55C00C3CB2A /* XS_Mask.swift in Sources */,
 				AEB255C02A0380C70008720F /* NSData+Git.m in Sources */,

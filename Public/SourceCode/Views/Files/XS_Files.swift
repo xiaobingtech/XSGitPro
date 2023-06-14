@@ -1,22 +1,20 @@
 //
-//  XS_Repository.swift
+//  XS_Files.swift
 //  XSGitPro
 //
-//  Created by 韩云智 on 2023/5/6.
+//  Created by 韩云智 on 2023/6/14.
 //
 
 import Foundation
 import ComposableArchitecture
 
-struct XS_Repository: ReducerProtocol {
+struct XS_Files: ReducerProtocol {
     struct State: Equatable {
-        var directory: XS_GitDirectory
-        var array: [XS_GitFile]
+        var files: [String:[XS_GitFile]]
+        var key: String
     }
     enum Action {
     }
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-        switch action {
-        }
     }
 }

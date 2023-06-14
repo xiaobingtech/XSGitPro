@@ -8,35 +8,32 @@
 import Foundation
 
 extension XS_Git {
-    func files(_ repo: GTRepository?) -> [XS_GitFile] {
-        guard let repo = repo else { return [] }
+    func files(_ repo: GTRepository) -> [String:[XS_GitFile]] {
         do {
             let index = try repo.index()
-            return index.entries.compactMap {
-                XS_GitFile(
-                    path: $0.path.components(separatedBy: "/"),
-                    entry: $0
-                )
-            }
-        } catch {
-            debugPrint(error)
-            return []
-        }
-    }
-    func files(_ items: [XS_GitFile], title: String, index: Int) -> [XS_GitFile] {
-        items.filter {
-            if $0.path.count > index {
-                if title.isEmpty || $0.path[index - 1] == title {
-                    return true
+            var dic: [String:[XS_GitFile]] = [:]
+            for entry in index.entries {
+                let path = entry.path.components(separatedBy: "/")
+                for index in 0..<path.count {
+                    let name = path[index]
+                    let key = path.prefix(index).joined(separator: "/")
+                    if dic[key] == nil { dic[key] = [] }
+                    let id = key.isEmpty ? name : key + "/" + name
+                    if !dic[key]!.contains(where: { $0.id == id }) {
+                        dic[key]?.append(XS_GitFile(id: id, name: name, entry: index == path.count-1 ? entry : nil))
+                    }
                 }
             }
-            return false
+            return dic
+        } catch {
+            debugPrint(error)
+            return [:]
         }
     }
 }
 
 struct XS_GitFile: Equatable, Identifiable, Hashable {
-    var id: String { entry.path }
-    var path: [String]
-    var entry: GTIndexEntry
+    let id: String
+    let name: String
+    let entry: GTIndexEntry?
 }
