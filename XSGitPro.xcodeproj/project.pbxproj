@@ -175,6 +175,10 @@
 		AEB255C82A0380C70008720F /* GTReference.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2555A2A0380C60008720F /* GTReference.m */; };
 		AEB255C92A0380C70008720F /* GTTreeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2555B2A0380C60008720F /* GTTreeEntry.m */; };
 		AEB255CA2A0380C70008720F /* GTTreeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB2555B2A0380C60008720F /* GTTreeEntry.m */; };
+		AED330B42A3A9CA30012CBDE /* XS_Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330B32A3A9CA30012CBDE /* XS_Tabbar.swift */; };
+		AED330B52A3A9CA30012CBDE /* XS_Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330B32A3A9CA30012CBDE /* XS_Tabbar.swift */; };
+		AED330B72A3A9CAD0012CBDE /* XS_TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330B62A3A9CAD0012CBDE /* XS_TabbarView.swift */; };
+		AED330B82A3A9CAD0012CBDE /* XS_TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330B62A3A9CAD0012CBDE /* XS_TabbarView.swift */; };
 		AEE39E932A089C9100F6D0B6 /* XS_GitClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */; };
 		AEE39E942A089C9100F6D0B6 /* XS_GitClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */; };
 /* End PBXBuildFile section */
@@ -332,6 +336,8 @@
 		AEB2555E2A0380C60008720F /* GTCommit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCommit.h; sourceTree = "<group>"; };
 		AEB258902A0390D00008720F /* libgit2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgit2.a; path = XSGitPro/Libgit2/libgit2.a; sourceTree = "<group>"; };
 		AEB258912A0390EB0008720F /* libgit2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgit2.a; path = GitSimulator/Libgit2/libgit2.a; sourceTree = "<group>"; };
+		AED330B32A3A9CA30012CBDE /* XS_Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Tabbar.swift; sourceTree = "<group>"; };
+		AED330B62A3A9CAD0012CBDE /* XS_TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_TabbarView.swift; sourceTree = "<group>"; };
 		AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitClone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -467,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				AEAE712A2A3995FC0089E96D /* Files */,
+				AED330B22A3A9C640012CBDE /* Tabbar */,
 				AEB0BE272A31C2CF00BA6AAF /* Clone */,
 				AE3990ED2A05F72700198AAA /* Directory */,
 				AE3990F42A05FD7300198AAA /* Navigation */,
@@ -752,6 +759,15 @@
 			name = Diff;
 			sourceTree = "<group>";
 		};
+		AED330B22A3A9C640012CBDE /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				AED330B32A3A9CA30012CBDE /* XS_Tabbar.swift */,
+				AED330B62A3A9CAD0012CBDE /* XS_TabbarView.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -909,6 +925,7 @@
 				AE3695F52A04D5DD00C3CB2A /* XS_Toast.swift in Sources */,
 				AE3696032A04EDE800C3CB2A /* XS_RootView.swift in Sources */,
 				AE25EE1129FA078100D8FA5B /* XSGitProApp.swift in Sources */,
+				AED330B42A3A9CA30012CBDE /* XS_Tabbar.swift in Sources */,
 				AE3990EF2A05F73C00198AAA /* XS_Directory.swift in Sources */,
 				AEB0BE2C2A31C36C00BA6AAF /* XS_CloneView.swift in Sources */,
 				AEB2555F2A0380C60008720F /* GTConfiguration.m in Sources */,
@@ -929,6 +946,7 @@
 				AE3696002A04EDD900C3CB2A /* XS_Root.swift in Sources */,
 				AEB255C12A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */,
 				AEAE712C2A39961C0089E96D /* XS_Files.swift in Sources */,
+				AED330B72A3A9CAD0012CBDE /* XS_TabbarView.swift in Sources */,
 				AEB255672A0380C70008720F /* GTReflog.m in Sources */,
 				AEB255B92A0380C70008720F /* GTRepository+Reset.m in Sources */,
 				AEB255BF2A0380C70008720F /* NSData+Git.m in Sources */,
@@ -995,6 +1013,7 @@
 				AEB255762A0380C70008720F /* GTSignature.m in Sources */,
 				AE3696042A04EDE800C3CB2A /* XS_RootView.swift in Sources */,
 				AE25EE2529FA07BB00D8FA5B /* GitSimulatorApp.swift in Sources */,
+				AED330B52A3A9CA30012CBDE /* XS_Tabbar.swift in Sources */,
 				AE3990F22A05F91F00198AAA /* XS_Directory.swift in Sources */,
 				AEB0BE2D2A31C36C00BA6AAF /* XS_CloneView.swift in Sources */,
 				AEB255602A0380C60008720F /* GTConfiguration.m in Sources */,
@@ -1015,6 +1034,7 @@
 				AE3696012A04EDD900C3CB2A /* XS_Root.swift in Sources */,
 				AEB255682A0380C70008720F /* GTReflog.m in Sources */,
 				AEAE712D2A3996270089E96D /* XS_Files.swift in Sources */,
+				AED330B82A3A9CAD0012CBDE /* XS_TabbarView.swift in Sources */,
 				AEB255BA2A0380C70008720F /* GTRepository+Reset.m in Sources */,
 				AE3695F22A04D55C00C3CB2A /* XS_Mask.swift in Sources */,
 				AEB255C02A0380C70008720F /* NSData+Git.m in Sources */,

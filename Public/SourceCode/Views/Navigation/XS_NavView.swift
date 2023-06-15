@@ -8,6 +8,12 @@
 import SwiftUI
 import ComposableArchitecture
 
+extension View {
+    func xsFilesNav() -> some View {
+        modifier(_NavFilesView())
+    }
+}
+
 struct XS_NavView: View {
     private let store: StoreOf<XS_Nav> = navStore
     var body: some View {
@@ -19,10 +25,28 @@ struct XS_NavView: View {
         }
     }
 }
+
+private struct _NavFilesView: ViewModifier {
+    private let store: StoreOf<XS_Nav> = navStore
+    func body(content: Content) -> some View {
+        WithViewStore(store, observe: \.files) { vs in
+            NavigationStack(path: vs.binding) {
+                content.modifier(_NavDestination())
+            }
+        }
+    }
+}
 private struct _NavDestination: ViewModifier {
     func body(content: Content) -> some View {
         content.navigationDestination(for: XS_NavPathItem.self) { item in
             switch item {
+            case let .tabbar(value):
+                XS_TabbarView(
+                    directory: value,
+                    store: .init(initialState: .init()) {
+                        XS_Tabbar()
+                    }
+                )
             case let .files(files, key, title):
                 XS_FilesView(
                     store: .init(initialState: .init(files: files, key: key)) {

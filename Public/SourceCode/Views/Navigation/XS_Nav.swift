@@ -9,16 +9,8 @@ import Foundation
 import ComposableArchitecture
 import SwiftUI
 
-extension ViewStore where ViewState == XS_Nav.State, ViewAction == XS_Nav.Action {
-    var binding: Binding<[XS_NavPathItem]> {
-        binding(
-            get: \.path,
-            send: ViewAction.setPath
-        )
-    }
-}
 extension ViewStore where ViewState == [XS_NavPathItem], ViewAction == XS_Nav.Action {
-    var binding: Binding<[XS_NavPathItem]> {
+    var binding: Binding<ViewState> {
         binding(
             send: ViewAction.setPath
         )
@@ -26,20 +18,29 @@ extension ViewStore where ViewState == [XS_NavPathItem], ViewAction == XS_Nav.Ac
 }
 
 enum XS_NavPathItem: Equatable, Hashable {
-    case files([String:[XS_GitFile]], String, String)
+    case tabbar(XS_GitDirectory)
+    case files([String:XS_GitFolder], String, String)
 }
 
 struct XS_Nav: ReducerProtocol {
     struct State: Equatable {
         var path: [XS_NavPathItem] = []
+        var files: [XS_NavPathItem] = []
     }
     enum Action {
         case setPath([XS_NavPathItem])
+        case setFiles([XS_NavPathItem])
     }
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
         case let .setPath(value):
             state.path = value
+            if value.isEmpty {
+                state.files.removeAll()
+            }
+            return .none
+        case let .setFiles(value):
+            state.files = value
             return .none
         }
     }

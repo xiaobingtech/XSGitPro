@@ -9,12 +9,19 @@ import SwiftUI
 
 extension View {
     func xsDelete(_ onDelete: @escaping () -> Void) -> ModifiedContent<Self, XS_DeleteModifier> {
-        modifier(XS_DeleteModifier(onDelete: onDelete))
+        let id = UUID()
+        return modifier(XS_DeleteModifier(onDelete: onDelete, id: id, currentId: .constant(id)))
+    }
+    func xsDelete(_ currentId: Binding<UUID?>, onDelete: @escaping () -> Void) -> ModifiedContent<Self, XS_DeleteModifier> {
+        modifier(XS_DeleteModifier(onDelete: onDelete, id: UUID(), currentId: currentId))
     }
 }
 
 struct XS_DeleteModifier: ViewModifier {
     let onDelete: () -> Void
+    let id: UUID
+    @Binding var currentId: UUID?
+    
     @State private var isPresented: Bool = false
     @State private var dragOffset: CGFloat = .zero
     @State private var currentOffset: CGFloat = .zero
@@ -30,6 +37,7 @@ struct XS_DeleteModifier: ViewModifier {
         HStack(spacing: 0) {
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.white)
             ZStack(alignment: .leading) {
                 Color.red
                     .frame(width: screenWidth)
@@ -55,11 +63,16 @@ struct XS_DeleteModifier: ViewModifier {
                 currentOffset = .zero
             }
         }
+        .onChange(of: currentId) { newValue in
+            if newValue == id { return }
+            currentOffset = .zero
+        }
     }
     
     private var dragGesture: some Gesture {
         DragGesture()
             .onChanged { value in
+                currentId = id
                 if currentOffset + value.translation.width <= 0 {
                     dragOffset = value.translation.width
                 }
@@ -84,7 +97,7 @@ struct XS_DeleteModifier: ViewModifier {
 struct XS_DeleteModifier_Previews: PreviewProvider {
     static var previews: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .modifier(XS_DeleteModifier {} )
+            .xsDelete {}
             .frame(width: UIScreen.main.bounds.size.width, height: 50)
     }
 }

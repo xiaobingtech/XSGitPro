@@ -10,6 +10,7 @@ import ComposableArchitecture
 
 struct XS_DirectoryView: View {
     private let store: StoreOf<XS_Directory> = rootStore.scopeDirectory
+    @State private var deleteId: UUID?
     var body: some View {
         _list
             .navigationTitle("所有仓库")
@@ -31,7 +32,7 @@ struct XS_DirectoryView: View {
             ScrollView {
                 VStackLayout(spacing: 0) {
                     ForEach(vs.state) { item in
-                        NavigationLink(value: XS_NavPathItem.files(XS_Git.shared.files(item.repo), "", item.fileName)) {
+                        NavigationLink(value: XS_NavPathItem.tabbar(item)) {
                             VStack(spacing: 0) {
                                 VStack(alignment: .leading) {
                                     Text(item.fileName)
@@ -44,7 +45,7 @@ struct XS_DirectoryView: View {
                                 Divider()
                             }
                             .padding(.leading)
-                            .xsDelete {
+                            .xsDelete($deleteId) {
                                 vs.send(.delete(item), animation: .default)
                             }
                         }

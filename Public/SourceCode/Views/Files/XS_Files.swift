@@ -10,7 +10,7 @@ import ComposableArchitecture
 
 struct XS_Files: ReducerProtocol {
     struct State: Equatable {
-        var files: [String:[XS_GitFile]]
+        var files: [String:XS_GitFolder]
         var key: String
     }
     enum Action {

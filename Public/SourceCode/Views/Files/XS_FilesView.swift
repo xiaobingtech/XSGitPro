@@ -26,29 +26,34 @@ struct XS_FilesView: View {
             return ""
         }
     }
-    private func array(_ dic: [String:[XS_GitFile]], key: String) -> [XS_GitFile] {
-        dic[key] ?? []
+    private func array(_ dic: [String:XS_GitFolder], key: String) -> XS_GitFolder {
+        dic[key] ?? XS_GitFolder()
     }
     var body: some View {
         WithViewStore(store) { $0 } content: { vs in
-            List(array(vs.files, key: vs.key)) { item in
+            List(array(vs.files, key: vs.key).list) { item in
                 if let entry = item.entry {
                     HStack {
                         Label(item.name, systemImage: "doc.text")
+                            .minimumScaleFactor(0.5)
+                            .lineLimit(1)
                         Spacer()
                         Text(status(entry.status))
+                            .font(.footnote)
                     }
                 } else {
                     NavigationLink(value: XS_NavPathItem.files(vs.files, item.id, item.name)) {
                         HStack {
                             Label(item.name, systemImage: "folder")
+                                .minimumScaleFactor(0.5)
+                                .lineLimit(1)
                             Spacer()
                             Text("\(array(vs.files, key: item.id).count)")
+                                .font(.footnote)
                         }
                     }
                 }
             }
-            
         }
     }
 }
@@ -57,7 +62,7 @@ struct XS_FilesView: View {
 struct XS_FilesView_Previews: PreviewProvider {
     static var previews: some View {
         XS_FilesView(
-            store: .init(initialState: .init(files: ["":[.init(id: "name", name: "name", entry: nil)]], key: "")) {
+            store: .init(initialState: .init(files: ["":.init()], key: "")) {
                 XS_Files()
             }
         )
