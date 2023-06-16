@@ -57,6 +57,10 @@
 		AE3991042A06453900198AAA /* XS_GitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3991022A06453900198AAA /* XS_GitFile.swift */; };
 		AE74E68E2A02407A007EB388 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AE74E68C2A02407A007EB388 /* EXTScope.m */; };
 		AE74E68F2A02407A007EB388 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AE74E68C2A02407A007EB388 /* EXTScope.m */; };
+		AE85FC1A2A3C4C37009A6EDE /* XS_Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85FC192A3C4C36009A6EDE /* XS_Search.swift */; };
+		AE85FC1B2A3C4C37009A6EDE /* XS_Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85FC192A3C4C36009A6EDE /* XS_Search.swift */; };
+		AE85FC1D2A3C4C47009A6EDE /* XS_SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85FC1C2A3C4C47009A6EDE /* XS_SearchView.swift */; };
+		AE85FC1E2A3C4C47009A6EDE /* XS_SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85FC1C2A3C4C47009A6EDE /* XS_SearchView.swift */; };
 		AEAE712C2A39961C0089E96D /* XS_Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE712B2A39961C0089E96D /* XS_Files.swift */; };
 		AEAE712D2A3996270089E96D /* XS_Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE712B2A39961C0089E96D /* XS_Files.swift */; };
 		AEAE712F2A39963B0089E96D /* XS_FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE712E2A39963B0089E96D /* XS_FilesView.swift */; };
@@ -219,6 +223,8 @@
 		AE74E68B2A02407A007EB388 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		AE74E68C2A02407A007EB388 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
 		AE74E68D2A02407A007EB388 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		AE85FC192A3C4C36009A6EDE /* XS_Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Search.swift; sourceTree = "<group>"; };
+		AE85FC1C2A3C4C47009A6EDE /* XS_SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_SearchView.swift; sourceTree = "<group>"; };
 		AEAE712B2A39961C0089E96D /* XS_Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Files.swift; sourceTree = "<group>"; };
 		AEAE712E2A39963B0089E96D /* XS_FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_FilesView.swift; sourceTree = "<group>"; };
 		AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_DeleteModifier.swift; sourceTree = "<group>"; };
@@ -478,6 +484,7 @@
 		AE25EF2429FA08CE00D8FA5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AE85FC182A3C4C17009A6EDE /* Search */,
 				AED330B92A3AFEE30012CBDE /* Branches */,
 				AEAE712A2A3995FC0089E96D /* Files */,
 				AED330B22A3A9C640012CBDE /* Tabbar */,
@@ -592,6 +599,15 @@
 				AE74E68D2A02407A007EB388 /* EXTScope.h */,
 			);
 			path = extobjc;
+			sourceTree = "<group>";
+		};
+		AE85FC182A3C4C17009A6EDE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				AE85FC192A3C4C36009A6EDE /* XS_Search.swift */,
+				AE85FC1C2A3C4C47009A6EDE /* XS_SearchView.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		AEAE712A2A3995FC0089E96D /* Files */ = {
@@ -921,6 +937,7 @@
 				AEB2556F2A0380C70008720F /* GTObject.m in Sources */,
 				AEB255892A0380C70008720F /* GTSubmodule.m in Sources */,
 				AEB255632A0380C60008720F /* GTIndexEntry.m in Sources */,
+				AE85FC1D2A3C4C47009A6EDE /* XS_SearchView.swift in Sources */,
 				AE3695EF2A04D1A500C3CB2A /* XS_ActivityView.swift in Sources */,
 				AE3695E92A04D11200C3CB2A /* XS_Mask.swift in Sources */,
 				AEB255AF2A0380C70008720F /* GTFetchHeadEntry.m in Sources */,
@@ -959,6 +976,7 @@
 				AEB255792A0380C70008720F /* GTDiffLine.m in Sources */,
 				AEB255732A0380C70008720F /* GTTree.m in Sources */,
 				AEB255832A0380C70008720F /* GTRepository+References.m in Sources */,
+				AE85FC1A2A3C4C37009A6EDE /* XS_Search.swift in Sources */,
 				AEB255AB2A0380C70008720F /* GTDiff.m in Sources */,
 				AEB0BE292A31C35600BA6AAF /* XS_Clone.swift in Sources */,
 				AE3696002A04EDD900C3CB2A /* XS_Root.swift in Sources */,
@@ -1011,6 +1029,7 @@
 				AEB255B42A0380C70008720F /* GTDiffFile.m in Sources */,
 				AEB255702A0380C70008720F /* GTObject.m in Sources */,
 				AEB2558A2A0380C70008720F /* GTSubmodule.m in Sources */,
+				AE85FC1E2A3C4C47009A6EDE /* XS_SearchView.swift in Sources */,
 				AEB255642A0380C60008720F /* GTIndexEntry.m in Sources */,
 				AEB255B02A0380C70008720F /* GTFetchHeadEntry.m in Sources */,
 				AEB2556C2A0380C70008720F /* ObjectiveGit.m in Sources */,
@@ -1049,6 +1068,7 @@
 				AE3990FA2A05FDCB00198AAA /* XS_Nav.swift in Sources */,
 				AEB255842A0380C70008720F /* GTRepository+References.m in Sources */,
 				AEB255AC2A0380C70008720F /* GTDiff.m in Sources */,
+				AE85FC1B2A3C4C37009A6EDE /* XS_Search.swift in Sources */,
 				AEB255C22A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */,
 				AEB0BE2A2A31C35600BA6AAF /* XS_Clone.swift in Sources */,
 				AE3696012A04EDD900C3CB2A /* XS_Root.swift in Sources */,

@@ -20,12 +20,18 @@ struct XS_TabbarView: View {
                 _branches._tabItem(.Branches)
                 Text("Commits")
                     ._tabItem(.Commits)
-                Text("Search")
-                    ._tabItem(.Search)
+                _search._tabItem(.Search)
             }
         }
         .toolbar(.hidden, for: .navigationBar)
         .navigationTitle(directory.fileName)
+    }
+    private var _search: some View {
+        XS_SearchView(
+            store: .init(initialState: .init(directory.entries)) {
+                XS_Search()
+            }
+        )
     }
     private var _branches: some View {
         XS_BranchesView(

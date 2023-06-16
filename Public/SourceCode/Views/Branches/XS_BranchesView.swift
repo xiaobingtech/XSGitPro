@@ -16,7 +16,6 @@ struct XS_BranchesView: View {
     
     var body: some View {
         _tabbar
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     _toolbarItem

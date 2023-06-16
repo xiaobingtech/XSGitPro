@@ -85,4 +85,12 @@ struct XS_GitDirectory: Equatable, Identifiable, Hashable {
             return nil
         }
     }
+    var entries: [GTIndexEntry] {
+        do {
+            return try repo.index().entries
+        } catch {
+            debugPrint(error)
+            return []
+        }
+    }
 }
