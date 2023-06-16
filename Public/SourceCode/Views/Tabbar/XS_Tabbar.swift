@@ -18,13 +18,22 @@ extension ViewStore where ViewState == XS_Tabbar.State.Name, ViewAction == XS_Ta
 }
 
 extension XS_Tabbar.State {
-    var navTitle: String { selection.rawValue }
     enum Name: String {
         case Files
         case Status
         case Branches
         case Commits
         case Search
+        
+        var systemImage: String {
+            switch self {
+            case .Files: return "folder"
+            case .Status: return "plusminus.circle"
+            case .Branches: return "arrow.triangle.branch"
+            case .Commits: return "command"
+            case .Search: return "magnifyingglass"
+            }
+        }
     }
 }
 

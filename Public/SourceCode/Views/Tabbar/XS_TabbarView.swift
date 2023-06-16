@@ -17,8 +17,7 @@ struct XS_TabbarView: View {
                 _files._tabItem(.Files)
                 Text("Status")
                     ._tabItem(.Status)
-                Text("Branches")
-                    ._tabItem(.Branches)
+                _branches._tabItem(.Branches)
                 Text("Commits")
                     ._tabItem(.Commits)
                 Text("Search")
@@ -27,6 +26,13 @@ struct XS_TabbarView: View {
         }
         .toolbar(.hidden, for: .navigationBar)
         .navigationTitle(directory.fileName)
+    }
+    private var _branches: some View {
+        XS_BranchesView(
+            store: .init(initialState: .init(repo: directory.repo)) {
+                XS_Branches()
+            }
+        )
     }
     private var _files: some View {
         XS_FilesView(
@@ -52,6 +58,7 @@ private struct _TabItemModifier: ViewModifier {
         content
             ._nav()
             .tabItem {
+                Image(uiImage: UIImage(systemName: name.systemImage)!)
                 Text(name.rawValue)
             }
             .tag(name)

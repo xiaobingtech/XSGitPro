@@ -179,6 +179,10 @@
 		AED330B52A3A9CA30012CBDE /* XS_Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330B32A3A9CA30012CBDE /* XS_Tabbar.swift */; };
 		AED330B72A3A9CAD0012CBDE /* XS_TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330B62A3A9CAD0012CBDE /* XS_TabbarView.swift */; };
 		AED330B82A3A9CAD0012CBDE /* XS_TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330B62A3A9CAD0012CBDE /* XS_TabbarView.swift */; };
+		AED330BB2A3AFEF80012CBDE /* XS_Branches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330BA2A3AFEF80012CBDE /* XS_Branches.swift */; };
+		AED330BC2A3AFEF80012CBDE /* XS_Branches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330BA2A3AFEF80012CBDE /* XS_Branches.swift */; };
+		AED330BE2A3AFF070012CBDE /* XS_BranchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330BD2A3AFF070012CBDE /* XS_BranchesView.swift */; };
+		AED330BF2A3AFF070012CBDE /* XS_BranchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330BD2A3AFF070012CBDE /* XS_BranchesView.swift */; };
 		AEE39E932A089C9100F6D0B6 /* XS_GitClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */; };
 		AEE39E942A089C9100F6D0B6 /* XS_GitClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */; };
 /* End PBXBuildFile section */
@@ -338,6 +342,8 @@
 		AEB258912A0390EB0008720F /* libgit2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgit2.a; path = GitSimulator/Libgit2/libgit2.a; sourceTree = "<group>"; };
 		AED330B32A3A9CA30012CBDE /* XS_Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Tabbar.swift; sourceTree = "<group>"; };
 		AED330B62A3A9CAD0012CBDE /* XS_TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_TabbarView.swift; sourceTree = "<group>"; };
+		AED330BA2A3AFEF80012CBDE /* XS_Branches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Branches.swift; sourceTree = "<group>"; };
+		AED330BD2A3AFF070012CBDE /* XS_BranchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_BranchesView.swift; sourceTree = "<group>"; };
 		AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitClone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -472,6 +478,7 @@
 		AE25EF2429FA08CE00D8FA5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AED330B92A3AFEE30012CBDE /* Branches */,
 				AEAE712A2A3995FC0089E96D /* Files */,
 				AED330B22A3A9C640012CBDE /* Tabbar */,
 				AEB0BE272A31C2CF00BA6AAF /* Clone */,
@@ -768,6 +775,15 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
+		AED330B92A3AFEE30012CBDE /* Branches */ = {
+			isa = PBXGroup;
+			children = (
+				AED330BA2A3AFEF80012CBDE /* XS_Branches.swift */,
+				AED330BD2A3AFF070012CBDE /* XS_BranchesView.swift */,
+			);
+			path = Branches;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -879,6 +895,7 @@
 			files = (
 				AE3991032A06453900198AAA /* XS_GitFile.swift in Sources */,
 				AEB255A52A0380C70008720F /* GTBlameHunk.m in Sources */,
+				AED330BB2A3AFEF80012CBDE /* XS_Branches.swift in Sources */,
 				AEB2557F2A0380C70008720F /* GTTreeBuilder.m in Sources */,
 				AEB255692A0380C70008720F /* GTBlob.m in Sources */,
 				AEB255872A0380C70008720F /* GTRepository+Status.m in Sources */,
@@ -934,6 +951,7 @@
 				AE3695EB2A04D12F00C3CB2A /* XS_MaskModifier.swift in Sources */,
 				AEB255652A0380C60008720F /* GTDiffHunk.m in Sources */,
 				AEB2558D2A0380C70008720F /* GTFilter.m in Sources */,
+				AED330BE2A3AFF070012CBDE /* XS_BranchesView.swift in Sources */,
 				AEB255712A0380C70008720F /* GTDiffDelta.m in Sources */,
 				AEB255C92A0380C70008720F /* GTTreeEntry.m in Sources */,
 				AEB0BE252A31A4B700BA6AAF /* XS_DeleteModifier.swift in Sources */,
@@ -967,6 +985,7 @@
 			files = (
 				AE3991042A06453900198AAA /* XS_GitFile.swift in Sources */,
 				AEB255A62A0380C70008720F /* GTBlameHunk.m in Sources */,
+				AED330BC2A3AFEF80012CBDE /* XS_Branches.swift in Sources */,
 				AEB255802A0380C70008720F /* GTTreeBuilder.m in Sources */,
 				AEB2556A2A0380C70008720F /* GTBlob.m in Sources */,
 				AE3695F32A04D55F00C3CB2A /* XS_MaskModifier.swift in Sources */,
@@ -1022,6 +1041,7 @@
 				AEB255662A0380C60008720F /* GTDiffHunk.m in Sources */,
 				AEB2558E2A0380C70008720F /* GTFilter.m in Sources */,
 				AEB255722A0380C70008720F /* GTDiffDelta.m in Sources */,
+				AED330BF2A3AFF070012CBDE /* XS_BranchesView.swift in Sources */,
 				AEB255CA2A0380C70008720F /* GTTreeEntry.m in Sources */,
 				AEB2557A2A0380C70008720F /* GTDiffLine.m in Sources */,
 				AEB0BE262A31A4F200BA6AAF /* XS_DeleteModifier.swift in Sources */,
