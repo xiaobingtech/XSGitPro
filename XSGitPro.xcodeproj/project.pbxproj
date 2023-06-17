@@ -187,6 +187,10 @@
 		AED330BC2A3AFEF80012CBDE /* XS_Branches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330BA2A3AFEF80012CBDE /* XS_Branches.swift */; };
 		AED330BE2A3AFF070012CBDE /* XS_BranchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330BD2A3AFF070012CBDE /* XS_BranchesView.swift */; };
 		AED330BF2A3AFF070012CBDE /* XS_BranchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED330BD2A3AFF070012CBDE /* XS_BranchesView.swift */; };
+		AED8E9CB2A3D38A200A2A983 /* XS_Commits.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED8E9CA2A3D38A200A2A983 /* XS_Commits.swift */; };
+		AED8E9CC2A3D38A200A2A983 /* XS_Commits.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED8E9CA2A3D38A200A2A983 /* XS_Commits.swift */; };
+		AED8E9CE2A3D38B400A2A983 /* XS_CommitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED8E9CD2A3D38B400A2A983 /* XS_CommitsView.swift */; };
+		AED8E9CF2A3D38B400A2A983 /* XS_CommitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED8E9CD2A3D38B400A2A983 /* XS_CommitsView.swift */; };
 		AEE39E932A089C9100F6D0B6 /* XS_GitClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */; };
 		AEE39E942A089C9100F6D0B6 /* XS_GitClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */; };
 /* End PBXBuildFile section */
@@ -350,6 +354,8 @@
 		AED330B62A3A9CAD0012CBDE /* XS_TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_TabbarView.swift; sourceTree = "<group>"; };
 		AED330BA2A3AFEF80012CBDE /* XS_Branches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Branches.swift; sourceTree = "<group>"; };
 		AED330BD2A3AFF070012CBDE /* XS_BranchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_BranchesView.swift; sourceTree = "<group>"; };
+		AED8E9CA2A3D38A200A2A983 /* XS_Commits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Commits.swift; sourceTree = "<group>"; };
+		AED8E9CD2A3D38B400A2A983 /* XS_CommitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_CommitsView.swift; sourceTree = "<group>"; };
 		AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitClone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -484,6 +490,7 @@
 		AE25EF2429FA08CE00D8FA5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AED8E9C92A3D383700A2A983 /* Commits */,
 				AE85FC182A3C4C17009A6EDE /* Search */,
 				AED330B92A3AFEE30012CBDE /* Branches */,
 				AEAE712A2A3995FC0089E96D /* Files */,
@@ -800,6 +807,15 @@
 			path = Branches;
 			sourceTree = "<group>";
 		};
+		AED8E9C92A3D383700A2A983 /* Commits */ = {
+			isa = PBXGroup;
+			children = (
+				AED8E9CA2A3D38A200A2A983 /* XS_Commits.swift */,
+				AED8E9CD2A3D38B400A2A983 /* XS_CommitsView.swift */,
+			);
+			path = Commits;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -916,6 +932,7 @@
 				AEB255692A0380C70008720F /* GTBlob.m in Sources */,
 				AEB255872A0380C70008720F /* GTRepository+Status.m in Sources */,
 				AEB255BD2A0380C70008720F /* NSArray+StringArray.m in Sources */,
+				AED8E9CE2A3D38B400A2A983 /* XS_CommitsView.swift in Sources */,
 				AE3696072A04EEBD00C3CB2A /* XS_Git.swift in Sources */,
 				AEE39E932A089C9100F6D0B6 /* XS_GitClone.swift in Sources */,
 				AE3695F82A04D6A200C3CB2A /* XS_Task.swift in Sources */,
@@ -978,6 +995,7 @@
 				AEB255832A0380C70008720F /* GTRepository+References.m in Sources */,
 				AE85FC1A2A3C4C37009A6EDE /* XS_Search.swift in Sources */,
 				AEB255AB2A0380C70008720F /* GTDiff.m in Sources */,
+				AED8E9CB2A3D38A200A2A983 /* XS_Commits.swift in Sources */,
 				AEB0BE292A31C35600BA6AAF /* XS_Clone.swift in Sources */,
 				AE3696002A04EDD900C3CB2A /* XS_Root.swift in Sources */,
 				AEB255C12A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */,
@@ -1008,6 +1026,7 @@
 				AEB2556A2A0380C70008720F /* GTBlob.m in Sources */,
 				AE3695F32A04D55F00C3CB2A /* XS_MaskModifier.swift in Sources */,
 				AEB255882A0380C70008720F /* GTRepository+Status.m in Sources */,
+				AED8E9CF2A3D38B400A2A983 /* XS_CommitsView.swift in Sources */,
 				AEE39E942A089C9100F6D0B6 /* XS_GitClone.swift in Sources */,
 				AE3696082A04EEBD00C3CB2A /* XS_Git.swift in Sources */,
 				AEB255BE2A0380C70008720F /* NSArray+StringArray.m in Sources */,
@@ -1070,6 +1089,7 @@
 				AEB255AC2A0380C70008720F /* GTDiff.m in Sources */,
 				AE85FC1B2A3C4C37009A6EDE /* XS_Search.swift in Sources */,
 				AEB255C22A0380C70008720F /* NSDate+GTTimeAdditions.m in Sources */,
+				AED8E9CC2A3D38A200A2A983 /* XS_Commits.swift in Sources */,
 				AEB0BE2A2A31C35600BA6AAF /* XS_Clone.swift in Sources */,
 				AE3696012A04EDD900C3CB2A /* XS_Root.swift in Sources */,
 				AEB255682A0380C70008720F /* GTReflog.m in Sources */,
@@ -1384,7 +1404,7 @@
 			repositoryURL = "git@github.com:pointfreeco/swift-composable-architecture.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.54.0;
+				minimumVersion = 0.54.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
