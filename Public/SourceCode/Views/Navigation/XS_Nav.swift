@@ -20,6 +20,7 @@ extension ViewStore where ViewState == [XS_NavPathItem], ViewAction == XS_Nav.Ac
 enum XS_NavPathItem: Equatable, Hashable {
     case tabbar(XS_GitDirectory)
     case files([String:XS_GitFolder], String, String)
+    case commit(GTCommit)
 }
 
 struct XS_Nav: ReducerProtocol {

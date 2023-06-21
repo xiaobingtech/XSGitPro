@@ -62,7 +62,7 @@ struct XS_FilesView: View {
 struct XS_FilesView_Previews: PreviewProvider {
     static var previews: some View {
         XS_FilesView(
-            store: .init(initialState: .init(files: ["":.init()], key: "")) {
+            store: .init(initialState: .init(files: ["":XS_GitFolder()], key: "")) {
                 XS_Files()
             }
         )

@@ -19,7 +19,7 @@ extension URL {
     static var clonesDir: URL? {
         #if DEBUG
         let fm = FileManager.default
-        let url = URL(fileURLWithPath: "/Users/hanyz/Desktop/GitDemo/GitClones/")
+        let url = URL(fileURLWithPath: "/Users/hanyz/Desktop/DEMO/Git/GitClones/")
         if fm.fileExists(atPath: url.relativePath) {
             return url
         } else {

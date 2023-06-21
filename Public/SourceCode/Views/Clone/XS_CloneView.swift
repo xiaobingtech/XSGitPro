@@ -66,7 +66,7 @@ struct XS_CloneView: View {
             Text("URL")
                 .foregroundColor(.blue)
             WithViewStore(store, observe: \.text) { vs in
-                TextField("http://example.com/object.git", text: vs.binding)
+                TextField(String("http://example.com/object.git"), text: vs.binding)
                     .padding(.bottom)
                 WithViewStore(store, observe: \.username) { vs in
                     TextField("username", text: vs.bindingUsername)

@@ -54,6 +54,12 @@ private struct _NavDestination: ViewModifier {
                     }
                 )
                 .navigationTitle(title)
+            case let .commit(value):
+                XS_CommitView(
+                    store: .init(initialState: .init(commit: value)) {
+                        XS_Commit()
+                    }
+                )
             default: EmptyView()
             }
         }

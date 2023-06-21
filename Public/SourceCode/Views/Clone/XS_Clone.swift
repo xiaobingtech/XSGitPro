@@ -86,6 +86,7 @@ struct XS_Clone: ReducerProtocol {
                     await self.dismiss()
                     await send(.setShowType(.default))
                 } catch {
+                    debugPrint(error)
                     let err = error as NSError
                     if err.code == -1001 {
                         await send(.setShowType(.error(err.domain)))

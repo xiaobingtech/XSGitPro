@@ -61,6 +61,10 @@
 		AE85FC1B2A3C4C37009A6EDE /* XS_Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85FC192A3C4C36009A6EDE /* XS_Search.swift */; };
 		AE85FC1D2A3C4C47009A6EDE /* XS_SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85FC1C2A3C4C47009A6EDE /* XS_SearchView.swift */; };
 		AE85FC1E2A3C4C47009A6EDE /* XS_SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85FC1C2A3C4C47009A6EDE /* XS_SearchView.swift */; };
+		AEA724642A429D4200A83BC6 /* XS_Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA724632A429D4200A83BC6 /* XS_Commit.swift */; };
+		AEA724652A429D4200A83BC6 /* XS_Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA724632A429D4200A83BC6 /* XS_Commit.swift */; };
+		AEA724672A429D4F00A83BC6 /* XS_CommitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA724662A429D4F00A83BC6 /* XS_CommitView.swift */; };
+		AEA724682A429D4F00A83BC6 /* XS_CommitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA724662A429D4F00A83BC6 /* XS_CommitView.swift */; };
 		AEAE712C2A39961C0089E96D /* XS_Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE712B2A39961C0089E96D /* XS_Files.swift */; };
 		AEAE712D2A3996270089E96D /* XS_Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE712B2A39961C0089E96D /* XS_Files.swift */; };
 		AEAE712F2A39963B0089E96D /* XS_FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE712E2A39963B0089E96D /* XS_FilesView.swift */; };
@@ -229,6 +233,8 @@
 		AE74E68D2A02407A007EB388 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
 		AE85FC192A3C4C36009A6EDE /* XS_Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Search.swift; sourceTree = "<group>"; };
 		AE85FC1C2A3C4C47009A6EDE /* XS_SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_SearchView.swift; sourceTree = "<group>"; };
+		AEA724632A429D4200A83BC6 /* XS_Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Commit.swift; sourceTree = "<group>"; };
+		AEA724662A429D4F00A83BC6 /* XS_CommitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_CommitView.swift; sourceTree = "<group>"; };
 		AEAE712B2A39961C0089E96D /* XS_Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Files.swift; sourceTree = "<group>"; };
 		AEAE712E2A39963B0089E96D /* XS_FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_FilesView.swift; sourceTree = "<group>"; };
 		AEB0BE242A31A4B700BA6AAF /* XS_DeleteModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_DeleteModifier.swift; sourceTree = "<group>"; };
@@ -490,6 +496,7 @@
 		AE25EF2429FA08CE00D8FA5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AEA724622A429D2900A83BC6 /* Commit */,
 				AED8E9C92A3D383700A2A983 /* Commits */,
 				AE85FC182A3C4C17009A6EDE /* Search */,
 				AED330B92A3AFEE30012CBDE /* Branches */,
@@ -615,6 +622,15 @@
 				AE85FC1C2A3C4C47009A6EDE /* XS_SearchView.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		AEA724622A429D2900A83BC6 /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				AEA724632A429D4200A83BC6 /* XS_Commit.swift */,
+				AEA724662A429D4F00A83BC6 /* XS_CommitView.swift */,
+			);
+			path = Commit;
 			sourceTree = "<group>";
 		};
 		AEAE712A2A3995FC0089E96D /* Files */ = {
@@ -976,6 +992,7 @@
 				AE3695F52A04D5DD00C3CB2A /* XS_Toast.swift in Sources */,
 				AE3696032A04EDE800C3CB2A /* XS_RootView.swift in Sources */,
 				AE25EE1129FA078100D8FA5B /* XSGitProApp.swift in Sources */,
+				AEA724672A429D4F00A83BC6 /* XS_CommitView.swift in Sources */,
 				AED330B42A3A9CA30012CBDE /* XS_Tabbar.swift in Sources */,
 				AE3990EF2A05F73C00198AAA /* XS_Directory.swift in Sources */,
 				AEB0BE2C2A31C36C00BA6AAF /* XS_CloneView.swift in Sources */,
@@ -986,6 +1003,7 @@
 				AEB255652A0380C60008720F /* GTDiffHunk.m in Sources */,
 				AEB2558D2A0380C70008720F /* GTFilter.m in Sources */,
 				AED330BE2A3AFF070012CBDE /* XS_BranchesView.swift in Sources */,
+				AEA724642A429D4200A83BC6 /* XS_Commit.swift in Sources */,
 				AEB255712A0380C70008720F /* GTDiffDelta.m in Sources */,
 				AEB255C92A0380C70008720F /* GTTreeEntry.m in Sources */,
 				AEB0BE252A31A4B700BA6AAF /* XS_DeleteModifier.swift in Sources */,
@@ -1070,6 +1088,7 @@
 				AEB255762A0380C70008720F /* GTSignature.m in Sources */,
 				AE3696042A04EDE800C3CB2A /* XS_RootView.swift in Sources */,
 				AE25EE2529FA07BB00D8FA5B /* GitSimulatorApp.swift in Sources */,
+				AEA724682A429D4F00A83BC6 /* XS_CommitView.swift in Sources */,
 				AED330B52A3A9CA30012CBDE /* XS_Tabbar.swift in Sources */,
 				AE3990F22A05F91F00198AAA /* XS_Directory.swift in Sources */,
 				AEB0BE2D2A31C36C00BA6AAF /* XS_CloneView.swift in Sources */,
@@ -1080,6 +1099,7 @@
 				AEB2558E2A0380C70008720F /* GTFilter.m in Sources */,
 				AEB255722A0380C70008720F /* GTDiffDelta.m in Sources */,
 				AED330BF2A3AFF070012CBDE /* XS_BranchesView.swift in Sources */,
+				AEA724652A429D4200A83BC6 /* XS_Commit.swift in Sources */,
 				AEB255CA2A0380C70008720F /* GTTreeEntry.m in Sources */,
 				AEB2557A2A0380C70008720F /* GTDiffLine.m in Sources */,
 				AEB0BE262A31A4F200BA6AAF /* XS_DeleteModifier.swift in Sources */,

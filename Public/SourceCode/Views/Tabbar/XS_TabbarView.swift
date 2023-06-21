@@ -18,8 +18,7 @@ struct XS_TabbarView: View {
                 Text("Status")
                     ._tabItem(.Status)
                 _branches._tabItem(.Branches)
-                Text("Commits")
-                    ._tabItem(.Commits)
+                _commits._tabItem(.Commits)
                 _search._tabItem(.Search)
             }
         }
@@ -30,6 +29,13 @@ struct XS_TabbarView: View {
         XS_SearchView(
             store: .init(initialState: .init(directory.entries)) {
                 XS_Search()
+            }
+        )
+    }
+    private var _commits: some View {
+        XS_CommitsView(
+            store: .init(initialState: .init(repo: directory.repo)) {
+                XS_Commits()
             }
         )
     }
