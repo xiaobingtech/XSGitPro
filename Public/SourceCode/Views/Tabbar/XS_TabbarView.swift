@@ -15,8 +15,7 @@ struct XS_TabbarView: View {
         WithViewStore(store, observe: \.selection) { vs in
             TabView(selection: vs.binding) {
                 _files._tabItem(.Files)
-                Text("Status")
-                    ._tabItem(.Status)
+                _status._tabItem(.Status)
                 _branches._tabItem(.Branches)
                 _commits._tabItem(.Commits)
                 _search._tabItem(.Search)
@@ -43,6 +42,13 @@ struct XS_TabbarView: View {
         XS_BranchesView(
             store: .init(initialState: .init(repo: directory.repo)) {
                 XS_Branches()
+            }
+        )
+    }
+    private var _status: some View {
+        XS_StatusView(
+            store: .init(initialState: .init(repo: directory.repo)) {
+                XS_Status()
             }
         )
     }

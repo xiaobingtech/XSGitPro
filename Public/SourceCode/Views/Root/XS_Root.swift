@@ -20,6 +20,9 @@ let navStore: StoreOf<XS_Nav> = .init(
     initialState: .init(),
     reducer: XS_Nav()
 )
+let tabStore: StoreOf<XS_Tabbar> = .init(initialState: .init()) {
+    XS_Tabbar()
+}
 
 extension Store where State == XS_Root.State, Action == XS_Root.Action {
     var scopeDirectory: StoreOf<XS_Directory> {

@@ -43,9 +43,7 @@ private struct _NavDestination: ViewModifier {
             case let .tabbar(value):
                 XS_TabbarView(
                     directory: value,
-                    store: .init(initialState: .init()) {
-                        XS_Tabbar()
-                    }
+                    store: tabStore
                 )
             case let .files(files, key, title):
                 XS_FilesView(
