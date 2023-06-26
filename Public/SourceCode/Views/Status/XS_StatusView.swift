@@ -20,7 +20,7 @@ struct XS_StatusView: View {
                     vs.send(.onPull)
                 }
                 Button("Push") {
-
+                    vs.send(.onPush)
                 }
             }
         }
@@ -30,6 +30,9 @@ struct XS_StatusView: View {
         }
         .sheet(store: store.scopePull) { store in
             XS_OnPullView(store: store)
+        }
+        .sheet(store: store.scopePush) { store in
+            XS_OnPushView(store: store)
         }
     }
 }

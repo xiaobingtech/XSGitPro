@@ -86,8 +86,8 @@ int GTRemotePushTransferProgressCallback(unsigned int current, unsigned int tota
 
 	git_fetch_options fetchOptions = GIT_FETCH_OPTIONS_INIT;
 	fetchOptions.callbacks = remote_callbacks;
-	fetchOptions.prune = [options[GTRepositoryRemoteOptionsFetchPrune] unsignedIntValue];
-	fetchOptions.download_tags = [options[GTRepositoryRemoteOptionsDownloadTags] unsignedIntValue];
+	fetchOptions.prune = options[GTRepositoryRemoteOptionsFetchPrune];
+	fetchOptions.download_tags = options[GTRepositoryRemoteOptionsDownloadTags];
 
 	__block git_strarray refspecs;
 	int gitError = git_remote_get_fetch_refspecs(&refspecs, remote.git_remote);

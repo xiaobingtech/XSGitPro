@@ -1,15 +1,15 @@
 //
-//  XS_OnPull.swift
+//  XS_OnPush.swift
 //  XSGitPro
 //
-//  Created by 韩云智 on 2023/6/25.
+//  Created by 韩云智 on 2023/6/26.
 //
 
 import Foundation
 import ComposableArchitecture
 import SwiftUI
 
-extension ViewStore where ViewState == String, ViewAction == XS_OnPull.Action {
+extension ViewStore where ViewState == String, ViewAction == XS_OnPush.Action {
     var bindingUsername: Binding<String> {
         binding(send: ViewAction.setUsername)
     }
@@ -18,7 +18,7 @@ extension ViewStore where ViewState == String, ViewAction == XS_OnPull.Action {
     }
 }
 
-extension XS_OnPull.State {
+extension XS_OnPush.State {
     var remoteNames: [String] {
         do {
             return try repo.remoteNames()
@@ -43,7 +43,7 @@ extension XS_OnPull.State {
     }
 }
 
-struct XS_OnPull: ReducerProtocol {
+struct XS_OnPush: ReducerProtocol {
     struct State: Equatable {
         let repo: GTRepository
         var remote: GTRemote?
@@ -54,7 +54,7 @@ struct XS_OnPull: ReducerProtocol {
         enum ShowType: Equatable {
             case `default`
             case wait
-            case pull(String, String)
+            case push(String, String)
             case error(String)
         }
         init(repo: GTRepository) {
@@ -72,10 +72,10 @@ struct XS_OnPull: ReducerProtocol {
     }
     enum Action {
         case onCancel
-        case onPull
+        case onPush
         case delegate(Delegate)
         enum Delegate {
-            case pull
+            case push
         }
         case setRemote(String)
         case setBranch(GTBranch)
@@ -90,7 +90,7 @@ struct XS_OnPull: ReducerProtocol {
             return .run { send in
                 await self.dismiss()
             }
-        case .onPull:
+        case .onPush:
             guard let remote = state.remote, let branch = state.branch else { return .none }
             return .run { [repo = state.repo, username = state.username, password = state.password] send in
                 await send(.setShowType(.wait))
@@ -101,9 +101,17 @@ struct XS_OnPull: ReducerProtocol {
                             try? GTCredential(userName: username, password: password)
                         }
                     }
-                    try XS_Git.shared.pull(repo, branch: branch, remote: remote, provider: provider) { pro in
-                        let progess = String(format: "%.1f", Double(pro.received_objects)*100/Double(pro.total_objects))
-                        var kb = Double(pro.received_bytes)/1024.0
+                    let remoteBranch: GTBranch?
+                    let currentBranch = try repo.currentBranch()
+                    let trackingBranch = currentBranch.trackingBranchWithError(NSErrorPointer(nilLiteral: ()), success: nil)
+                    if let trackingBranch = trackingBranch, trackingBranch == branch {
+                        remoteBranch = nil
+                    } else {
+                        remoteBranch = branch
+                    }
+                    try XS_Git.shared.push(repo, branch: remoteBranch, remote: remote, provider: provider) { current, total, size in
+                        let progess = String(format: "%.1f", Double(current)*100/Double(total))
+                        var kb = Double(size)/1024.0
                         let unit: String
                         if kb < 1024 {
                             unit = "KB"
@@ -116,10 +124,10 @@ struct XS_OnPull: ReducerProtocol {
                         }
                         let size = String(format: "%.2f ", kb) + unit
                         DispatchQueue.main.async {
-                            send(.setShowType(.pull(progess, size)))
+                            send(.setShowType(.push(progess, size)))
                         }
                     }
-                    await send(.delegate(.pull))
+                    await send(.delegate(.push))
                     await self.dismiss()
                     await send(.setShowType(.default))
                 } catch {
@@ -130,7 +138,7 @@ struct XS_OnPull: ReducerProtocol {
                     } else if err.code == -16 {
                         await send(.setShowType(.error("需要授权!")))
                     } else {
-                        await send(.setShowType(.error("Pull失败!")))
+                        await send(.setShowType(.error("Push失败!")))
                     }
                 }
             }

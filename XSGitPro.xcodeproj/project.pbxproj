@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE06D08A2A4936EE00998842 /* XS_GitPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06D0892A4936EE00998842 /* XS_GitPush.swift */; };
+		AE06D08B2A4936EE00998842 /* XS_GitPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06D0892A4936EE00998842 /* XS_GitPush.swift */; };
+		AE06D08E2A49709200998842 /* XS_OnPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06D08D2A49709200998842 /* XS_OnPush.swift */; };
+		AE06D08F2A49709200998842 /* XS_OnPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06D08D2A49709200998842 /* XS_OnPush.swift */; };
+		AE06D0912A49709F00998842 /* XS_OnPushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06D0902A49709F00998842 /* XS_OnPushView.swift */; };
+		AE06D0922A49709F00998842 /* XS_OnPushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06D0902A49709F00998842 /* XS_OnPushView.swift */; };
 		AE256CA92A0393A7006CF9A5 /* libgit2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB258912A0390EB0008720F /* libgit2.a */; };
 		AE256CAA2A0393C1006CF9A5 /* libgit2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB258902A0390D00008720F /* libgit2.a */; };
 		AE256D972A039A67006CF9A5 /* XS_Git2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE256D962A039A67006CF9A5 /* XS_Git2.swift */; };
@@ -216,6 +222,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE06D0892A4936EE00998842 /* XS_GitPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitPush.swift; sourceTree = "<group>"; };
+		AE06D08D2A49709200998842 /* XS_OnPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_OnPush.swift; sourceTree = "<group>"; };
+		AE06D0902A49709F00998842 /* XS_OnPushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_OnPushView.swift; sourceTree = "<group>"; };
 		AE256D962A039A67006CF9A5 /* XS_Git2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XS_Git2.swift; sourceTree = "<group>"; };
 		AE25EE0D29FA078100D8FA5B /* XSGitPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XSGitPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE25EE1029FA078100D8FA5B /* XSGitProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSGitProApp.swift; sourceTree = "<group>"; };
@@ -415,6 +424,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE06D08C2A4936F100998842 /* OnPush */ = {
+			isa = PBXGroup;
+			children = (
+				AE06D08D2A49709200998842 /* XS_OnPush.swift */,
+				AE06D0902A49709F00998842 /* XS_OnPushView.swift */,
+			);
+			path = OnPush;
+			sourceTree = "<group>";
+		};
 		AE25EE0429FA078100D8FA5B = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +626,7 @@
 				AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */,
 				AE632FDB2A47D6E30042A609 /* XS_GitCommit.swift */,
 				AE632FE52A4829E10042A609 /* XS_GitPull.swift */,
+				AE06D0892A4936EE00998842 /* XS_GitPush.swift */,
 			);
 			path = Git;
 			sourceTree = "<group>";
@@ -634,6 +653,7 @@
 		AE632FCD2A47D2BB0042A609 /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				AE06D08C2A4936F100998842 /* OnPush */,
 				AE632FDE2A4829830042A609 /* OnPull */,
 				AE632FD42A47D51D0042A609 /* OnCommit */,
 				AE632FCE2A47D2D10042A609 /* XS_Status.swift */,
@@ -1017,6 +1037,7 @@
 				AEB255A12A0380C70008720F /* GTRepository+Merging.m in Sources */,
 				AEB255932A0380C70008720F /* GTFilterSource.m in Sources */,
 				AEB255C72A0380C70008720F /* GTReference.m in Sources */,
+				AE06D0912A49709F00998842 /* XS_OnPushView.swift in Sources */,
 				AE632FD92A47D5450042A609 /* XS_OnCommitView.swift in Sources */,
 				AE3990F12A05F74B00198AAA /* XS_DirectoryView.swift in Sources */,
 				AEB2557D2A0380C70008720F /* GTRepository.m in Sources */,
@@ -1024,6 +1045,7 @@
 				AE3990F82A05FDA300198AAA /* XS_NavView.swift in Sources */,
 				AEB2559F2A0380C70008720F /* GTBranch.m in Sources */,
 				AEB255B72A0380C70008720F /* GTCheckoutOptions.m in Sources */,
+				AE06D08A2A4936EE00998842 /* XS_GitPush.swift in Sources */,
 				AE74E68E2A02407A007EB388 /* EXTScope.m in Sources */,
 				AEB255B32A0380C70008720F /* GTDiffFile.m in Sources */,
 				AEB2556F2A0380C70008720F /* GTObject.m in Sources */,
@@ -1032,6 +1054,7 @@
 				AE85FC1D2A3C4C47009A6EDE /* XS_SearchView.swift in Sources */,
 				AE632FE62A4829E10042A609 /* XS_GitPull.swift in Sources */,
 				AE3695EF2A04D1A500C3CB2A /* XS_ActivityView.swift in Sources */,
+				AE06D08E2A49709200998842 /* XS_OnPush.swift in Sources */,
 				AE3695E92A04D11200C3CB2A /* XS_Mask.swift in Sources */,
 				AEB255AF2A0380C70008720F /* GTFetchHeadEntry.m in Sources */,
 				AEB2556B2A0380C70008720F /* ObjectiveGit.m in Sources */,
@@ -1121,6 +1144,7 @@
 				AE3695FD2A04D83D00C3CB2A /* XS_Task.swift in Sources */,
 				AEB255942A0380C70008720F /* GTFilterSource.m in Sources */,
 				AEB255C82A0380C70008720F /* GTReference.m in Sources */,
+				AE06D0922A49709F00998842 /* XS_OnPushView.swift in Sources */,
 				AE632FDA2A47D5450042A609 /* XS_OnCommitView.swift in Sources */,
 				AE3990F32A05F92200198AAA /* XS_DirectoryView.swift in Sources */,
 				AEB2557E2A0380C70008720F /* GTRepository.m in Sources */,
@@ -1128,6 +1152,7 @@
 				AEB255622A0380C60008720F /* GTRemote.m in Sources */,
 				AE3695F12A04D55A00C3CB2A /* XS_ActivityView.swift in Sources */,
 				AEB255A02A0380C70008720F /* GTBranch.m in Sources */,
+				AE06D08B2A4936EE00998842 /* XS_GitPush.swift in Sources */,
 				AEB255B82A0380C70008720F /* GTCheckoutOptions.m in Sources */,
 				AE74E68F2A02407A007EB388 /* EXTScope.m in Sources */,
 				AEB255B42A0380C70008720F /* GTDiffFile.m in Sources */,
@@ -1136,6 +1161,7 @@
 				AE85FC1E2A3C4C47009A6EDE /* XS_SearchView.swift in Sources */,
 				AE632FE72A4829E10042A609 /* XS_GitPull.swift in Sources */,
 				AEB255642A0380C60008720F /* GTIndexEntry.m in Sources */,
+				AE06D08F2A49709200998842 /* XS_OnPush.swift in Sources */,
 				AEB255B02A0380C70008720F /* GTFetchHeadEntry.m in Sources */,
 				AEB2556C2A0380C70008720F /* ObjectiveGit.m in Sources */,
 				AEB2559A2A0380C70008720F /* GTBlame.m in Sources */,

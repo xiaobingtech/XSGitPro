@@ -1,30 +1,30 @@
 //
-//  XS_OnPullView.swift
+//  XS_OnPushView.swift
 //  XSGitPro
 //
-//  Created by 韩云智 on 2023/6/25.
+//  Created by 韩云智 on 2023/6/26.
 //
 
 import SwiftUI
 import ComposableArchitecture
 
-struct XS_OnPullView: View {
-    let store: StoreOf<XS_OnPull>
+struct XS_OnPushView: View {
+    let store: StoreOf<XS_OnPush>
     var body: some View {
         NavigationStack {
             VStack {
                 WithViewStore(store, observe: \.showType) { vs in
                     switch vs.state {
-                    case let .pull(progress, size):
-                        _pulling(progess: progress, size: size)
+                    case let .push(progress, size):
+                        _pushing(progess: progress, size: size)
                     case .wait:
                         _wait
                     case let .error(value):
                         Text(value)
                             .foregroundColor(.red)
-                        _pull
+                        _push
                     default:
-                        _pull
+                        _push
                     }
                 }
             }
@@ -36,16 +36,16 @@ struct XS_OnPullView: View {
                     }
                 }
             }
-            .navigationTitle("Pull")
+            .navigationTitle("Push")
         }
     }
-    private func _pulling(progess: String, size: String) -> some View {
+    private func _pushing(progess: String, size: String) -> some View {
         VStack(spacing: 20) {
             Text(progess)
                 .font(.largeTitle)
             +
             Text(" %")
-            Text("Pulling... (\(size))")
+            Text("Pushing... (\(size))")
         }
         .padding(.bottom, 100)
     }
@@ -53,7 +53,7 @@ struct XS_OnPullView: View {
         Text("waiting...")
             .padding(.bottom, 100)
     }
-    private var _pull: some View {
+    private var _push: some View {
         VStack {
             Text("Switch to the seleted remote")
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -73,9 +73,9 @@ struct XS_OnPullView: View {
             Spacer()
             WithViewStore(store, observe: \.disabled) { vs in
                 Button {
-                    vs.send(.onPull)
+                    vs.send(.onPush)
                 } label: {
-                    Text("Pull")
+                    Text("Push")
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, maxHeight: 44)
                         .background(vs.state ? Color.gray.opacity(0.6) : Color.blue)
@@ -133,11 +133,11 @@ struct XS_OnPullView: View {
 }
 
 #if DEBUG
-struct XS_OnPullView_Previews: PreviewProvider {
+struct XS_OnPushView_Previews: PreviewProvider {
     static var previews: some View {
-        XS_OnPullView(
+        XS_OnPushView(
             store: .init(initialState: .init(repo: XS_Git.shared.directorys.last!.repo)) {
-                XS_OnPull()
+                XS_OnPush()
             }
         )
     }
