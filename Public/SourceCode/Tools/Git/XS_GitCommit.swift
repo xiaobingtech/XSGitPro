@@ -7,21 +7,6 @@
 
 import Foundation
 
-extension GTRepository {
-    func commitAll() throws {
-        let index = try index()
-        try index.addAll()
-        let tree = try index.writeTree()
-        
-        let commit = try currentBranch().targetCommit()
-        let diff = try GTDiff(oldTree: commit.parents[0].tree, withNewTree: commit.tree, in: self)
-        diff.numberOfDeltas(with: .added)
-        diff.enumerateDeltas { delta, isStop in
-            print(delta.type.rawValue)
-        }
-    }
-}
-
 extension XS_Git {
     func addAll(_ repo: GTRepository) throws -> GTDiff {
         let index = try repo.index()

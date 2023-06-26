@@ -17,16 +17,19 @@ struct XS_StatusView: View {
                     vs.send(.onCommit)
                 }
                 Button("Pull") {
-                    
+                    vs.send(.onPull)
                 }
                 Button("Push") {
-                    
+
                 }
             }
         }
         .buttonStyle(.bordered)
         .sheet(store: store.scopeCommit) { store in
             XS_OnCommitView(store: store)
+        }
+        .sheet(store: store.scopePull) { store in
+            XS_OnPullView(store: store)
         }
     }
 }

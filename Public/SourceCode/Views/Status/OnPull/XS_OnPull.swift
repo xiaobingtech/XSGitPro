@@ -1,18 +1,15 @@
 //
-//  XS_Clone.swift
+//  XS_OnPull.swift
 //  XSGitPro
 //
-//  Created by 韩云智 on 2023/6/8.
+//  Created by 韩云智 on 2023/6/25.
 //
 
 import Foundation
 import ComposableArchitecture
 import SwiftUI
 
-extension ViewStore where ViewState == String, ViewAction == XS_Clone.Action {
-    var binding: Binding<String> {
-        binding(send: ViewAction.setText)
-    }
+extension ViewStore where ViewState == String, ViewAction == XS_OnPull.Action {
     var bindingUsername: Binding<String> {
         binding(send: ViewAction.setUsername)
     }
@@ -21,27 +18,67 @@ extension ViewStore where ViewState == String, ViewAction == XS_Clone.Action {
     }
 }
 
-struct XS_Clone: ReducerProtocol {
+extension XS_OnPull.State {
+    var remoteNames: [String] {
+        do {
+            return try repo.remoteNames()
+        } catch {
+            debugPrint(error.localizedDescription)
+            return []
+        }
+    }
+    var currentBranchs: [GTBranch] {
+        remoteBranchs.filter { $0.remoteName == remote?.name }
+    }
+    var remoteBranchs: [GTBranch] {
+        do {
+            return try repo.remoteBranches()
+        } catch {
+            debugPrint(error.localizedDescription)
+            return []
+        }
+    }
+    var disabled: Bool {
+        remote == nil || branch == nil
+    }
+}
+
+struct XS_OnPull: ReducerProtocol {
     struct State: Equatable {
-        var text: String = ""
+        let repo: GTRepository
+        var remote: GTRemote?
+        var branch: GTBranch?
         var username: String = ""
         var password: String = ""
         var showType: ShowType = .default
         enum ShowType: Equatable {
             case `default`
             case wait
-            case clone(String, String)
+            case pull(String, String)
             case error(String)
+        }
+        init(repo: GTRepository) {
+            self.repo = repo
+            do {
+                let branch = try repo.currentBranch()
+                if let remoteBranch = branch.trackingBranchWithError(NSErrorPointer(nilLiteral: ()), success: nil), let remoteName = remoteBranch.remoteName {
+                    self.remote = try GTRemote(name: remoteName, in: repo)
+                    self.branch = remoteBranch
+                }
+            } catch {
+                debugPrint(error.localizedDescription)
+            }
         }
     }
     enum Action {
         case onCancel
-        case onClone
+        case onPull
         case delegate(Delegate)
         enum Delegate {
-            case clone
+            case pull
         }
-        case setText(String)
+        case setRemote(String)
+        case setBranch(GTBranch)
         case setUsername(String)
         case setPassword(String)
         case setShowType(State.ShowType)
@@ -53,9 +90,9 @@ struct XS_Clone: ReducerProtocol {
             return .run { send in
                 await self.dismiss()
             }
-        case .onClone:
-            if state.text.isEmpty { return .none }
-            return .run { [text = state.text, username = state.username, password = state.password] send in
+        case .onPull:
+            guard let remote = state.remote, let branch = state.branch else { return .none }
+            return .run { [repo = state.repo, username = state.username, password = state.password] send in
                 await send(.setShowType(.wait))
                 do {
                     var provider: GTCredentialProvider?
@@ -64,7 +101,7 @@ struct XS_Clone: ReducerProtocol {
                             try? GTCredential(userName: username, password: password)
                         }
                     }
-                    try XS_Git.shared.clone(text, provider: provider) { pro in
+                    try XS_Git.shared.pull(repo, branch: branch, remote: remote, provider: provider) { pro in
                         let progess = String(format: "%.1f", Double(pro.received_objects)*100/Double(pro.total_objects))
                         var kb = Double(pro.received_bytes)/1024.0
                         let unit: String
@@ -79,10 +116,10 @@ struct XS_Clone: ReducerProtocol {
                         }
                         let size = String(format: "%.2f ", kb) + unit
                         DispatchQueue.main.async {
-                            send(.setShowType(.clone(progess, size)))
+                            send(.setShowType(.pull(progess, size)))
                         }
                     }
-                    await send(.delegate(.clone))
+                    await send(.delegate(.pull))
                     await self.dismiss()
                     await send(.setShowType(.default))
                 } catch {
@@ -93,14 +130,27 @@ struct XS_Clone: ReducerProtocol {
                     } else if err.code == -16 {
                         await send(.setShowType(.error("需要授权!")))
                     } else {
-                        await send(.setShowType(.error("CLONE失败!")))
+                        await send(.setShowType(.error("Pull失败!")))
                     }
                 }
             }
         case .delegate:
             return .none
-        case let .setText(value):
-            state.text = value
+        case let .setRemote(value):
+            if value == state.remote?.name { return .none }
+            do {
+                let remote = try GTRemote(name: value, in: state.repo)
+                let branches = try state.repo.branches()
+                state.remote = remote
+                state.branch = branches.first  { $0.remoteName == remote.name }
+            } catch {
+                debugPrint(error.localizedDescription)
+                state.remote = nil
+                state.branch = nil
+            }
+            return .none
+        case let .setBranch(value):
+            state.branch = value
             return .none
         case let .setUsername(value):
             state.username = value
