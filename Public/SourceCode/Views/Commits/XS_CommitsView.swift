@@ -16,7 +16,7 @@ struct XS_CommitsView: View {
     }
     private var _list: some View {
         WithViewStore(store, observe: \.commits) { vs in
-            List(vs.state, id: \.oid) { item in
+            List(vs.state, id: \.self) { item in
                 NavigationLink(value: XS_NavPathItem.commit(item)) {
                     VStack(alignment: .leading) {
                         Text(item.messageSummary)

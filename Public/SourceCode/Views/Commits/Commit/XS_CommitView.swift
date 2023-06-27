@@ -27,7 +27,7 @@ struct XS_CommitView: View {
     private func tree(_ vs: ViewStore<GTCommit, XS_Commit.Action>) -> some View {
         VStack {
             if let tree = vs.tree, let entries = tree.entries {
-                ForEach(entries, id: \.oid) { item in
+                ForEach(entries, id: \.self) { item in
                     Text(item.name)
                     Text("\(item.type.rawValue)")
                 }
@@ -54,7 +54,7 @@ struct XS_CommitView: View {
             if !vs.parents.isEmpty {
                 _Info(name: "Parents") {
                     HStack {
-                        ForEach(vs.parents, id: \.oid) { item in
+                        ForEach(vs.parents, id: \.self) { item in
                             NavigationLink(value: XS_NavPathItem.commit(item)) {
                                 Text(item.shortSHA)
                                     .foregroundColor(.blue)

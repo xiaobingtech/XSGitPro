@@ -16,7 +16,15 @@ extension XS_Git {
         if let provider = provider {
             options[GTRepositoryRemoteOptionsCredentialProvider] = provider
         }
-        try repo.pull(branch, from: remote, withOptions: options) { pro, stop in
+        let pullBranch: GTBranch
+        if branch.branchType == .local {
+            pullBranch = branch
+        } else {
+            let currentBranch = try repo.currentBranch()
+            try currentBranch.updateTrackingBranch(branch)
+            pullBranch = currentBranch
+        }
+        try repo.pull(pullBranch, from: remote, withOptions: options) { pro, stop in
             progress(pro.pointee)
         }
     }

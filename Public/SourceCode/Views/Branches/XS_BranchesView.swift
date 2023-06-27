@@ -47,7 +47,7 @@ struct XS_BranchesView: View {
                     if vs.state.isEmpty {
                         nullView("No branches")
                     } else {
-                        ForEach(vs.state, id: \.oid) { item in
+                        ForEach(vs.state, id: \.self) { item in
                             Text(item.name)
                         }
                     }
@@ -82,7 +82,7 @@ struct XS_BranchesView: View {
                     if vs.state.local.isEmpty {
                         nullView("No branches")
                     } else {
-                        ForEach(vs.state.local, id: \.oid) { item in
+                        ForEach(vs.state.local, id: \.self) { item in
                             _branch(item)
                         }
                     }
@@ -93,7 +93,7 @@ struct XS_BranchesView: View {
                     if vs.state.remote.isEmpty {
                         nullView("No branches")
                     } else {
-                        ForEach(vs.state.remote, id: \.oid) { item in
+                        ForEach(vs.state.remote, id: \.self) { item in
                             _branch(item)
                         }
                     }

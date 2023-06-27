@@ -119,6 +119,7 @@ struct XS_OnPull: ReducerProtocol {
                             send(.setShowType(.pull(progess, size)))
                         }
                     }
+                    
                     await send(.delegate(.pull))
                     await self.dismiss()
                     await send(.setShowType(.default))
