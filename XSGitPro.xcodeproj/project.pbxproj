@@ -219,6 +219,9 @@
 		AED8E9CF2A3D38B400A2A983 /* XS_CommitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED8E9CD2A3D38B400A2A983 /* XS_CommitsView.swift */; };
 		AEE39E932A089C9100F6D0B6 /* XS_GitClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */; };
 		AEE39E942A089C9100F6D0B6 /* XS_GitClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */; };
+		CBA09A442A6019080059570C /* CodeEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = CBA09A432A6019080059570C /* CodeEditorView */; };
+		CBA09A462A6019080059570C /* LanguageSupport in Frameworks */ = {isa = PBXBuildFile; productRef = CBA09A452A6019080059570C /* LanguageSupport */; };
+		CBA09A492A6019170059570C /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA09A482A6019170059570C /* CodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -396,6 +399,7 @@
 		AED8E9CA2A3D38A200A2A983 /* XS_Commits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Commits.swift; sourceTree = "<group>"; };
 		AED8E9CD2A3D38B400A2A983 /* XS_CommitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_CommitsView.swift; sourceTree = "<group>"; };
 		AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitClone.swift; sourceTree = "<group>"; };
+		CBA09A482A6019170059570C /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +410,8 @@
 				AE256CAA2A0393C1006CF9A5 /* libgit2.a in Frameworks */,
 				AE25EF3429FA140700D8FA5B /* libiconv.2.4.0.tbd in Frameworks */,
 				AE3695E12A04D00900C3CB2A /* ComposableArchitecture in Frameworks */,
+				CBA09A442A6019080059570C /* CodeEditorView in Frameworks */,
+				CBA09A462A6019080059570C /* LanguageSupport in Frameworks */,
 				AE25EF3329FA13FE00D8FA5B /* libz.1.1.3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +544,7 @@
 		AE25EF2429FA08CE00D8FA5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CBA09A472A60190E0059570C /* Code */,
 				AE632FCD2A47D2BB0042A609 /* Status */,
 				AED8E9C92A3D383700A2A983 /* Commits */,
 				AE85FC182A3C4C17009A6EDE /* Search */,
@@ -908,6 +915,14 @@
 			path = Commits;
 			sourceTree = "<group>";
 		};
+		CBA09A472A60190E0059570C /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				CBA09A482A6019170059570C /* CodeView.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -926,6 +941,8 @@
 			name = XSGitPro;
 			packageProductDependencies = (
 				AE3695E02A04D00900C3CB2A /* ComposableArchitecture */,
+				CBA09A432A6019080059570C /* CodeEditorView */,
+				CBA09A452A6019080059570C /* LanguageSupport */,
 			);
 			productName = XSGitPro;
 			productReference = AE25EE0D29FA078100D8FA5B /* XSGitPro.app */;
@@ -980,6 +997,7 @@
 			mainGroup = AE25EE0429FA078100D8FA5B;
 			packageReferences = (
 				AE3695DF2A04D00900C3CB2A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				CBA09A422A6019080059570C /* XCRemoteSwiftPackageReference "CodeEditorView" */,
 			);
 			productRefGroup = AE25EE0E29FA078100D8FA5B /* Products */;
 			projectDirPath = "";
@@ -1115,6 +1133,7 @@
 				AE36960A2A04EFB900C3CB2A /* XS_GitDirectory.swift in Sources */,
 				AE3695ED2A04D19D00C3CB2A /* XS_Activity.swift in Sources */,
 				AEB2558F2A0380C70008720F /* GTEnumerator.m in Sources */,
+				CBA09A492A6019170059570C /* CodeView.swift in Sources */,
 				AEB255952A0380C70008720F /* GTIndex.m in Sources */,
 				AEB255812A0380C70008720F /* GTRepository+RemoteOperations.m in Sources */,
 			);
@@ -1352,6 +1371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"XSGitPro/Preview Content\"";
+				DEVELOPMENT_TEAM = F9N98X7P4L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/XSGitPro/Libgit2/Headers\"";
@@ -1387,6 +1407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"XSGitPro/Preview Content\"";
+				DEVELOPMENT_TEAM = F9N98X7P4L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/XSGitPro/Libgit2/Headers\"";
@@ -1525,6 +1546,14 @@
 				minimumVersion = 0.54.1;
 			};
 		};
+		CBA09A422A6019080059570C /* XCRemoteSwiftPackageReference "CodeEditorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mchakravarty/CodeEditorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1537,6 +1566,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AE3695DF2A04D00900C3CB2A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		CBA09A432A6019080059570C /* CodeEditorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBA09A422A6019080059570C /* XCRemoteSwiftPackageReference "CodeEditorView" */;
+			productName = CodeEditorView;
+		};
+		CBA09A452A6019080059570C /* LanguageSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBA09A422A6019080059570C /* XCRemoteSwiftPackageReference "CodeEditorView" */;
+			productName = LanguageSupport;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

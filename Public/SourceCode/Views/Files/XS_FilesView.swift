@@ -33,13 +33,15 @@ struct XS_FilesView: View {
         WithViewStore(store) { $0 } content: { vs in
             List(array(vs.files, key: vs.key).list) { item in
                 if let entry = item.entry {
-                    HStack {
-                        Label(item.name, systemImage: "doc.text")
-                            .minimumScaleFactor(0.5)
-                            .lineLimit(1)
-                        Spacer()
-                        Text(status(entry.status))
-                            .font(.footnote)
+                    NavigationLink(value: XS_NavPathItem.code(item)) {
+                        HStack {
+                            Label(item.name, systemImage: "doc.text")
+                                .minimumScaleFactor(0.5)
+                                .lineLimit(1)
+                            Spacer()
+                            Text(status(entry.status))
+                                .font(.footnote)
+                        }
                     }
                 } else {
                     NavigationLink(value: XS_NavPathItem.files(vs.files, item.id, item.name)) {

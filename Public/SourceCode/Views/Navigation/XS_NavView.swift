@@ -58,6 +58,9 @@ private struct _NavDestination: ViewModifier {
                         XS_Commit()
                     }
                 )
+            case let .code(file):
+                CodeView(file: file)
+                    .navigationTitle(file.name)
             default: EmptyView()
             }
         }

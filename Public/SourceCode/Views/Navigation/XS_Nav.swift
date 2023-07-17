@@ -21,6 +21,7 @@ enum XS_NavPathItem: Equatable, Hashable {
     case tabbar(XS_GitDirectory)
     case files([String:XS_GitFolder], String, String)
     case commit(GTCommit)
+    case code(XS_GitFile)
 }
 
 struct XS_Nav: ReducerProtocol {
