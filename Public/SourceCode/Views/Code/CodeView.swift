@@ -24,23 +24,30 @@ struct CodeView: View {
             .environment(\.codeEditorTheme,
                           colorScheme == .dark ? Theme.defaultDark : Theme.defaultLight)
             .onAppear(perform: readFile)
+            .onDisappear(perform: saveFile)
     }
     
     private func readFile() {
-        text = textFromFile(file: file)
-    }
-    
-    private func textFromFile(file: XS_GitFile) -> String {
+//        if let path = Bundle.main.path(forResource: "vuejs", ofType: "js") {
         if let path = file.entry?.path {
-            debugPrint("当前文件路径:\(path)")
             do {
-                let string = try String(contentsOfFile: path)
-                return string
+                text = try String(contentsOfFile: path)
             }catch {
-                return error.localizedDescription
+                text = error.localizedDescription
             }
         }else{
-            return "Read Error"
+            text = "Read Error"
+        }
+    }
+    
+    private func saveFile() {
+//        if let path = Bundle.main.path(forResource: "vuejs", ofType: "js") {
+        if let path = file.entry?.path {
+            do {
+                try text.data(using: .utf8)?.write(to: URL(fileURLWithPath: path))
+            }catch {
+                debugPrint("保存文件失败:\(error.localizedDescription)")
+            }
         }
     }
 }
