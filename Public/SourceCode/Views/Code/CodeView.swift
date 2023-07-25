@@ -13,6 +13,7 @@ import ComposableArchitecture
 struct CodeView: View {
     
     var file: XS_GitFile
+    var directory: XS_GitDirectory
     @State var text: String = ""
     @State private var position: CodeEditor.Position = CodeEditor.Position()
     @State private var messages: Set<Located<Message>> = Set()
@@ -28,10 +29,11 @@ struct CodeView: View {
     }
     
     private func readFile() {
-//        if let path = Bundle.main.path(forResource: "vuejs", ofType: "js") {
         if let path = file.entry?.path {
+            let finalPath = directory.localURL.appendingPathComponent(path)
+            debugPrint("finalPath:\(finalPath)")
             do {
-                text = try String(contentsOfFile: path)
+                text = try String(contentsOfFile: finalPath.path)
             }catch {
                 text = error.localizedDescription
             }
@@ -41,10 +43,11 @@ struct CodeView: View {
     }
     
     private func saveFile() {
-//        if let path = Bundle.main.path(forResource: "vuejs", ofType: "js") {
         if let path = file.entry?.path {
+            let finalPath = directory.localURL.appendingPathComponent(path)
+            debugPrint("finalPath:\(finalPath)")
             do {
-                try text.data(using: .utf8)?.write(to: URL(fileURLWithPath: path))
+                try text.data(using: .utf8)?.write(to: finalPath)
             }catch {
                 debugPrint("保存文件失败:\(error.localizedDescription)")
             }

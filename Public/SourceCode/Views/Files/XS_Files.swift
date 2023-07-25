@@ -12,6 +12,7 @@ struct XS_Files: ReducerProtocol {
     struct State: Equatable {
         var files: [String:XS_GitFolder]
         var key: String
+        var directory: XS_GitDirectory
     }
     enum Action {
     }

@@ -45,9 +45,9 @@ private struct _NavDestination: ViewModifier {
                     directory: value,
                     store: tabStore
                 )
-            case let .files(files, key, title):
+            case let .files(files, key, title, directory):
                 XS_FilesView(
-                    store: .init(initialState: .init(files: files, key: key)) {
+                    store: .init(initialState: .init(files: files, key: key, directory: directory)) {
                         XS_Files()
                     }
                 )
@@ -58,8 +58,8 @@ private struct _NavDestination: ViewModifier {
                         XS_Commit()
                     }
                 )
-            case let .code(file):
-                CodeView(file: file)
+            case let .code(file, directory):
+                CodeView(file: file, directory: directory)
                     .navigationTitle(file.name)
             default: EmptyView()
             }

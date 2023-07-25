@@ -54,7 +54,7 @@ struct XS_TabbarView: View {
     }
     private var _files: some View {
         XS_FilesView(
-            store: .init(initialState: .init(files: XS_Git.shared.files(directory.repo), key: "")) {
+            store: .init(initialState: .init(files: XS_Git.shared.files(directory.repo), key: "", directory: directory)) {
                 XS_Files()
             }
         )
