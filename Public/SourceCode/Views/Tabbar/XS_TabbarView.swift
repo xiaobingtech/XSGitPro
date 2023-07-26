@@ -93,6 +93,7 @@ private struct _NavModifier: ViewModifier {
                             dismiss()
                         } label: {
                             Text("所有仓库")
+                                .foregroundColor(.defaultText)
                         }
                     }
                 }

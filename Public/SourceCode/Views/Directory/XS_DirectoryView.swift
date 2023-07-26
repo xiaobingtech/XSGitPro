@@ -9,6 +9,8 @@ import SwiftUI
 import ComposableArchitecture
 
 struct XS_DirectoryView: View {
+    @Environment(\.colorScheme) private var colorScheme: ColorScheme
+    
     private let store: StoreOf<XS_Directory> = rootStore.scopeDirectory
     @State private var deleteId: UUID?
     var body: some View {
@@ -20,6 +22,7 @@ struct XS_DirectoryView: View {
                         ViewStore(store).send(.onAdd)
                     } label: {
                         Image(systemName: "plus")
+                            .foregroundColor(.defaultText)
                     }
                 }
             }
@@ -44,6 +47,8 @@ struct XS_DirectoryView: View {
                                 .frame(maxWidth: .infinity, minHeight: 50, alignment: .leading)
                                 Divider()
                             }
+                            .foregroundColor(.defaultText)
+                            .background(Color.defaultBackground)
                             .padding(.leading)
                             .xsDelete($deleteId) {
                                 vs.send(.delete(item), animation: .default)
