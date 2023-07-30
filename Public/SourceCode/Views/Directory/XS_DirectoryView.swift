@@ -17,6 +17,14 @@ struct XS_DirectoryView: View {
         _list
             .navigationTitle("所有仓库")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        ViewStore(store).send(.set)
+                    } label: {
+                        Image(systemName: "gear")
+                            .foregroundColor(.defaultText)
+                    }
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         ViewStore(store).send(.onAdd)
