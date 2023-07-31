@@ -45,50 +45,70 @@ private struct PaywallContent: View {
 
     var body: some View {
         NavigationView {
-            ZStack {
-                /// - The paywall view list displaying each package
-                List {
-                    Section(header: Text("\nMagic Weather Premium"), footer: Text(Self.footerText)) {
-                        ForEach(offering?.availablePackages ?? []) { package in
-                            PackageCellView(package: package) { (package) in
+            VStack(alignment: .center, spacing: 10) {
+                CurrentView()
+                ZStack {
+                    /// - The paywall view list displaying each package
+                    List {
+                        Section(footer: Text(Self.footerText)) {
+                            ForEach(offering?.availablePackages ?? []) { package in
+                                PackageCellView(package: package) { (package) in
 
-                                /// - Set 'isPurchasing' state to `true`
-                                isPurchasing = true
+                                    /// - Set 'isPurchasing' state to `true`
+                                    isPurchasing = true
 
-                                /// - Purchase a package
-                                do {
-                                    let result = try await Purchases.shared.purchase(package: package)
+                                    /// - Purchase a package
+                                    do {
+                                        let result = try await Purchases.shared.purchase(package: package)
 
-                                    /// - Set 'isPurchasing' state to `false`
-                                    self.isPurchasing = false
+                                        /// - Set 'isPurchasing' state to `false`
+                                        self.isPurchasing = false
 
-                                    if !result.userCancelled {
-                                        self.isPresented.wrappedValue = false
+                                        if !result.userCancelled {
+                                            self.isPresented.wrappedValue = false
+                                        }
+                                    } catch {
+                                        self.isPurchasing = false
+                                        self.error = error as NSError
+                                        self.displayError = true
                                     }
-                                } catch {
-                                    self.isPurchasing = false
-                                    self.error = error as NSError
-                                    self.displayError = true
                                 }
                             }
                         }
                     }
-                }
-                .listStyle(InsetGroupedListStyle())
-                .navigationBarTitle("✨ Magic Weather Premium")
-                .navigationBarTitleDisplayMode(.inline)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .edgesIgnoringSafeArea(.bottom)
+                    .listStyle(InsetGroupedListStyle())
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .edgesIgnoringSafeArea(.bottom)
 
-                /// - Display an overlay during a purchase
-                Rectangle()
-                    .foregroundColor(Color.black)
-                    .opacity(isPurchasing ? 0.5: 0.0)
-                    .edgesIgnoringSafeArea(.all)
+                    /// - Display an overlay during a purchase
+                    Rectangle()
+                        .foregroundColor(Color.defaultBackground)
+                        .opacity(isPurchasing ? 0.5: 0.0)
+                        .edgesIgnoringSafeArea(.all)
+                }
             }
         }
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Restore") {
+                    isPurchasing = true
+                    Purchases.shared.restorePurchases { info, error in
+                        if let error = error {
+                            self.isPurchasing = false
+                            self.error = error as NSError
+                            self.displayError = true
+                        }else{
+                            self.isPurchasing = false
+                            self.isPresented.wrappedValue = false
+                        }
+                    }
+                }
+            }
+        })
+        .navigationBarTitle("SwiftGit Member")
+        .navigationBarTitleDisplayMode(.large)
         .navigationViewStyle(StackNavigationViewStyle())
-        .colorScheme(.dark)
+        .colorScheme(.light)
         .alert(
             isPresented: self.$displayError,
             error: self.error,
@@ -101,8 +121,26 @@ private struct PaywallContent: View {
         )
     }
 
-    private static let footerText = "Don't forget to add your subscription terms and conditions. Read more about this here: https://www.revenuecat.com/blog/schedule-2-section-3-8-b"
+    private static let footerText = Purchases.shared.appUserID
 
+}
+
+private struct CurrentView: View {
+    
+    @State var info: CustomerInfo?
+    
+    var body: some View {
+        
+        Text((info?.entitlements[Constants.entitlementID]?.isActive ?? false) ? "感谢支持，您已解锁会员特权，可使用所有高级功能" : "选择适合你的方案")
+            .font(.title2)
+            .onAppear(perform: getInfo)
+    }
+    
+    private func getInfo() {
+        Purchases.shared.getCustomerInfo { customInfo, error in
+            self.info = customInfo
+        }
+    }
 }
 
 /* The cell view for each package */

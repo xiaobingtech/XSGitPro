@@ -20,7 +20,7 @@ extension Package {
                 return "\(self.localizedIntroductoryPriceString!) for \(intro.subscriptionPeriod.periodTitle)"
             }
         } else {
-            return "Unlocks Premium"
+            return "Become member"
         }
     }
 }

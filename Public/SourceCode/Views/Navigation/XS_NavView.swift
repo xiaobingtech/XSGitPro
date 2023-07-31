@@ -37,6 +37,9 @@ private struct _NavFilesView: ViewModifier {
     }
 }
 private struct _NavDestination: ViewModifier {
+    
+    @State var paywallPresented = true
+    
     func body(content: Content) -> some View {
         content.navigationDestination(for: XS_NavPathItem.self) { item in
             switch item {
@@ -59,8 +62,9 @@ private struct _NavDestination: ViewModifier {
                     }
                 )
             case let .code(file, directory):
-                CodeView(file: file, directory: directory)
-                    .navigationTitle(file.name)
+//                CodeView(file: file, directory: directory)
+//                    .navigationTitle(file.name)
+                IAPView(isPresented: $paywallPresented)
             default: EmptyView()
             }
         }
