@@ -9,17 +9,28 @@ import SwiftUI
 import ComposableArchitecture
 
 struct XS_DirectoryView: View {
+    @Environment(\.colorScheme) private var colorScheme: ColorScheme
+    
     private let store: StoreOf<XS_Directory> = rootStore.scopeDirectory
     @State private var deleteId: UUID?
     var body: some View {
         _list
             .navigationTitle("所有仓库")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        ViewStore(store) { _ in 0 } .send(.set)
+                    } label: {
+                        Image(systemName: "gear")
+                            .foregroundColor(.defaultText)
+                    }
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        ViewStore(store).send(.onAdd)
+                        ViewStore(store) { _ in 0 } .send(.onAdd)
                     } label: {
                         Image(systemName: "plus")
+                            .foregroundColor(.defaultText)
                     }
                 }
             }
@@ -44,6 +55,8 @@ struct XS_DirectoryView: View {
                                 .frame(maxWidth: .infinity, minHeight: 50, alignment: .leading)
                                 Divider()
                             }
+                            .foregroundColor(.defaultText)
+                            .background(Color.defaultBackground)
                             .padding(.leading)
                             .xsDelete($deleteId) {
                                 vs.send(.delete(item), animation: .default)

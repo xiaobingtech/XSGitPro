@@ -36,10 +36,11 @@ struct XS_MaskModifier: ViewModifier {
 struct XS_MaskModifier_Previews: PreviewProvider {
     static var previews: some View {
         let store: StoreOf<XS_Mask> = .init(
-            initialState: .init(),
-            reducer: XS_Mask()
-        )
-        let vs = ViewStore(store)
+            initialState: .init()
+        ) {
+            XS_Mask()
+        }
+        let vs = ViewStore(store) { _ in 0 }
         return VStack {
             HStack {
                 Button("显示1") {

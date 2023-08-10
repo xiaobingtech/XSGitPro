@@ -38,9 +38,10 @@ struct XS_ToastView_Previews: PreviewProvider {
     static var previews: some View {
         XS_ToastView(
             store: .init(
-                initialState: .init(text: "12345"),
-                reducer: XS_Toast()
-            )
+                initialState: .init(text: "12345")
+            ) {
+                XS_Toast()
+            }
         )
     }
 }

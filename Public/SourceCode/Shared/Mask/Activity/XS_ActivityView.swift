@@ -32,9 +32,10 @@ struct XS_ActivityView_Previews: PreviewProvider {
     static var previews: some View {
         XS_ActivityView(
             store: .init(
-                initialState: .init(isShow: true),
-                reducer: XS_Activity()
-            )
+                initialState: .init(isShow: true)
+            ) {
+                XS_Activity()
+            }
         )
     }
 }

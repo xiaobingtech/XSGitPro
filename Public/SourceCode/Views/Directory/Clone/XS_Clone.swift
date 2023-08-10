@@ -40,6 +40,7 @@ struct XS_Clone: Reducer {
         case delegate(Delegate)
         enum Delegate {
             case clone
+            case set
         }
         case setText(String)
         case setUsername(String)

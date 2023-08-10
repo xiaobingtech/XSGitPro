@@ -24,6 +24,7 @@ struct XS_Directory: Reducer {
         case update
         case onAdd
         case clone(PresentationAction<XS_Clone.Action>)
+        case set
     }
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -50,6 +51,8 @@ struct XS_Directory: Reducer {
                 state.list = XS_Git.shared.directorys
                 return .none
             case .clone:
+                return .none
+            case .set:
                 return .none
             }
         }

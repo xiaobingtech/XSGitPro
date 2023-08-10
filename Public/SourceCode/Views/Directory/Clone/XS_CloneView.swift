@@ -32,7 +32,7 @@ struct XS_CloneView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") {
-                        ViewStore(store).send(.onCancel)
+                        ViewStore(store) { _ in 0 } .send(.onCancel)
                     }
                 }
             }
