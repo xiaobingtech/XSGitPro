@@ -20,7 +20,7 @@ extension Store where State == XS_Status.State, Action == XS_Status.Action {
     }
 }
 
-struct XS_Status: ReducerProtocol {
+struct XS_Status: Reducer {
     struct State: Equatable {
         let repo: GTRepository
         @PresentationState var commit: XS_OnCommit.State?
@@ -35,7 +35,7 @@ struct XS_Status: ReducerProtocol {
         case onPush
         case push(PresentationAction<XS_OnPush.Action>)
     }
-    var body: some ReducerProtocolOf<Self> {
+    var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .onCommit:

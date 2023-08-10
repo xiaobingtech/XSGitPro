@@ -43,7 +43,7 @@ extension XS_OnPull.State {
     }
 }
 
-struct XS_OnPull: ReducerProtocol {
+struct XS_OnPull: Reducer {
     struct State: Equatable {
         let repo: GTRepository
         var remote: GTRemote?
@@ -84,7 +84,7 @@ struct XS_OnPull: ReducerProtocol {
         case setShowType(State.ShowType)
     }
     @Dependency(\.dismiss) var dismiss
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .onCancel:
             return .run { send in

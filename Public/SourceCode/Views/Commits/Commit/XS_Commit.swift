@@ -8,12 +8,12 @@
 import Foundation
 import ComposableArchitecture
 
-struct XS_Commit: ReducerProtocol {
+struct XS_Commit: Reducer {
     struct State: Equatable {
         let commit: GTCommit
     }
     enum Action {
     }
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
     }
 }

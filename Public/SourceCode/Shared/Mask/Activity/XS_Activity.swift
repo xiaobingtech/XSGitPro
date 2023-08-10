@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 
-struct XS_Activity: ReducerProtocol {
+struct XS_Activity: Reducer {
     struct State: Equatable {
         var isShow: Bool = false
         var ids: [UUID] = []
@@ -19,7 +19,7 @@ struct XS_Activity: ReducerProtocol {
         case showId(UUID)
         case hideId(UUID)
     }
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .show:
             state.isShow = true

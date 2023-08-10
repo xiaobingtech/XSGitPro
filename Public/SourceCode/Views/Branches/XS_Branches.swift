@@ -73,7 +73,7 @@ extension XS_Branches.State {
     }
 }
 
-struct XS_Branches: ReducerProtocol {
+struct XS_Branches: Reducer {
     struct State: Equatable {
         let repo: GTRepository
         var selection: SelectionType = .Branches
@@ -81,7 +81,7 @@ struct XS_Branches: ReducerProtocol {
     enum Action {
         case setSelection(State.SelectionType)
     }
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case let .setSelection(selection):
             state.selection = selection

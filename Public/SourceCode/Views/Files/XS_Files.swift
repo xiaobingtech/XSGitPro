@@ -8,13 +8,13 @@
 import Foundation
 import ComposableArchitecture
 
-struct XS_Files: ReducerProtocol {
+struct XS_Files: Reducer {
     struct State: Equatable {
         var files: [String:XS_GitFolder]
         var key: String
     }
     enum Action {
     }
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
     }
 }

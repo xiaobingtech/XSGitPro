@@ -59,12 +59,12 @@ extension GTCommit {
     }
 }
 
-struct XS_Commits: ReducerProtocol {
+struct XS_Commits: Reducer {
     struct State: Equatable {
         let repo: GTRepository
     }
     enum Action {
     }
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
     }
 }

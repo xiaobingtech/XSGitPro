@@ -23,7 +23,7 @@ enum XS_NavPathItem: Equatable, Hashable {
     case commit(GTCommit)
 }
 
-struct XS_Nav: ReducerProtocol {
+struct XS_Nav: Reducer {
     struct State: Equatable {
         var path: [XS_NavPathItem] = []
         var files: [XS_NavPathItem] = []
@@ -32,7 +32,7 @@ struct XS_Nav: ReducerProtocol {
         case setPath([XS_NavPathItem])
         case setFiles([XS_NavPathItem])
     }
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case let .setPath(value):
             state.path = value

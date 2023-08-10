@@ -9,7 +9,7 @@ import Foundation
 import ComposableArchitecture
 import SwiftUI
 
-struct XS_Toast: ReducerProtocol {
+struct XS_Toast: Reducer {
     struct State: Equatable {
         var id: UUID?
         var text: String?
@@ -20,7 +20,7 @@ struct XS_Toast: ReducerProtocol {
         case hideToast
         case _hideToast(UUID)
     }
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case let .showToast(msg, time, alignment):
             if msg.isEmpty {
@@ -30,9 +30,9 @@ struct XS_Toast: ReducerProtocol {
             state.id = id
             state.text = msg
             state.alignment = alignment
-            return .task {
+            return .run { send in
                 try await Task.sleep(seconds: time)
-                return ._hideToast(id)
+                await send(._hideToast(id))
             }
         case .hideToast:
             _hideToast(state: &state)

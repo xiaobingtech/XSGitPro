@@ -14,7 +14,7 @@ extension Store where State == XS_Directory.State, Action == XS_Directory.Action
     }
 }
 
-struct XS_Directory: ReducerProtocol {
+struct XS_Directory: Reducer {
     struct State: Equatable {
         var list: [XS_GitDirectory] = XS_Git.shared.directorys
         @PresentationState var clone: XS_Clone.State?
@@ -25,7 +25,7 @@ struct XS_Directory: ReducerProtocol {
         case onAdd
         case clone(PresentationAction<XS_Clone.Action>)
     }
-    var body: some ReducerProtocolOf<Self> {
+    var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case let .delete(value):
@@ -35,8 +35,7 @@ struct XS_Directory: ReducerProtocol {
                 } catch {
                     debugPrint(error)
                     DispatchQueue.main.async {
-                        ViewStore(maskStore.scopeToast)
-                            .send(.showToast(msg: error.localizedDescription))
+                        ViewStore(maskStore.scopeToast, observe: { _ in 0 }).send(.showToast(msg: error.localizedDescription))
                     }
                 }
                 return .none

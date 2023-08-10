@@ -21,7 +21,7 @@ extension ViewStore where ViewState == String, ViewAction == XS_Clone.Action {
     }
 }
 
-struct XS_Clone: ReducerProtocol {
+struct XS_Clone: Reducer {
     struct State: Equatable {
         var text: String = ""
         var username: String = ""
@@ -47,7 +47,7 @@ struct XS_Clone: ReducerProtocol {
         case setShowType(State.ShowType)
     }
     @Dependency(\.dismiss) var dismiss
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .onCancel:
             return .run { send in

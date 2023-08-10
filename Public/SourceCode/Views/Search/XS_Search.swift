@@ -15,7 +15,7 @@ extension ViewStore where ViewState == String, ViewAction == XS_Search.Action {
     }
 }
 
-struct XS_Search: ReducerProtocol {
+struct XS_Search: Reducer {
     struct State: Equatable {
         let entries: [Entry]
         var text: String = ""
@@ -37,7 +37,7 @@ struct XS_Search: ReducerProtocol {
         case setText(String)
         case onCancel
     }
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .onCancel:
             state.text = ""

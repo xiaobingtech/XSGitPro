@@ -21,7 +21,7 @@ extension XS_OnCommit.State {
     }
 }
 
-struct XS_OnCommit: ReducerProtocol {
+struct XS_OnCommit: Reducer {
     struct State: Equatable {
         let repo: GTRepository
         let deltas: [GTDiffDelta]
@@ -71,7 +71,7 @@ struct XS_OnCommit: ReducerProtocol {
         case setText(String)
     }
     @Dependency(\.dismiss) var dismiss
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .onCancel:
             return .run { send in

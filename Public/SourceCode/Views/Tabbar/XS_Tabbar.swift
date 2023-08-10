@@ -37,7 +37,7 @@ extension XS_Tabbar.State {
     }
 }
 
-struct XS_Tabbar: ReducerProtocol {
+struct XS_Tabbar: Reducer {
     struct State: Equatable {
         var selection: Name = .Files
     }
@@ -46,7 +46,7 @@ struct XS_Tabbar: ReducerProtocol {
         case setSelection(State.Name)
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case let .setSelection(selection):
             state.selection = selection
