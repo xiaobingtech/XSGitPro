@@ -12,6 +12,7 @@ struct XSGitProApp: App {
     var body: some Scene {
         WindowGroup {
             XS_RootView()
+
         }
     }
 }
