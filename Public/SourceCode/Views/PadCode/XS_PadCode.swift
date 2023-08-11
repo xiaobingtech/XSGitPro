@@ -65,8 +65,8 @@ struct XS_PadCode: Reducer {
             return .none
         case .onEnded:
             state.width = max(min(state.width, XS_PadCode.maxWidth), 100)
-//            @AppStorage("XS_PadCode_Width") var data: Double?
-//            data = value
+            @AppStorage("XS_PadCode_Width") var data: Double?
+            data = state.width
             return .none
         }
     }
