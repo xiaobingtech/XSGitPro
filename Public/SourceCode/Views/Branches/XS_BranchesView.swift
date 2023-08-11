@@ -24,8 +24,12 @@ struct XS_BranchesView: View {
     }
     private var _toolbarItem: some View {
         WithViewStore(store, observe: \.selection) { vs in
-            _ItemView(current: vs.binding)
-                .frame(width: screenWidth/2 + 82 - 15, alignment: .leading)
+            if UIDevice.isPad {
+                _ItemView(current: vs.binding)
+            } else {
+                _ItemView(current: vs.binding)
+                    .frame(width: screenWidth/2 + 82 - 15, alignment: .leading)
+            }
         }
     }
     
@@ -117,7 +121,7 @@ private struct _ItemView: View {
     var body: some View {
         let index = all.firstIndex { $0 == current } ?? 0
         return ZStack(alignment: .leading) {
-            Color.white
+            Color.defaultBackground
                 .frame(width: 80, height: 30)
                 .cornerRadius(8)
                 .offset(x: Double(index)*80)

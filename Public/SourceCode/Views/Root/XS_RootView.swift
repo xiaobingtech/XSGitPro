@@ -10,12 +10,19 @@ import ComposableArchitecture
 
 struct XS_RootView: View {
     var body: some View {
-        XS_NavView()
-            .xsMask(maskStore)
-            .tint(.black)
-            .accessibilityHidden(true)
+        Group {
+            if UIDevice.isPad {
+                XS_PadCodeView()
+            } else {
+                XS_NavView()
+            }
+        }
+        .xsMask(maskStore)
+        .tint(.black)
+        .accessibilityHidden(true)
     }
 }
+
 #if DEBUG
 struct XS_RootView_Previews: PreviewProvider {
     static var previews: some View {

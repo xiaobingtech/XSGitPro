@@ -21,6 +21,11 @@ struct XS_TabbarView: View {
                 _search._tabItem(.Search)
             }
         }
+        .onAppear {
+            if UIDevice.isPad {
+                XS_PadCode.setShow(isShow: true)
+            }
+        }
         .toolbar(.hidden, for: .navigationBar)
         .navigationTitle(directory.fileName)
     }
@@ -76,8 +81,7 @@ private struct _TabItemModifier: ViewModifier {
         content
             ._nav()
             .tabItem {
-                Image(uiImage: UIImage(systemName: name.systemImage)!)
-                Text(name.rawValue)
+                Label(name.rawValue, systemImage: name.systemImage)
             }
             .tag(name)
     }

@@ -37,7 +37,7 @@ struct XS_DeleteModifier: ViewModifier {
         HStack(spacing: 0) {
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.white)
+                .background(Color.defaultBackground)
             ZStack(alignment: .leading) {
                 Color.red
                     .frame(width: screenWidth)

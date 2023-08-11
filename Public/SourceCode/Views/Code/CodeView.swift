@@ -24,11 +24,17 @@ struct CodeView: View {
         CodeEditor(text: $text, position: $position, messages: $messages, language: .swift())
             .environment(\.codeEditorTheme,
                           colorScheme == .dark ? Theme.defaultDark : Theme.defaultLight)
-            .onAppear(perform: readFile)
+            .onAppear {
+                readFile(file: file)
+            }
             .onDisappear(perform: saveFile)
+            .onChange(of: file) { newValue in
+                saveFile()
+                readFile(file: newValue)
+            }
     }
     
-    private func readFile() {
+    private func readFile(file: XS_GitFile) {
         if let path = file.entry?.path {
             let finalPath = directory.localURL.appendingPathComponent(path)
             debugPrint("finalPath:\(finalPath)")

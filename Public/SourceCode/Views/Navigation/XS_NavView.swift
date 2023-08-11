@@ -62,9 +62,9 @@ private struct _NavDestination: ViewModifier {
                     }
                 )
             case let .code(file, directory):
-//                CodeView(file: file, directory: directory)
-//                    .navigationTitle(file.name)
-                IAPView(isPresented: $paywallPresented)
+                CodeView(file: file, directory: directory)
+                    .navigationTitle(file.name)
+//                IAPView(isPresented: $paywallPresented)
             default: EmptyView()
             }
         }

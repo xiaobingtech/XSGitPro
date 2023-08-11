@@ -15,6 +15,12 @@ struct XS_DirectoryView: View {
     @State private var deleteId: UUID?
     var body: some View {
         _list
+            .onAppear {
+                if UIDevice.isPad {
+                    XS_PadCode.setShow(isShow: false)
+                    XS_PadCode.setCode(code: nil)
+                }
+            }
             .navigationTitle("所有仓库")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

@@ -8,18 +8,10 @@
 import Foundation
 import ComposableArchitecture
 
-let rootStore: StoreOf<XS_Root> = .init(initialState: .init()) {
-    XS_Root()
-}
-let maskStore: StoreOf<XS_Mask> = .init(initialState: .init()) {
-    XS_Mask()
-}
-let navStore: StoreOf<XS_Nav> = .init(initialState: .init()) {
-    XS_Nav()
-}
-let tabStore: StoreOf<XS_Tabbar> = .init(initialState: .init()) {
-    XS_Tabbar()
-}
+let rootStore: StoreOf<XS_Root> = .init(initialState: .init()) { XS_Root() }
+let maskStore: StoreOf<XS_Mask> = .init(initialState: .init()) { XS_Mask() }
+let navStore: StoreOf<XS_Nav> = .init(initialState: .init()) { XS_Nav() }
+let tabStore: StoreOf<XS_Tabbar> = .init(initialState: .init()) { XS_Tabbar() }
 
 extension Store where State == XS_Root.State, Action == XS_Root.Action {
     var scopeDirectory: StoreOf<XS_Directory> {

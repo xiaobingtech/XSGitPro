@@ -33,14 +33,42 @@ struct XS_FilesView: View {
         WithViewStore(store) { $0 } content: { vs in
             List(array(vs.files, key: vs.key).list) { item in
                 if let entry = item.entry {
-                    NavigationLink(value: XS_NavPathItem.code(item, vs.directory)) {
-                        HStack {
-                            Label(item.name, systemImage: "doc.text")
-                                .minimumScaleFactor(0.5)
-                                .lineLimit(1)
-                            Spacer()
-                            Text(status(entry.status))
-                                .font(.footnote)
+                    if UIDevice.isPad {
+                        Button {
+                            XS_PadCode.setCode(code: .init(file: item, dire: vs.directory))
+                        } label: {
+                            HStack {
+                                Label(item.name, systemImage: "doc.text")
+                                    .minimumScaleFactor(0.5)
+                                    .lineLimit(1)
+                                Spacer()
+                                Text(status(entry.status))
+                                    .font(.footnote)
+                            }
+                        }
+                        .tint(.defaultText)
+                        
+//                        HStack {
+//                            Label(item.name, systemImage: "doc.text")
+//                                .minimumScaleFactor(0.5)
+//                                .lineLimit(1)
+//                            Spacer()
+//                            Text(status(entry.status))
+//                                .font(.footnote)
+//                        }
+//                        .onTapGesture {
+//                            XS_PadCode.setCode(code: .init(file: item, dire: vs.directory))
+//                        }
+                    } else {
+                        NavigationLink(value: XS_NavPathItem.code(item, vs.directory)) {
+                            HStack {
+                                Label(item.name, systemImage: "doc.text")
+                                    .minimumScaleFactor(0.5)
+                                    .lineLimit(1)
+                                Spacer()
+                                Text(status(entry.status))
+                                    .font(.footnote)
+                            }
                         }
                     }
                 } else {
