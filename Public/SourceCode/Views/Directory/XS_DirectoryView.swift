@@ -21,7 +21,7 @@ struct XS_DirectoryView: View {
                     XS_PadCode.setCode(code: nil)
                 }
             }
-            .navigationTitle("所有仓库")
+            .navigationTitle("Repositories".i18n)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
