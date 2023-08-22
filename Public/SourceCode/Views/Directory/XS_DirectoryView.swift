@@ -25,7 +25,7 @@ struct XS_DirectoryView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        ViewStore(store) { _ in 0 } .send(.set)
+                        
                     } label: {
                         Image(systemName: "gear")
                             .foregroundColor(.defaultText)

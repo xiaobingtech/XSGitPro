@@ -18,14 +18,12 @@ struct XS_Directory: Reducer {
     struct State: Equatable {
         var list: [XS_GitDirectory] = XS_Git.shared.directorys
         @PresentationState var clone: XS_Clone.State?
-        @PresentationState var set: SetReducer.State?
     }
     enum Action {
         case delete(XS_GitDirectory)
         case update
         case onAdd
         case clone(PresentationAction<XS_Clone.Action>)
-        case set
     }
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -52,9 +50,6 @@ struct XS_Directory: Reducer {
                 state.list = XS_Git.shared.directorys
                 return .none
             case .clone:
-                return .none
-            case .set:
-                state.set = .init()
                 return .none
             }
         }

@@ -18,10 +18,6 @@
 		00F818352A9377DB0004E058 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F818332A9377DB0004E058 /* String.swift */; };
 		00F818392A9382740004E058 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00F8183C2A9382740004E058 /* Localizable.strings */; };
 		00F8183A2A9382740004E058 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00F8183C2A9382740004E058 /* Localizable.strings */; };
-		00F818472A93A1060004E058 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F818462A93A1060004E058 /* SetView.swift */; };
-		00F818482A93A1060004E058 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F818462A93A1060004E058 /* SetView.swift */; };
-		00F8184A2A93A1280004E058 /* SetReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F818492A93A1280004E058 /* SetReducer.swift */; };
-		00F8184B2A93A1280004E058 /* SetReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F818492A93A1280004E058 /* SetReducer.swift */; };
 		AE06D08A2A4936EE00998842 /* XS_GitPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06D0892A4936EE00998842 /* XS_GitPush.swift */; };
 		AE06D08B2A4936EE00998842 /* XS_GitPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06D0892A4936EE00998842 /* XS_GitPush.swift */; };
 		AE06D08E2A49709200998842 /* XS_OnPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06D08D2A49709200998842 /* XS_OnPush.swift */; };
@@ -264,8 +260,6 @@
 		00F818332A9377DB0004E058 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		00F8183B2A9382740004E058 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00F8183D2A9382810004E058 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		00F818462A93A1060004E058 /* SetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
-		00F818492A93A1280004E058 /* SetReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReducer.swift; sourceTree = "<group>"; };
 		AE06D0892A4936EE00998842 /* XS_GitPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitPush.swift; sourceTree = "<group>"; };
 		AE06D08D2A49709200998842 /* XS_OnPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_OnPush.swift; sourceTree = "<group>"; };
 		AE06D0902A49709F00998842 /* XS_OnPushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_OnPushView.swift; sourceTree = "<group>"; };
@@ -502,8 +496,6 @@
 		00F818452A93A0FC0004E058 /* Set */ = {
 			isa = PBXGroup;
 			children = (
-				00F818462A93A1060004E058 /* SetView.swift */,
-				00F818492A93A1280004E058 /* SetReducer.swift */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -1163,7 +1155,6 @@
 				AEB255B52A0380C70008720F /* GTTag.m in Sources */,
 				AE3695FA2A04D75000C3CB2A /* XS_ToastView.swift in Sources */,
 				AEB255BB2A0380C70008720F /* NSError+Git.m in Sources */,
-				00F8184A2A93A1280004E058 /* SetReducer.swift in Sources */,
 				AEB255A12A0380C70008720F /* GTRepository+Merging.m in Sources */,
 				AEB255932A0380C70008720F /* GTFilterSource.m in Sources */,
 				AEB255C72A0380C70008720F /* GTReference.m in Sources */,
@@ -1224,7 +1215,6 @@
 				AEB2558D2A0380C70008720F /* GTFilter.m in Sources */,
 				AED330BE2A3AFF070012CBDE /* XS_BranchesView.swift in Sources */,
 				AEA724642A429D4200A83BC6 /* XS_Commit.swift in Sources */,
-				00F818472A93A1060004E058 /* SetView.swift in Sources */,
 				AEB255712A0380C70008720F /* GTDiffDelta.m in Sources */,
 				AEB255C92A0380C70008720F /* GTTreeEntry.m in Sources */,
 				AEB0BE252A31A4B700BA6AAF /* XS_DeleteModifier.swift in Sources */,
@@ -1344,7 +1334,6 @@
 				AEB2558E2A0380C70008720F /* GTFilter.m in Sources */,
 				AEB255722A0380C70008720F /* GTDiffDelta.m in Sources */,
 				AED330BF2A3AFF070012CBDE /* XS_BranchesView.swift in Sources */,
-				00F8184B2A93A1280004E058 /* SetReducer.swift in Sources */,
 				AEA724652A429D4200A83BC6 /* XS_Commit.swift in Sources */,
 				AEB255CA2A0380C70008720F /* GTTreeEntry.m in Sources */,
 				AEB2557A2A0380C70008720F /* GTDiffLine.m in Sources */,
@@ -1371,7 +1360,6 @@
 				AEB255AE2A0380C70008720F /* GTReflogEntry.m in Sources */,
 				AE2423782A84DB38006B6E3B /* UserViewModel.swift in Sources */,
 				AE36960B2A04EFB900C3CB2A /* XS_GitDirectory.swift in Sources */,
-				00F818482A93A1060004E058 /* SetView.swift in Sources */,
 				AEB255902A0380C70008720F /* GTEnumerator.m in Sources */,
 				AEB255962A0380C70008720F /* GTIndex.m in Sources */,
 				AE3695FC2A04D75600C3CB2A /* XS_Toast.swift in Sources */,
