@@ -96,7 +96,7 @@ private struct _NavModifier: ViewModifier {
                         Button {
                             dismiss()
                         } label: {
-                            Text("所有仓库")
+                            Text("Repositories".i18n)
                                 .foregroundColor(.defaultText)
                         }
                     }

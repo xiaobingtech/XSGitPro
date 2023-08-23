@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  XSGitPro
+
+  Created by 范小兵 on 2023/8/21.
+  
+*/
+
+"Repositories"="所有仓库";
+"Cancel"="取消";
+"Clone Repository"="克隆仓库";
+"Clone an existing repository"="克隆一个已经存在的仓库";
+"URL"="远端地址";
+"Username"="用户名";
+"Password"="密码";
+"Clone"="克隆";
+
+"Cloning..."="正在克隆...";
+"Waiting..."="等待中...";

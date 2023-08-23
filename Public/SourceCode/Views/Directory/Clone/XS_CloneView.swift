@@ -31,12 +31,12 @@ struct XS_CloneView: View {
             .padding(.horizontal)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") {
+                    Button("Cancel".i18n) {
                         store.send(.onCancel)
                     }
                 }
             }
-            .navigationTitle("Clone Repository")
+            .navigationTitle("Clone Repository".i18n)
         }
     }
     private func _cloning(progess: String, size: String) -> some View {
@@ -45,17 +45,17 @@ struct XS_CloneView: View {
                 .font(.largeTitle)
             +
             Text(" %")
-            Text("Cloning... (\(size))")
+            Text("Cloning...".i18n + " (\(size))")
         }
         .padding(.bottom, 100)
     }
     private var _wait: some View {
-        Text("waiting...")
+        Text("Waiting...".i18n)
             .padding(.bottom, 100)
     }
     private var _clone: some View {
         VStack {
-            Text("Clone an existing repository")
+            Text("Clone an existing repository".i18n)
                 .frame(maxWidth: .infinity, alignment: .leading)
             _text.padding(.top)
             Spacer()
@@ -63,22 +63,22 @@ struct XS_CloneView: View {
     }
     private var _text: some View {
         VStack(alignment: .leading) {
-            Text("URL")
+            Text("URL".i18n)
                 .foregroundColor(.blue)
             WithViewStore(store, observe: \.text) { vs in
-                TextField(String("http://example.com/object.git"), text: vs.binding)
+                TextField(String("https://github.com/apple/swift.git"), text: vs.binding)
                     .padding(.bottom)
                 WithViewStore(store, observe: \.username) { vs in
-                    TextField("username", text: vs.bindingUsername)
+                    TextField("Username".i18n, text: vs.bindingUsername)
                 }
                 WithViewStore(store, observe: \.password) { vs in
-                    SecureField("password", text: vs.bindingPassword)
+                    SecureField("Password".i18n, text: vs.bindingPassword)
                 }
                 Spacer()
                 Button {
                     vs.send(.onClone)
                 } label: {
-                    Text("Clone")
+                    Text("Clone".i18n)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, maxHeight: 44)
                         .background(vs.isEmpty ? Color.gray.opacity(0.6) : Color.blue)
