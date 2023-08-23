@@ -44,7 +44,7 @@ struct XS_OnCommitView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") {
-                        ViewStore(store) { _ in 0 } .send(.onCancel)
+                        store.send(.onCancel)
                     }
                 }
             }

@@ -12,19 +12,24 @@ extension Store where State == XS_Directory.State, Action == XS_Directory.Action
     var scopeClone: Store<PresentationState<XS_Clone.State>, PresentationAction<XS_Clone.Action>> {
         scope(state: \.$clone, action: Action.clone)
     }
+    var scopeSet: Store<PresentationState<XS_Set.State>, PresentationAction<XS_Set.Action>> {
+        scope(state: \.$set, action: Action.set)
+    }
 }
 
 struct XS_Directory: Reducer {
     struct State: Equatable {
         var list: [XS_GitDirectory] = XS_Git.shared.directorys
         @PresentationState var clone: XS_Clone.State?
+        @PresentationState var set: XS_Set.State?
     }
     enum Action {
         case delete(XS_GitDirectory)
         case update
         case onAdd
         case clone(PresentationAction<XS_Clone.Action>)
-        case set
+        case onSet
+        case set(PresentationAction<XS_Set.Action>)
     }
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -46,16 +51,21 @@ struct XS_Directory: Reducer {
             case .onAdd:
                 state.clone = .init()
                 return .none
+            case .onSet:
+                state.set = .init()
+                return .none
                 
             case .clone(.presented(.delegate(.clone))):
                 state.list = XS_Git.shared.directorys
                 return .none
             case .clone:
                 return .none
+                
             case .set:
                 return .none
             }
         }
         .ifLet(\.$clone, action: /Action.clone) { XS_Clone() }
+        .ifLet(\.$set, action: /Action.set) { XS_Set() }
     }
 }

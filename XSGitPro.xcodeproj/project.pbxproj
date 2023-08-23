@@ -77,6 +77,10 @@
 		AE3990FA2A05FDCB00198AAA /* XS_Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3990F52A05FD9400198AAA /* XS_Nav.swift */; };
 		AE3991032A06453900198AAA /* XS_GitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3991022A06453900198AAA /* XS_GitFile.swift */; };
 		AE3991042A06453900198AAA /* XS_GitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3991022A06453900198AAA /* XS_GitFile.swift */; };
+		AE5D49632A959F9600DA14D9 /* XS_Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D49622A959F9600DA14D9 /* XS_Set.swift */; };
+		AE5D49642A959F9600DA14D9 /* XS_Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D49622A959F9600DA14D9 /* XS_Set.swift */; };
+		AE5D49662A959FA000DA14D9 /* XS_SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D49652A959FA000DA14D9 /* XS_SetView.swift */; };
+		AE5D49672A959FA000DA14D9 /* XS_SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D49652A959FA000DA14D9 /* XS_SetView.swift */; };
 		AE632FCF2A47D2D10042A609 /* XS_Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE632FCE2A47D2D10042A609 /* XS_Status.swift */; };
 		AE632FD02A47D2D10042A609 /* XS_Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE632FCE2A47D2D10042A609 /* XS_Status.swift */; };
 		AE632FD22A47D2DE0042A609 /* XS_StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE632FD12A47D2DE0042A609 /* XS_StatusView.swift */; };
@@ -284,6 +288,8 @@
 		AE3990F52A05FD9400198AAA /* XS_Nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Nav.swift; sourceTree = "<group>"; };
 		AE3990F72A05FDA300198AAA /* XS_NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_NavView.swift; sourceTree = "<group>"; };
 		AE3991022A06453900198AAA /* XS_GitFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitFile.swift; sourceTree = "<group>"; };
+		AE5D49622A959F9600DA14D9 /* XS_Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Set.swift; sourceTree = "<group>"; };
+		AE5D49652A959FA000DA14D9 /* XS_SetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_SetView.swift; sourceTree = "<group>"; };
 		AE632FCE2A47D2D10042A609 /* XS_Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_Status.swift; sourceTree = "<group>"; };
 		AE632FD12A47D2DE0042A609 /* XS_StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_StatusView.swift; sourceTree = "<group>"; };
 		AE632FD52A47D5380042A609 /* XS_OnCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_OnCommit.swift; sourceTree = "<group>"; };
@@ -700,6 +706,7 @@
 		AE3990ED2A05F72700198AAA /* Directory */ = {
 			isa = PBXGroup;
 			children = (
+				AE5D49612A959F7C00DA14D9 /* Set */,
 				AEB0BE272A31C2CF00BA6AAF /* Clone */,
 				AE3990EE2A05F73C00198AAA /* XS_Directory.swift */,
 				AE3990F02A05F74B00198AAA /* XS_DirectoryView.swift */,
@@ -714,6 +721,15 @@
 				AE3990F72A05FDA300198AAA /* XS_NavView.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		AE5D49612A959F7C00DA14D9 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				AE5D49622A959F9600DA14D9 /* XS_Set.swift */,
+				AE5D49652A959FA000DA14D9 /* XS_SetView.swift */,
+			);
+			path = Set;
 			sourceTree = "<group>";
 		};
 		AE632FCD2A47D2BB0042A609 /* Status */ = {
@@ -1131,6 +1147,7 @@
 				AE3695F82A04D6A200C3CB2A /* XS_Task.swift in Sources */,
 				AEB255A92A0380C70008720F /* GTRepository+Attributes.m in Sources */,
 				AE632FE32A4829A70042A609 /* XS_OnPullView.swift in Sources */,
+				AE5D49632A959F9600DA14D9 /* XS_Set.swift in Sources */,
 				AE821CA52A85C2A300318DC4 /* XS_PadCode.swift in Sources */,
 				AEB255B52A0380C70008720F /* GTTag.m in Sources */,
 				AE3695FA2A04D75000C3CB2A /* XS_ToastView.swift in Sources */,
@@ -1143,6 +1160,7 @@
 				AE3990F12A05F74B00198AAA /* XS_DirectoryView.swift in Sources */,
 				AEB2557D2A0380C70008720F /* GTRepository.m in Sources */,
 				AEB255612A0380C60008720F /* GTRemote.m in Sources */,
+				AE5D49662A959FA000DA14D9 /* XS_SetView.swift in Sources */,
 				AE3990F82A05FDA300198AAA /* XS_NavView.swift in Sources */,
 				AEB2559F2A0380C70008720F /* GTBranch.m in Sources */,
 				AEB255B72A0380C70008720F /* GTCheckoutOptions.m in Sources */,
@@ -1254,6 +1272,7 @@
 				AEB255BC2A0380C70008720F /* NSError+Git.m in Sources */,
 				AEB255A22A0380C70008720F /* GTRepository+Merging.m in Sources */,
 				AE3695FD2A04D83D00C3CB2A /* XS_Task.swift in Sources */,
+				AE5D49642A959F9600DA14D9 /* XS_Set.swift in Sources */,
 				AEB255942A0380C70008720F /* GTFilterSource.m in Sources */,
 				AEB255C82A0380C70008720F /* GTReference.m in Sources */,
 				AE06D0922A49709F00998842 /* XS_OnPushView.swift in Sources */,
@@ -1342,6 +1361,7 @@
 				AEB255962A0380C70008720F /* GTIndex.m in Sources */,
 				AE3695FC2A04D75600C3CB2A /* XS_Toast.swift in Sources */,
 				AEB255822A0380C70008720F /* GTRepository+RemoteOperations.m in Sources */,
+				AE5D49672A959FA000DA14D9 /* XS_SetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

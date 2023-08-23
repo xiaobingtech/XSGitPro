@@ -23,14 +23,12 @@ struct XS_PadCode: Reducer {
     static let store: StoreOf<XS_PadCode> = .init(initialState: .init()) { XS_PadCode() }
     static func setShow(isShow: Bool) {
         DispatchQueue.main.async {
-            ViewStore(store) { _ in 0 }
-                .send(.setShow(isShow))
+            store.send(.setShow(isShow))
         }
     }
     static func setCode(code: State.Code?) {
         DispatchQueue.main.async {
-            ViewStore(store) { _ in 0 }
-                .send(.setCode(code))
+            store.send(.setCode(code))
         }
     }
     static var maxWidth: Double {

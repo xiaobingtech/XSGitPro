@@ -12,16 +12,14 @@ struct XS_StatusView: View {
     let store: StoreOf<XS_Status>
     var body: some View {
         VStack {
-            WithViewStore(store) { _ in 0 } content: { vs in
-                Button("Commit") {
-                    vs.send(.onCommit)
-                }
-                Button("Pull") {
-                    vs.send(.onPull)
-                }
-                Button("Push") {
-                    vs.send(.onPush)
-                }
+            Button("Commit") {
+                store.send(.onCommit)
+            }
+            Button("Pull") {
+                store.send(.onPull)
+            }
+            Button("Push") {
+                store.send(.onPush)
             }
         }
         .buttonStyle(.bordered)

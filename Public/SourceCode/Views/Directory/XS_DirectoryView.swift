@@ -25,7 +25,7 @@ struct XS_DirectoryView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        ViewStore(store) { _ in 0 } .send(.set)
+                        store.send(.onSet)
                     } label: {
                         Image(systemName: "gear")
                             .foregroundColor(.defaultText)
@@ -33,7 +33,7 @@ struct XS_DirectoryView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        ViewStore(store) { _ in 0 } .send(.onAdd)
+                        store.send(.onAdd)
                     } label: {
                         Image(systemName: "plus")
                             .foregroundColor(.defaultText)
@@ -42,6 +42,9 @@ struct XS_DirectoryView: View {
             }
             .sheet(store: store.scopeClone) { store in
                 XS_CloneView(store: store)
+            }
+            .sheet(store: store.scopeSet) { store in
+                XS_SetView(store: store)
             }
     }
     private var _list: some View {

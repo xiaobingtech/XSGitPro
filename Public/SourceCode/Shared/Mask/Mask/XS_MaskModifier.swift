@@ -40,24 +40,23 @@ struct XS_MaskModifier_Previews: PreviewProvider {
         ) {
             XS_Mask()
         }
-        let vs = ViewStore(store) { _ in 0 }
         return VStack {
             HStack {
                 Button("显示1") {
-                    vs.send(.toast(.showToast(msg: "1234", alignment: .center)))
+                    store.send(.toast(.showToast(msg: "1234", alignment: .center)))
                 }
                 Button("显示2") {
-                    vs.send(.toast(.showToast(msg: "background(Color.white)background(Color.white)background(Color.white)")))
+                    store.send(.toast(.showToast(msg: "background(Color.white)background(Color.white)background(Color.white)")))
                 }
                 Button("隐藏") {
-                    vs.send(.toast(.hideToast))
+                    store.send(.toast(.hideToast))
                 }
             }
             Button("Loading") {
-                vs.send(.activity(.show))
+                store.send(.activity(.show))
                 Task {
                     try await Task.sleep(seconds: 3)
-                    vs.send(.activity(.hide))
+                    store.send(.activity(.hide))
                 }
             }
         }
