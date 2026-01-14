@@ -25,7 +25,8 @@ extension Package {
     }
 }
 
-extension SubscriptionPeriod {
+@available(iOS 18.4, *)
+extension StoreKit.SubscriptionPeriod {
     var durationTitle: String {
         switch self.unit {
         case .day: return "day"
@@ -35,7 +36,25 @@ extension SubscriptionPeriod {
         @unknown default: return "Unknown"
         }
     }
-    
+
+    var periodTitle: String {
+        let periodString = "\(self.value) \(self.durationTitle)"
+        let pluralized = self.value > 1 ?  periodString + "s" : periodString
+        return pluralized
+    }
+}
+
+extension RevenueCat.SubscriptionPeriod {
+    var durationTitle: String {
+        switch self.unit {
+        case .day: return "day"
+        case .week: return "week"
+        case .month: return "month"
+        case .year: return "year"
+        @unknown default: return "Unknown"
+        }
+    }
+
     var periodTitle: String {
         let periodString = "\(self.value) \(self.durationTitle)"
         let pluralized = self.value > 1 ?  periodString + "s" : periodString
