@@ -27,7 +27,7 @@ struct XS_DirectoryView: View {
                     Button {
                         store.send(.onSet)
                     } label: {
-                        Image(systemName: "gear")
+                        Image(systemName: "gearshape.circle")
                             .foregroundColor(.defaultText)
                     }
                 }
@@ -35,7 +35,7 @@ struct XS_DirectoryView: View {
                     Button {
                         store.send(.onAdd)
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: "plus.circle")
                             .foregroundColor(.defaultText)
                     }
                 }
