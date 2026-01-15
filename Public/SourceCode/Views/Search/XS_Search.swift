@@ -18,6 +18,7 @@ extension ViewStore where ViewState == String, ViewAction == XS_Search.Action {
 struct XS_Search: Reducer {
     struct State: Equatable {
         let entries: [Entry]
+        let directory: XS_GitDirectory
         var text: String = ""
         var list: [Entry]
         struct Entry: Equatable, Identifiable {
@@ -25,12 +26,13 @@ struct XS_Search: Reducer {
             var name: String
             var entry: GTIndexEntry
         }
-        init(_ entries: [GTIndexEntry]) {
+        init(_ entries: [GTIndexEntry], directory: XS_GitDirectory) {
             self.entries = entries.compactMap {
                 guard let name = $0.path.components(separatedBy: "/").last else { return nil }
                 return Entry(name: name, entry: $0)
             }
             list = self.entries
+            self.directory = directory
         }
     }
     enum Action {

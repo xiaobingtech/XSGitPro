@@ -30,9 +30,10 @@ struct XS_TabbarView: View {
     }
     private var _search: some View {
         XS_SearchView(
-            store: .init(initialState: .init(directory.entries)) {
+            store: .init(initialState: .init(directory.entries, directory: directory)) {
                 XS_Search()
-            }
+            },
+            directory: directory
         )
     }
     private var _commits: some View {
