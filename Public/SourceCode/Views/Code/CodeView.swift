@@ -16,7 +16,7 @@ struct CodeView: View {
     var directory: XS_GitDirectory
     @State var text: String = ""
     @State private var position: CodeEditor.Position = CodeEditor.Position()
-    @State private var messages: Set<Located<Message>> = Set()
+    @State private var messages: Set<TextLocated<Message>> = Set()
     
     @Environment(\.colorScheme) private var colorScheme: ColorScheme
     

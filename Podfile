@@ -14,5 +14,6 @@ target 'XSGitPro' do
   use_frameworks!
 
   # Pods for XSGitPro
+  pod 'RATreeView', :git => 'https://github.com/fandongtongxue/RATreeView.git'
 
 end
