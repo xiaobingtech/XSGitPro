@@ -30,7 +30,7 @@ struct XS_OnCommitView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Create a commit with staged changes")
+                Text("Create a commit with staged changes".i18n)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 _message
                 _list
@@ -43,17 +43,17 @@ struct XS_OnCommitView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") {
+                    Button("Cancel".i18n) {
                         store.send(.onCancel)
                     }
                 }
             }
-            .navigationTitle("Commit")
+            .navigationTitle("Commit".i18n)
         }
     }
     private var _message: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("Message")
+            Text("Message".i18n)
             WithViewStore(store, observe: \.text) { vs in
                 TextEditor(text: vs.binding)
             }
@@ -79,7 +79,7 @@ struct XS_OnCommitView: View {
     }
     private var _header: some View {
         HStack {
-            Text("Files to Commit")
+            Text("Files to Commit".i18n)
             Spacer()
             WithViewStore(store, observe: \.str) { vs in
                 Text(vs.state)
@@ -108,7 +108,7 @@ struct XS_OnCommitView: View {
             Button {
                 vs.send(.onCommit)
             } label: {
-                Text("Commit")
+                Text("Commit".i18n)
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, maxHeight: 44)
                     .background(vs.state ? Color.gray.opacity(0.6) : Color.blue)

@@ -1,9 +1,9 @@
-/* 
+/*
   Localizable.strings
   XSGitPro
 
   Created by 范小兵 on 2023/8/21.
-  
+
 */
 
 "Repositories"="所有仓库";
@@ -17,3 +17,8 @@
 
 "Cloning..."="正在克隆...";
 "Waiting..."="等待中...";
+
+"Create a commit with staged changes"="创建提交暂存的更改";
+"Commit"="提交";
+"Message"="消息";
+"Files to Commit"="待提交的文件";

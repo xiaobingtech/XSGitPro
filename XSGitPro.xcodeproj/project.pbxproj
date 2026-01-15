@@ -250,6 +250,8 @@
 		CB8EA7EF2F17CB360083A8E9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CB8EA7EE2F17CB360083A8E9 /* ComposableArchitecture */; };
 		CB8EA7F12F17CB820083A8E9 /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8EA7F02F17CB820083A8E9 /* libiconv.2.tbd */; };
 		CB8EA7F22F17CB8B0083A8E9 /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8EA7F02F17CB820083A8E9 /* libiconv.2.tbd */; };
+		CB98AE082F192A1200CD882F /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = CB98AE072F192A1200CD882F /* status.png */; };
+		CB98AE092F192A1200CD882F /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = CB98AE072F192A1200CD882F /* status.png */; };
 		CBA09A442A6019080059570C /* CodeEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = CBA09A432A6019080059570C /* CodeEditorView */; };
 		CBA09A462A6019080059570C /* LanguageSupport in Frameworks */ = {isa = PBXBuildFile; productRef = CBA09A452A6019080059570C /* LanguageSupport */; };
 		CBA09A492A6019170059570C /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA09A482A6019170059570C /* CodeView.swift */; };
@@ -448,6 +450,7 @@
 		AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitClone.swift; sourceTree = "<group>"; };
 		C5C7D192BE5CA0C01DF5A634 /* Pods_XSGitPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSGitPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8EA7F02F17CB820083A8E9 /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
+		CB98AE072F192A1200CD882F /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
 		CBA09A482A6019170059570C /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		E5EDD25E008836529048BBF9 /* Pods-XSGitPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSGitPro.debug.xcconfig"; path = "Target Support Files/Pods-XSGitPro/Pods-XSGitPro.debug.xcconfig"; sourceTree = "<group>"; };
 		EA3A6441F602FA648D45DB19 /* Pods-GitSimulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitSimulator.debug.xcconfig"; path = "Target Support Files/Pods-GitSimulator/Pods-GitSimulator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -776,6 +779,7 @@
 		AE632FCD2A47D2BB0042A609 /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				CB98AE072F192A1200CD882F /* status.png */,
 				AE06D08C2A4936F100998842 /* OnPush */,
 				AE632FDE2A4829830042A609 /* OnPull */,
 				AE632FD42A47D51D0042A609 /* OnCommit */,
@@ -1157,6 +1161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE25EE1829FA078300D8FA5B /* Preview Assets.xcassets in Resources */,
+				CB98AE092F192A1200CD882F /* status.png in Resources */,
 				00F818392A9382740004E058 /* Localizable.strings in Resources */,
 				AE25EE1529FA078300D8FA5B /* Assets.xcassets in Resources */,
 			);
@@ -1167,6 +1172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE25EE2C29FA07BC00D8FA5B /* Preview Assets.xcassets in Resources */,
+				CB98AE082F192A1200CD882F /* status.png in Resources */,
 				00F8183A2A9382740004E058 /* Localizable.strings in Resources */,
 				AE25EE2929FA07BC00D8FA5B /* Assets.xcassets in Resources */,
 			);

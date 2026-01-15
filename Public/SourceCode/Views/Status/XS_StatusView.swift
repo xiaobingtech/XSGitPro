@@ -12,17 +12,16 @@ struct XS_StatusView: View {
     let store: StoreOf<XS_Status>
     var body: some View {
         VStack {
-            Button("Commit") {
+            Button("Commit".i18n) {
                 store.send(.onCommit)
             }
-            Button("Pull") {
+            Button("Pull".i18n) {
                 store.send(.onPull)
             }
-            Button("Push") {
+            Button("Push".i18n) {
                 store.send(.onPush)
             }
         }
-        .buttonStyle(.bordered)
         .sheet(store: store.scopeCommit) { store in
             XS_OnCommitView(store: store)
         }
