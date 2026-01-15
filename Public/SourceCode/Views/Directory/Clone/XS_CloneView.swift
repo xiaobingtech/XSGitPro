@@ -67,12 +67,30 @@ struct XS_CloneView: View {
                 .foregroundColor(.blue)
             WithViewStore(store, observe: \.text) { vs in
                 TextField(String("https://github.com/apple/swift.git"), text: vs.binding)
+                    .frame(height: 44)
+                    .padding(.horizontal, 12)
+                    .background(Color(uiColor: .secondarySystemBackground))
+                    .cornerRadius(8)
                     .padding(.bottom)
-                WithViewStore(store, observe: \.username) { vs in
-                    TextField("Username".i18n, text: vs.bindingUsername)
-                }
-                WithViewStore(store, observe: \.password) { vs in
-                    SecureField("Password".i18n, text: vs.bindingPassword)
+                WithViewStore(store, observe: \.showCredential) { showVs in
+                    if showVs.state {
+                        WithViewStore(store, observe: \.username) { vs in
+                            TextField("Username".i18n, text: vs.bindingUsername)
+                                .frame(height: 44)
+                                .padding(.horizontal, 12)
+                                .background(Color(uiColor: .secondarySystemBackground))
+                                .cornerRadius(8)
+                                .padding(.bottom)
+                        }
+                        WithViewStore(store, observe: \.password) { vs in
+                            SecureField("Password".i18n, text: vs.bindingPassword)
+                                .frame(height: 44)
+                                .padding(.horizontal, 12)
+                                .background(Color(uiColor: .secondarySystemBackground))
+                                .cornerRadius(8)
+                                .padding(.bottom)
+                        }
+                    }
                 }
                 Spacer()
                 Button {
@@ -88,7 +106,6 @@ struct XS_CloneView: View {
             }
             .autocorrectionDisabled()
             .textInputAutocapitalization(.never)
-            .textFieldStyle(.roundedBorder)
         }
     }
 }

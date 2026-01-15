@@ -26,6 +26,7 @@ struct XS_Clone: Reducer {
         var text: String = ""
         var username: String = ""
         var password: String = ""
+        var showCredential: Bool = false
         var showType: ShowType = .default
         enum ShowType: Equatable {
             case `default`
@@ -44,6 +45,7 @@ struct XS_Clone: Reducer {
         case setText(String)
         case setUsername(String)
         case setPassword(String)
+        case setShowCredential(Bool)
         case setShowType(State.ShowType)
     }
     @Dependency(\.dismiss) var dismiss
@@ -92,6 +94,7 @@ struct XS_Clone: Reducer {
                         await send(.setShowType(.error(err.domain)))
                     } else if err.code == -16 {
                         await send(.setShowType(.error("需要授权!")))
+                        await send(.setShowCredential(true))
                     } else {
                         await send(.setShowType(.error("CLONE失败!")))
                     }
@@ -107,6 +110,9 @@ struct XS_Clone: Reducer {
             return .none
         case let .setPassword(value):
             state.password = value
+            return .none
+        case let .setShowCredential(value):
+            state.showCredential = value
             return .none
         case let .setShowType(value):
             state.showType = value
