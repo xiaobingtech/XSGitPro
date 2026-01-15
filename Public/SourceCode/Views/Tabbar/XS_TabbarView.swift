@@ -20,13 +20,13 @@ struct XS_TabbarView: View {
                 _commits._tabItem(.Commits)
                 _search._tabItem(.Search)
             }
+            .navigationTitle(vs.state.rawValue)
         }
         .onAppear {
             if UIDevice.isPad {
                 XS_PadCode.setShow(isShow: true)
             }
         }
-        .navigationTitle(directory.fileName)
     }
     private var _search: some View {
         XS_SearchView(
