@@ -66,12 +66,6 @@ struct XS_BranchesView: View {
             switch item.branchType {
             case .local:
                 Text(item.name ?? "")
-                    .background(
-                        Color.blue
-                            .cornerRadius(8)
-                            .padding(-3)
-                            .opacity(item.isCurrent ? 0.3 : 0)
-                    )
             default:
                 Text(item.name ?? "")
             }
