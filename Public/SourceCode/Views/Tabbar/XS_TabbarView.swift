@@ -26,7 +26,6 @@ struct XS_TabbarView: View {
                 XS_PadCode.setShow(isShow: true)
             }
         }
-        .toolbar(.hidden, for: .navigationBar)
         .navigationTitle(directory.fileName)
     }
     private var _search: some View {
@@ -63,7 +62,6 @@ struct XS_TabbarView: View {
                 XS_Files()
             }
         )
-        .navigationTitle(directory.fileName)
     }
 }
 
@@ -87,22 +85,9 @@ private struct _TabItemModifier: ViewModifier {
     }
 }
 private struct _NavModifier: ViewModifier {
-    @Environment(\.dismiss) private var dismiss
     func body(content: Content) -> some View {
-        NavigationView {
-            content
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button {
-                            dismiss()
-                        } label: {
-                            Text("Repositories".i18n)
-                                .foregroundColor(.defaultText)
-                        }
-                    }
-                }
-        }
-        .navigationViewStyle(.stack)
+        content
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 
