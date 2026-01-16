@@ -98,9 +98,7 @@ private struct FileTreeItem: View {
                 }
                 .tint(.defaultText)
             } else {
-                Button {
-                    // No navigation, just show content or do nothing
-                } label: {
+                NavigationLink(value: XS_NavPathItem.code(item, directory)) {
                     rowContent(
                         icon: "doc.text",
                         text: item.name,
