@@ -91,6 +91,7 @@ struct XS_FilesView: View {
                 }
             }
         }
+        .listStyle(.plain)
     }
 }
 

@@ -56,10 +56,6 @@ struct XS_DirectoryView: View {
                             VStack(spacing: 0) {
                                 VStack(alignment: .leading) {
                                     Text(item.fileName)
-                                    if let name = item.branchName {
-                                        Text(name)
-                                            .font(.footnote)
-                                    }
                                 }
                                 .frame(maxWidth: .infinity, minHeight: 50, alignment: .leading)
                                 Divider()
