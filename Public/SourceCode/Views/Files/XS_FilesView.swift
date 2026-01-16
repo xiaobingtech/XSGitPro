@@ -39,10 +39,12 @@ struct XS_FilesView: View {
                         } label: {
                             HStack {
                                 Label(item.name, systemImage: "doc.text")
+                                    .foregroundStyle(.primary)
                                     .minimumScaleFactor(0.5)
                                     .lineLimit(1)
                                 Spacer()
                                 Text(status(entry.status))
+                                    .foregroundStyle(.secondary)
                                     .font(.footnote)
                             }
                         }
@@ -63,10 +65,12 @@ struct XS_FilesView: View {
                         NavigationLink(value: XS_NavPathItem.code(item, vs.directory)) {
                             HStack {
                                 Label(item.name, systemImage: "doc.text")
+                                    .foregroundStyle(.primary)
                                     .minimumScaleFactor(0.5)
                                     .lineLimit(1)
                                 Spacer()
                                 Text(status(entry.status))
+                                    .foregroundStyle(.secondary)
                                     .font(.footnote)
                             }
                         }
@@ -75,10 +79,12 @@ struct XS_FilesView: View {
                     NavigationLink(value: XS_NavPathItem.files(vs.files, item.id, item.name, vs.directory)) {
                         HStack {
                             Label(item.name, systemImage: "folder")
+                                .foregroundStyle(.primary)
                                 .minimumScaleFactor(0.5)
                                 .lineLimit(1)
                             Spacer()
                             Text("\(array(vs.files, key: item.id).count)")
+                                .foregroundStyle(.secondary)
                                 .font(.footnote)
                         }
                     }
