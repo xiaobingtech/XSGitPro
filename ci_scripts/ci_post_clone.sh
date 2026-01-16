@@ -7,3 +7,6 @@ echo "Cocoapods设置完毕"
 echo "开始安装Pods依赖库"
 pod install
 echo "Pods依赖库安装完毕"
+
+# Disable Xcode macro fingerprint validation to prevent spurious build errors
+defaults write com.apple.dt.Xcode IDESkipMacroFingerprintValidation -bool YES
