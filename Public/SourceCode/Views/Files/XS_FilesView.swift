@@ -123,11 +123,24 @@ private struct FileTreeItem: View {
                 }
             }
         } label: {
-            rowContent(
-                icon: isExpanded ? "folder.fill" : "folder",
-                text: item.name,
-                trailing: "\(array(files, key: item.id).count)"
-            )
+            HStack {
+                Image(systemName: isExpanded ? "folder.fill" : "folder")
+                    .foregroundStyle(.secondary)
+                    .frame(width: 20)
+                Text(item.name)
+                    .foregroundStyle(.primary)
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(1)
+                Spacer()
+                Text("\(array(files, key: item.id).count)")
+                    .foregroundStyle(.secondary)
+                    .font(.footnote)
+                Image(systemName: isExpanded ? "chevron.down" : "chevron.right")
+                    .foregroundStyle(.secondary)
+                    .font(.system(size: 12, weight: .semibold))
+                    .frame(width: 16)
+            }
+            .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .padding(.leading, CGFloat(depth) * indentPerLevel)
