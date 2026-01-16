@@ -239,6 +239,16 @@
 		BF8611FDF736F3F90A0A6471 /* Pods_XSGitPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C7D192BE5CA0C01DF5A634 /* Pods_XSGitPro.framework */; };
 		CB8ABD952F1A69E700AB0141 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = CB8ABD942F1A69E700AB0141 /* Toast */; };
 		CB8ABD972F1A69F100AB0141 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = CB8ABD962F1A69F100AB0141 /* Toast */; };
+		CB8ABD9E2F1A820000AB0141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ABD982F1A820000AB0141 /* Constants.swift */; };
+		CB8ABD9F2F1A820000AB0141 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ABD9C2F1A820000AB0141 /* UserViewModel.swift */; };
+		CB8ABDA02F1A820000AB0141 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ABD992F1A820000AB0141 /* Extensions.swift */; };
+		CB8ABDA12F1A820000AB0141 /* PurchasesDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ABD9B2F1A820000AB0141 /* PurchasesDelegateHandler.swift */; };
+		CB8ABDA22F1A820000AB0141 /* IAPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ABD9A2F1A820000AB0141 /* IAPView.swift */; };
+		CB8ABDA32F1A820000AB0141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ABD982F1A820000AB0141 /* Constants.swift */; };
+		CB8ABDA42F1A820000AB0141 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ABD9C2F1A820000AB0141 /* UserViewModel.swift */; };
+		CB8ABDA52F1A820000AB0141 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ABD992F1A820000AB0141 /* Extensions.swift */; };
+		CB8ABDA62F1A820000AB0141 /* PurchasesDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ABD9B2F1A820000AB0141 /* PurchasesDelegateHandler.swift */; };
+		CB8ABDA72F1A820000AB0141 /* IAPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ABD9A2F1A820000AB0141 /* IAPView.swift */; };
 		CB8EA7ED2F17C9500083A8E9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CB8EA7EC2F17C9500083A8E9 /* ComposableArchitecture */; };
 		CB8EA7EF2F17CB360083A8E9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CB8EA7EE2F17CB360083A8E9 /* ComposableArchitecture */; };
 		CB8EA7F12F17CB820083A8E9 /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8EA7F02F17CB820083A8E9 /* libiconv.2.tbd */; };
@@ -435,6 +445,11 @@
 		AED8E9CD2A3D38B400A2A983 /* XS_CommitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_CommitsView.swift; sourceTree = "<group>"; };
 		AEE39E922A089C9100F6D0B6 /* XS_GitClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XS_GitClone.swift; sourceTree = "<group>"; };
 		C5C7D192BE5CA0C01DF5A634 /* Pods_XSGitPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSGitPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB8ABD982F1A820000AB0141 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB8ABD992F1A820000AB0141 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CB8ABD9A2F1A820000AB0141 /* IAPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPView.swift; sourceTree = "<group>"; };
+		CB8ABD9B2F1A820000AB0141 /* PurchasesDelegateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesDelegateHandler.swift; sourceTree = "<group>"; };
+		CB8ABD9C2F1A820000AB0141 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		CB8EA7F02F17CB820083A8E9 /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
 		CBA09A482A6019170059570C /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		E5EDD25E008836529048BBF9 /* Pods-XSGitPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSGitPro.debug.xcconfig"; path = "Target Support Files/Pods-XSGitPro/Pods-XSGitPro.debug.xcconfig"; sourceTree = "<group>"; };
@@ -616,6 +631,7 @@
 		AE25EF2429FA08CE00D8FA5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CB8ABD9D2F1A820000AB0141 /* IAP */,
 				AE821CA02A85C17800318DC4 /* PadCode */,
 				CBA09A472A60190E0059570C /* Code */,
 				AE632FCD2A47D2BB0042A609 /* Status */,
@@ -1017,6 +1033,18 @@
 			path = Commits;
 			sourceTree = "<group>";
 		};
+		CB8ABD9D2F1A820000AB0141 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				CB8ABD982F1A820000AB0141 /* Constants.swift */,
+				CB8ABD992F1A820000AB0141 /* Extensions.swift */,
+				CB8ABD9A2F1A820000AB0141 /* IAPView.swift */,
+				CB8ABD9B2F1A820000AB0141 /* PurchasesDelegateHandler.swift */,
+				CB8ABD9C2F1A820000AB0141 /* UserViewModel.swift */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
 		CBA09A472A60190E0059570C /* Code */ = {
 			isa = PBXGroup;
 			children = (
@@ -1263,6 +1291,11 @@
 				AE06D08E2A49709200998842 /* XS_OnPush.swift in Sources */,
 				AE3695E92A04D11200C3CB2A /* XS_Mask.swift in Sources */,
 				AEB255AF2A0380C70008720F /* GTFetchHeadEntry.m in Sources */,
+				CB8ABD9E2F1A820000AB0141 /* Constants.swift in Sources */,
+				CB8ABD9F2F1A820000AB0141 /* UserViewModel.swift in Sources */,
+				CB8ABDA02F1A820000AB0141 /* Extensions.swift in Sources */,
+				CB8ABDA12F1A820000AB0141 /* PurchasesDelegateHandler.swift in Sources */,
+				CB8ABDA22F1A820000AB0141 /* IAPView.swift in Sources */,
 				AEB2556B2A0380C70008720F /* ObjectiveGit.m in Sources */,
 				AEB255992A0380C70008720F /* GTBlame.m in Sources */,
 				AEB255C32A0380C70008720F /* NSString+Git.m in Sources */,
@@ -1378,6 +1411,11 @@
 				AE06D08F2A49709200998842 /* XS_OnPush.swift in Sources */,
 				AE2423702A84DA6A006B6E3B /* UIColor.swift in Sources */,
 				AEB255B02A0380C70008720F /* GTFetchHeadEntry.m in Sources */,
+				CB8ABDA32F1A820000AB0141 /* Constants.swift in Sources */,
+				CB8ABDA42F1A820000AB0141 /* UserViewModel.swift in Sources */,
+				CB8ABDA52F1A820000AB0141 /* Extensions.swift in Sources */,
+				CB8ABDA62F1A820000AB0141 /* PurchasesDelegateHandler.swift in Sources */,
+				CB8ABDA72F1A820000AB0141 /* IAPView.swift in Sources */,
 				AEB2556C2A0380C70008720F /* ObjectiveGit.m in Sources */,
 				AEB2559A2A0380C70008720F /* GTBlame.m in Sources */,
 				AE3990F92A05FDC800198AAA /* XS_NavView.swift in Sources */,
