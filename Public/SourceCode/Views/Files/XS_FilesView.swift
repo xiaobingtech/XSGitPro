@@ -108,6 +108,7 @@ private struct FileTreeItem: View {
                 .buttonStyle(.plain)
             }
         }
+        .frame(height: depth > 0 ? 44 : nil)
         .padding(.leading, CGFloat(depth) * indentPerLevel)
     }
 
@@ -140,6 +141,7 @@ private struct FileTreeItem: View {
             }
             .contentShape(Rectangle())
         }
+        .frame(height: depth > 0 ? 44 : nil)
         .buttonStyle(.plain)
         .padding(.leading, CGFloat(depth) * indentPerLevel)
     }
