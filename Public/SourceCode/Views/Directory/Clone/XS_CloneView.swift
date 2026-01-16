@@ -34,6 +34,7 @@ struct XS_CloneView: View {
                     Button("Cancel".i18n) {
                         store.send(.onCancel)
                     }
+                    .foregroundStyle(.primary)
                 }
             }
             .navigationTitle("Clone Repository".i18n)
@@ -55,16 +56,12 @@ struct XS_CloneView: View {
     }
     private var _clone: some View {
         VStack {
-            Text("Clone an existing repository".i18n)
-                .frame(maxWidth: .infinity, alignment: .leading)
             _text.padding(.top)
             Spacer()
         }
     }
     private var _text: some View {
         VStack(alignment: .leading) {
-            Text("URL".i18n)
-                .foregroundColor(.blue)
             WithViewStore(store, observe: \.text) { vs in
                 TextField(String("https://github.com/apple/swift.git"), text: vs.binding)
                     .frame(height: 44)
@@ -99,7 +96,7 @@ struct XS_CloneView: View {
                     Text("Clone".i18n)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, maxHeight: 44)
-                        .background(vs.isEmpty ? Color.gray.opacity(0.6) : Color.blue)
+                        .background(vs.isEmpty ? Color.gray.opacity(0.4) : Color.blue)
                         .clipShape(Capsule())
                 }
                 .disabled(vs.isEmpty)
