@@ -122,7 +122,7 @@ private struct FileTreeItem: View {
                 }
             }
         } label: {
-            HStack {
+            HStack(alignment: .center) {
                 Image(systemName: isExpanded ? "folder.fill" : "folder")
                     .foregroundStyle(.secondary)
                     .frame(width: 20)
@@ -147,20 +147,27 @@ private struct FileTreeItem: View {
     }
 
     private var children: some View {
-        ForEach(array(files, key: item.id).list, id: \.id) { child in
-            FileTreeItem(
-                item: child,
-                files: files,
-                directory: directory,
-                expandedFolderIds: $expandedFolderIds,
-                status: status,
-                depth: depth + 1
-            )
+        let childList = array(files, key: item.id).list
+        return ForEach(Array(childList.enumerated()), id: \.element.id) { index, child in
+            VStack(spacing: 0) {
+                FileTreeItem(
+                    item: child,
+                    files: files,
+                    directory: directory,
+                    expandedFolderIds: $expandedFolderIds,
+                    status: status,
+                    depth: depth + 1
+                )
+                if index < childList.count - 1 {
+                    Divider()
+                        .padding(.leading, CGFloat(depth + 1) * indentPerLevel)
+                }
+            }
         }
     }
 
     private func rowContent(icon: String, text: String, trailing: String) -> some View {
-        HStack {
+        HStack(alignment: .center) {
             Image(systemName: icon)
                 .foregroundStyle(.secondary)
                 .frame(width: 20)
