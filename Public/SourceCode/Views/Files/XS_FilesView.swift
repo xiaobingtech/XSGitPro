@@ -10,6 +10,8 @@ import ComposableArchitecture
 
 struct XS_FilesView: View {
     let store: StoreOf<XS_Files>
+    @State private var expandedFolderIds: Set<String> = []
+
     private func status(_ status: GTIndexEntryStatus) -> String {
         switch status {
         case .updated:
@@ -26,72 +28,139 @@ struct XS_FilesView: View {
             return ""
         }
     }
+
     private func array(_ dic: [String:XS_GitFolder], key: String) -> XS_GitFolder {
         dic[key] ?? XS_GitFolder()
     }
+
     var body: some View {
         WithViewStore(store) { $0 } content: { vs in
-            List(array(vs.files, key: vs.key).list) { item in
-                if let entry = item.entry {
-                    if UIDevice.isPad {
-                        Button {
-                            XS_PadCode.setCode(code: .init(file: item, dire: vs.directory))
-                        } label: {
-                            HStack {
-                                Label(item.name, systemImage: "doc.text")
-                                    .foregroundStyle(.primary)
-                                    .minimumScaleFactor(0.5)
-                                    .lineLimit(1)
-                                Spacer()
-                                Text(status(entry.status))
-                                    .foregroundStyle(.secondary)
-                                    .font(.footnote)
-                            }
-                        }
-                        .tint(.defaultText)
-                        
-//                        HStack {
-//                            Label(item.name, systemImage: "doc.text")
-//                                .minimumScaleFactor(0.5)
-//                                .lineLimit(1)
-//                            Spacer()
-//                            Text(status(entry.status))
-//                                .font(.footnote)
-//                        }
-//                        .onTapGesture {
-//                            XS_PadCode.setCode(code: .init(file: item, dire: vs.directory))
-//                        }
-                    } else {
-                        NavigationLink(value: XS_NavPathItem.code(item, vs.directory)) {
-                            HStack {
-                                Label(item.name, systemImage: "doc.text")
-                                    .foregroundStyle(.primary)
-                                    .minimumScaleFactor(0.5)
-                                    .lineLimit(1)
-                                Spacer()
-                                Text(status(entry.status))
-                                    .foregroundStyle(.secondary)
-                                    .font(.footnote)
-                            }
-                        }
-                    }
-                } else {
-                    NavigationLink(value: XS_NavPathItem.files(vs.files, item.id, item.name, vs.directory)) {
-                        HStack {
-                            Label(item.name, systemImage: "folder")
-                                .foregroundStyle(.primary)
-                                .minimumScaleFactor(0.5)
-                                .lineLimit(1)
-                            Spacer()
-                            Text("\(array(vs.files, key: item.id).count)")
-                                .foregroundStyle(.secondary)
-                                .font(.footnote)
-                        }
-                    }
+            List {
+                ForEach(array(vs.files, key: vs.key).list, id: \.id) { item in
+                    FileTreeItem(
+                        item: item,
+                        files: vs.files,
+                        directory: vs.directory,
+                        expandedFolderIds: $expandedFolderIds,
+                        status: status
+                    )
+                }
+            }
+            .listStyle(.plain)
+        }
+    }
+}
+
+private struct FileTreeItem: View {
+    let item: XS_GitFile
+    let files: [String: XS_GitFolder]
+    let directory: XS_GitDirectory
+    @Binding var expandedFolderIds: Set<String>
+    let status: (GTIndexEntryStatus) -> String
+    var depth: Int = 0
+
+    private let indentPerLevel: CGFloat = 16
+
+    private func array(_ dic: [String:XS_GitFolder], key: String) -> XS_GitFolder {
+        dic[key] ?? XS_GitFolder()
+    }
+
+    private var isExpanded: Bool {
+        expandedFolderIds.contains(item.id)
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            if let entry = item.entry {
+                // File item
+                fileRow(for: entry)
+            } else {
+                // Folder item
+                folderRow
+                if isExpanded {
+                    children
                 }
             }
         }
-        .listStyle(.plain)
+    }
+
+    private func fileRow(for entry: GTIndexEntry) -> some View {
+        Group {
+            if UIDevice.isPad {
+                Button {
+                    XS_PadCode.setCode(code: .init(file: item, dire: directory))
+                } label: {
+                    rowContent(
+                        icon: "doc.text",
+                        text: item.name,
+                        trailing: status(entry.status)
+                    )
+                }
+                .tint(.defaultText)
+            } else {
+                Button {
+                    // No navigation, just show content or do nothing
+                } label: {
+                    rowContent(
+                        icon: "doc.text",
+                        text: item.name,
+                        trailing: status(entry.status)
+                    )
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(.leading, CGFloat(depth) * indentPerLevel)
+    }
+
+    private var folderRow: some View {
+        Button {
+            withAnimation(.easeInOut(duration: 0.2)) {
+                if isExpanded {
+                    expandedFolderIds.remove(item.id)
+                } else {
+                    expandedFolderIds.insert(item.id)
+                }
+            }
+        } label: {
+            rowContent(
+                icon: isExpanded ? "folder.fill" : "folder",
+                text: item.name,
+                trailing: "\(array(files, key: item.id).count)"
+            )
+        }
+        .buttonStyle(.plain)
+        .padding(.leading, CGFloat(depth) * indentPerLevel)
+    }
+
+    private var children: some View {
+        ForEach(array(files, key: item.id).list, id: \.id) { child in
+            FileTreeItem(
+                item: child,
+                files: files,
+                directory: directory,
+                expandedFolderIds: $expandedFolderIds,
+                status: status,
+                depth: depth + 1
+            )
+        }
+    }
+
+    private func rowContent(icon: String, text: String, trailing: String) -> some View {
+        HStack {
+            Image(systemName: icon)
+                .foregroundStyle(.secondary)
+                .frame(width: 20)
+            Text(text)
+                .foregroundStyle(.primary)
+                .minimumScaleFactor(0.5)
+                .lineLimit(1)
+            Spacer()
+            Text(trailing)
+                .foregroundStyle(.secondary)
+                .font(.footnote)
+        }
+        .contentShape(Rectangle())
     }
 }
 
